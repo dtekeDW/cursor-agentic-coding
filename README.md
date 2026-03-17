@@ -10,7 +10,9 @@
 ## Working Pattern
 - `input/` = Brainstorm, Constraints, Quellen (nicht-iterative Inputs)
 - `output/` = iterative Arbeitsartefakte
-  - `output/Workshop.md` (Master-Backbone)
-  - `output/00-roadmap.md` (Ticket-/Status-Roadmap)
   - `output/sections/*/section.md` (Inhalte pro Section)
   - `output/Changelog.md` (Änderungshistorie)
+- Root-Artefakte / Steuerung
+  - `Workshop.md` (Master-Backbone)
+  - `input/workflow/00-roadmap.md` (Ticket-/Status-Roadmap)
+  - `input/workflow/Workflow.md` und `input/workflow/03-constraints.md` (Arbeitsregeln)

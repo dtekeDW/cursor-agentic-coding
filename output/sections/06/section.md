@@ -9,7 +9,7 @@
 | Kern-Demo | `ja` |
 
 ## Navigation
-- [Workshop Master](../../Workshop.md)
+- [Workshop Master](../../../Workshop.md)
 - [Prev: Section 05](../05/section.md)
 - [Next: Section 07](../07/section.md)
 

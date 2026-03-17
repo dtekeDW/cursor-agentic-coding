@@ -12,9 +12,9 @@
 ## - Show how to use Cursor's features to enhance the coding workflow and create more efficient and reliable outcomes.
 
 # Workflow Constraints
-## - `output/Workshop.md` is the master file and must be updated first.
+## - `Workshop.md` is the master file and must be updated first.
 ## - All section files must live in `output/sections/01..08/section.md`.
 ## - Every section must contain links to `Workshop`, `Prev`, and `Next`.
-## - Every iteration must update version + timestamp in `output/Workshop.md`.
+## - Every iteration must update version + timestamp in `Workshop.md`.
 ## - Every iteration must add a short entry in `output/Changelog.md`.
 ## - `README.md` is only updated when navigation/onboarding changes.

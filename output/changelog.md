@@ -1,6 +1,11 @@
 # Changelog
 
 ## 2026-03-17
+- `v0.4.24` - `Workshop.md` - Presenter in der Agenda auf Section-Owner synchronisiert (ab Section 03 auf Miguel); Version/Stand aktualisiert.
+- `v0.4.23` - Reorg abgeschlossen: `Workshop.md` nach Root verschoben, `output/changelog.md` nach `output/Changelog.md` normalisiert, Workflow-/Brainstorm-Dateien nach `input/workflow/*` und `input/brainstorm/*` verschoben, `models.gif` und `queue.gif` nach `input/ui-controls/*` verschoben.
+- `v0.4.23` - Referenzen bereinigt: Section-Navigationen auf Root-`Workshop.md` umgestellt, `Workshop.md`-Agenda/Navigationslinks auf neue Pfade angepasst, `README.md`, `input/workflow/Workflow.md`, `input/workflow/03-constraints.md` und `input/workflow/00-roadmap.md` auf die neue Struktur synchronisiert.
+- `v0.4.23` - `input/brainstorm/01-brainstorm.md` in strukturierte, section-gemappte Summary überführt (statt Rohnotizen).
+- `v0.4.23` - `Workshop.md` - Version/Stand für diese Iteration aktualisiert.
 - `v0.4.22` - `output/sections/03/section.md` - Section 03 auf Timebox getrimmt (7 Min): Fokus auf Ask -> Plan -> 1 Implementierungsphase; Debug-Track entfernt und als Übergang zu Section 06 markiert.
 - `v0.4.22` - `output/sections/06/section.md` - Kompakten Debug-Showcase in Safety/Governance integriert (Hypothesen -> Validierung -> sicherer Fix), Status auf `ready-for-demo` und `Kern-Demo: ja` gesetzt.
 - `v0.4.22` - `output/sections/01/section.md`, `output/sections/02/section.md` - Timebox-Schärfung: Section 01 UI-Teil mit optionalen Punkten markiert; Section 02 auf ein Haupt-Livebeispiel fokussiert, Plan/Debug als Kurz-Einordnung.

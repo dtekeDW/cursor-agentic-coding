@@ -9,7 +9,7 @@
 | Kern-Demo | `nein` |
 
 ## Navigation
-- [Workshop Master](../../Workshop.md)
+- [Workshop Master](../../../Workshop.md)
 - [Prev: Section 07](../07/section.md)
 - Next: `-`
 
