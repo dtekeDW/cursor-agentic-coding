@@ -18,7 +18,8 @@
 
 ## Ziel dieser Section
 
-- Section 02 erklärt die Modes im Detail, damit das Publikum pro Aufgabe den passenden Startmodus wählen kann.
+- Section 02 ist das **Entscheidungs-Framework** fuer Modes: welcher Startmodus passt zu welchem Problem.
+- Keine Umsetzungsdemo in dieser Section; die praktische Execution folgt in Section 03.
 
 ## Was du konkret erklärst
 
@@ -49,42 +50,35 @@
   - bei Problemen gezielt in `Debug`.
 3. **Vermeiden:** Großen Refactoring oder unklares Feature direkt in Agent starten – erst Ask/Plan, dann Agent.
 
-### Beispiele in der Praxis
+### Beispiele in der Praxis (nur Entscheidung, keine Umsetzung)
 
 
-| Situation                                | Modus | Kurz                                   |
-| ---------------------------------------- | ----- | -------------------------------------- |
-| Verstehen, Optionen, keine Änderung      | Ask   | Read-only, Rückfragen                  |
-| Task klar und klein, Plan steht          | Agent | Edits + Terminal                       |
-| Mehrere Phasen, Risiko, Rollback wichtig | Plan  | Phasen + Checks vor Umsetzung          |
-| Unklares Fehlerbild, Laufzeit/Log nötig  | Debug | Hypothesen, Instrumentierung, dann Fix |
+| Situation                                | Modus | Kurz                          |
+| ---------------------------------------- | ----- | ----------------------------- |
+| Verstehen, Optionen, keine Änderung      | Ask   | Read-only, Rückfragen         |
+| Task klar und klein, Plan steht          | Agent | Edits + Terminal              |
+| Mehrere Phasen, Risiko, Rollback wichtig | Plan  | Phasen + Checks vor Umsetzung |
+| Unklares Fehlerbild, Laufzeit/Log nötig  | Debug | Evidenz vor Fix               |
 
-
-- **Ask:** Neue Drittanbieter-API anbinden – unsicher welche Stelle anfassen → Ask: "Welche Dateien/Module sind betroffen, welche zwei Optionen gibt es, was spricht dagegen?" (keine Edits).
-  - Medien: [ask.gif](../../../input/modes/ask/ask.gif)
-- **Agent:** Kleiner, klarer Task: "Tests für Modul X ergänzen" – Plan steht, Scope klein → Agent mit klarem Prompt, danach Diff + Test prüfen.
-  - Medien: [agent.gif](../../../input/modes/agent/agent.gif)
-- **Plan:** Refactoring über mehrere Dateien – zuerst Optionen in Ask, dann in Plan: 3 Phasen mit Dateien, Checks, Rollback pro Phase, erst danach Agent.
-  - Zusatz im Plan: To-dos laufend anpassen und bei Bedarf Frontend/Backend als getrennte Arbeitsstränge planen.
-  - Medien: [plan.gif](../../../input/modes/plan/plan.gif), [todos.gif](../../../input/modes/plan/todos.gif), [plan-final.png](../../../input/modes/plan/plan-final.png)
-- **Debug:** Fehler tritt nur in Produktion/unter Last auf – statt blind zu raten: Debug-Mode, Hypothesen + Instrumentierung vorschlagen, Log-Auswertung, dann gezielter Fix.
-  - Medien: [debug.gif](../../../input/modes/debug/debug.gif)
+- **Mode-Karten live vergleichen (ohne Code-Edits):**
+  - Ask/Agent als Gegenueberstellung: [ask.gif](../../../input/modes/ask/ask.gif), [agent.gif](../../../input/modes/agent/agent.gif)
+- **Plan/Debug kurz einordnen:**
+  - Plan-Medien: [plan.gif](../../../input/modes/plan/plan.gif), [todos.gif](../../../input/modes/plan/todos.gif), [plan-final.png](../../../input/modes/plan/plan-final.png)
+  - Debug-Medium: [debug.gif](../../../input/modes/debug/debug.gif)
 
 ## Was du live in Cursor zeigst
 
-1. **Beispiel-Mini-Aufgabe:** "Erkläre, wo in diesem Repo die Konfiguration für [Feature X] liegt und welche zwei Wege es gäbe, sie zu erweitern – ohne etwas zu ändern."
-  - **Ask:** Gleicher Prompt → Antwort mit Fundstellen + Optionen, keine Edits.
-  - **Agent:** Gleicher oder erweiterter Prompt mit "Setze Option A um" → Agent editiert; danach Diff zeigen.
-   So siehst du direkt den Unterschied: "Zuerst in Ask, dann in Agent."
-2. `Plan` kurz zeigen: wie der Plan vor der Umsetzung aufgebaut ist.
-3. `Debug` kurz einordnen: wann runtime-basierte Analyse sinnvoller ist als direktes Editieren.
-4. Übergang zu Section 03: Dort machen wir den Plan-first Ablauf praktisch.
+1. **Szenario-Raster zeigen (2-3 kurze Aufgaben):** Audience entscheidet zuerst den Modus, dann loest ihr auf.
+2. **Ask vs Agent** an derselben Frage einordnen (was darf passieren, was nicht).
+3. **Plan/Debug** als Spezialfaelle einordnen (wann Pflicht, wann optional).
+4. **Uebergang zu Section 03:** "Jetzt nehmen wir genau einen Fall und fuehren ihn Plan-First wirklich aus."
 
 ## Was die Audience nach Section 02 verstanden haben soll
 
 - Modes sind ein Steuerungshebel für Qualität, Tempo und Risiko.
 - `Plan` ist ideal für komplexe Änderungen, `Debug` für unklare Fehlerbilder.
 - Ein bewusster Mode-Wechsel spart Nacharbeit und macht Agent-Workflows stabiler.
+- Die Umsetzung passiert erst nach Mode-Entscheidung (Section 03).
 
 ## Prompt-/Command-Bausteine (zum Vorlesen oder Kopieren)
 

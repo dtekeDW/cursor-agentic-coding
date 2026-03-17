@@ -1,6 +1,10 @@
 # Changelog
 
 ## 2026-03-17
+- `v0.4.22` - `output/sections/03/section.md` - Section 03 auf Timebox getrimmt (7 Min): Fokus auf Ask -> Plan -> 1 Implementierungsphase; Debug-Track entfernt und als Übergang zu Section 06 markiert.
+- `v0.4.22` - `output/sections/06/section.md` - Kompakten Debug-Showcase in Safety/Governance integriert (Hypothesen -> Validierung -> sicherer Fix), Status auf `ready-for-demo` und `Kern-Demo: ja` gesetzt.
+- `v0.4.22` - `output/sections/01/section.md`, `output/sections/02/section.md` - Timebox-Schärfung: Section 01 UI-Teil mit optionalen Punkten markiert; Section 02 auf ein Haupt-Livebeispiel fokussiert, Plan/Debug als Kurz-Einordnung.
+- `v0.4.22` - `output/Workshop.md` - Agenda auf 48 Min synchronisiert (`Section 03 = 7 Min`, `Section 06 = Kern-Demo ja + ready-for-demo`), Meta auf klaren Timestamp gesetzt.
 - `v0.4.21` - `output/sections/01/section.md` - Teil 0 gebündelt: Kontext-Fenster (Context Window), Modellauswahl (Model Selection) und Local/Worktree/Cloud jeweils mit Erklärung und Medien verlinkt (context-window.png, model-selection.png, work-tree.png); Fokus auf Context Window und Model Selection in Teil 0 verstärkt; Live-Demo-Step auf diese drei UI-Controls ausgerichtet.
 - `v0.4.20` - `output/sections/01/section.md` - Teil 0 ausgebaut: Local/Worktree/Cloud (Zahnrad/Dropdown) mit klaren Unterscheidungen – Local = aktueller Workspace, Worktree = lokale Sandbox + Apply, Cloud = separater Branch + Push/PR; Worktree-Beispiel (main → Worktree-Agent → Apply); Cloud ohne Direkt-Merge; Live-Demo und Audience-Takeaway angepasst.
 - `v0.4.19` - `output/sections/01/section.md` - Teil 0 ergänzt: Wo ihr arbeitet (Cloud, Branch), UI-Orientierung (Kontext-Indicator, Modellauswahl), Bild-Upload; Live-Demo um Schritt „Composer öffnen“ erweitert; Zeit auf 6 Min, Audience-Takeaway um Orientierungspunkte ergänzt.
