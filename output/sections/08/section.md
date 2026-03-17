@@ -1,11 +1,11 @@
-# Section 08 - Takeaways und Q&A Übergabe
+# Section 08 - Abschluss, Adoption und Q&A Übergabe
 
 | Feld | Wert |
 | --- | --- |
 | Section-ID | `08` |
 | Owner | `Miguel` |
 | Zeit | `4 Min` |
-| Status | `draft` |
+| Status | `ready-for-content` |
 | Kern-Demo | `nein` |
 
 ## Navigation
@@ -13,38 +13,39 @@
 - [Prev: Section 07](../07/section.md)
 - Next: `-`
 
-## Lernziel
-- Team kann konkrete nächste Schritte für den eigenen Alltag ableiten.
+## Ziel dieser Section
+- Section 08 schließt den Talk ab und übersetzt den Inhalt in konkrete nächste Team-Schritte.
 
-## Kernbotschaft
-- Erfolg entsteht durch iteratives Vorgehen, klare Regeln und kleine reproduzierbare Patterns.
+## Was du konkret erklärst
+1. Welche 2-3 Workflows sofort im Team getestet werden.
+2. Welche Guardrails verpflichtend sind.
+3. Wie Erfolg gemessen wird (kleine KPIs: Zeit, Qualität, Rework).
 
-## Live-Demo-Setup
-- Keine Demo, Fokus auf Decision- und Adoption-Checkliste.
+## Was du live zeigst
+1. Kurze „First Week Adoption“-Liste in 3 Punkten.
+2. Q&A-Übergabe: welche Fragen wir gerne hören wollen.
 
-## Demo-Skript
-- 3 konkrete Team-Aktionen für die Woche nach dem Talk.
+## Presenter dieser Section
+- Miguel führt die Section vollständig durch.
 
-## Prompt/Command-Beispiele
+## Prompt-/Command-Bausteine
 ```text
-Summarize the top 3 adoption actions for our team in the next 7 days.
+Create a 7-day adoption plan for a dev team starting with Cursor agentic workflows.
+Keep it to 5 actionable bullets.
 ```
 
 ```text
-List one safe starter workflow for daily use and one workflow to avoid initially.
+List two workflows to start now and one workflow to postpone.
+Explain why.
 ```
 
-## Docs-Referenzen
+## Was die Audience nach Section 08 verstanden haben soll
+- Nächste Schritte sind klar und klein genug, um direkt zu starten.
+
+## Doc-Referenzen (Web)
+- [Rules (DE)](https://cursor.com/de/docs/rules)
+- [Teams Setup (DE)](https://cursor.com/de/docs/account/teams/setup)
 - [Rules](https://cursor.com/docs/rules.md)
 - [Skills](https://cursor.com/docs/skills.md)
 - [Teams Setup](https://cursor.com/docs/account/teams/setup.md)
 - [Help: Teams Setup](https://cursor.com/help/account-and-billing/teams-setup.md)
-
-## Fallback bei Demo-Fehler
-- Nicht relevant, da kein Live-Demo-Block.
-
-## Takeaway
-- Start klein, halte den Loop eng, dokumentiere Entscheidungen sauber.
-
-## Übergang zur nächsten Section
-- Q&A Start (10 Minuten).

@@ -1,5 +1,42 @@
 # Changelog
 
+## 2026-03-17
+- `v0.4.11` - `output/sections/01/section.md` - Teil-Überschriften geschärft (`Agent-Grundlagen`, `Modellverhalten und Live-Steuerung`, `Checkpoints und Sicherheit`) und Tool-Block mit klaren Key Points verdichtet.
+- `v0.4.11` - `output/Workshop.md` - Version/Stand für diese Iteration aktualisiert.
+- `v0.4.10` - `output/sections/01/section.md` - Tool-Block ergänzt (Semantic Search, Search, Web/Fetch, Rules, Read/Edit, Shell, Browser, Image Generation, Ask Questions), `Presenter`-Block entfernt, Reihenfolge auf Pattern gebracht (`Audience` über `Prompt/Command`, `Prompt/Command` direkt vor `Doc-Referenzen`), Status auf `ready-for-presentation` gesetzt.
+- `v0.4.10` - `output/Workshop.md` - Version/Stand aktualisiert und Status von Section 01 in der Agenda auf `ready-for-presentation` gesetzt.
+- `v0.4.9` - `output/sections/01/section.md` - "Episode"-Beschriftungen entfernt und in drei klare Teilabschnitte gegliedert: Teil 1 (Punkte 1-3), Teil 2 (Punkte 4-6), Teil 3 (Punkt 7 Checkpoints); zusätzliche Schreibweisen auf Umlaute korrigiert.
+- `v0.4.9` - `output/Workshop.md` - Version/Stand für diese Iteration aktualisiert.
+- `v0.4.7` - `output/sections/01/section.md` - Abschnitt nach Punkt 4 klar getrennt: Punkt 5 `Queue` (`Enter`), Punkt 6 `Immediate` (`Cmd+Enter`), Punkt 7 `Checkpoints`; Queue-Beispielmedium auf `qgif.gif` direkt bei Punkt 5 verschoben; separaten "Beispiel-GIF"-Block entfernt.
+- `v0.4.7` - `output/Workshop.md` - Version/Stand fuer diese Iteration aktualisiert.
+- `v0.4.6` - `output/sections/01/section.md` - Medien aufgeraeumt: alle Debug-/externen Embeds entfernt; nur noch zwei lokale klickbare Beispiele belassen (`models.gif`, `qgif.gif`).
+- `v0.4.6` - `output/Workshop.md` - Version/Stand fuer diese Iteration aktualisiert.
+- `v0.4.5` - `output/sections/01/section.md` - GIF-Embedding fuer Cursor-Preview nachgeschaerft: `file://`-Pfad entfernt und stattdessen workspace-freundliche Varianten (`../../../input/assets/models.gif`, `/input/assets/models.gif`, HTML mit relativem `src`) gesetzt.
+- `v0.4.5` - `output/Workshop.md` - Version/Stand fuer diese Iteration aktualisiert.
+- `v0.4.4` - `output/sections/01/section.md` - `models.gif` aus dem Listenblock in einen eigenen Visual-Block verschoben und zusaetzlichen `file://`-Fallback per HTML-`img` fuer Preview-Kompatibilitaet ergaenzt.
+- `v0.4.4` - `output/Workshop.md` - Version/Stand fuer diese Iteration aktualisiert.
+- `v0.4.3` - `output/sections/01/section.md` - Lokales GIF `input/assets/models.gif` direkt unter der modellabhaengigen Erklaerung (Instructions/Tools/User Messages) eingebettet.
+- `v0.4.3` - `output/Workshop.md` - Version/Stand fuer diese Iteration aktualisiert.
+- `v0.4.2` - `output/sections/01/section.md` - Instructions-Teil praezisiert (Cursor System Prompt + eigene Rules), Modellunterschiede mit Beispielen ergaenzt (Speed/Kontext/Stil), Immediate-Kontextbeispiel fuer vergessene Bedingung eingebaut und GIF-Rendering-Fallback (Direktlink + HTML-Embed) hinzugefuegt.
+- `v0.4.2` - `output/Workshop.md` - Version/Stand fuer diese Iteration aktualisiert.
+- `v0.4.1` - `output/Workshop.md` - Version/Stand aktualisiert und Docs-Mapping fuer Section 01 auf Agent Overview geschaerft.
+- `v0.4.1` - `output/sections/01/section.md` - Einstieg inhaltlich auf Agent Overview umgebaut (3 Komponenten, Queue vs `Cmd+Enter`, Checkpoints) und Beispiel-GIF fuer Queued Messages am Ende ergaenzt.
+
+## 2026-03-16
+- `v0.4.0` - `output/Workshop.md` - Version/Stand für inhaltliche Nachschärfung der Sections aktualisiert.
+- `v0.4.0` - `output/sections/01..08/section.md` - Ziele section-spezifisch umformuliert, „Schlagabtausch“-Blöcke entfernt (eine Person pro Section), DE-`cursor.com`-Links als primäre Web-Referenzen ergänzt.
+
+## 2026-03-16
+- `v0.3.0` - `output/Workshop.md` - Status-Felder auf `ready-for-content`/`ready-for-demo` aktualisiert und Meta-Stand hochgezogen.
+- `v0.3.0` - `output/sections/01/section.md` - Von grobem Template zu tutorfähigem Talk-Playbook ausgebaut (Erklärziele, Live-Schritte, Schlagabtausch, klare Doc-Links).
+- `v0.3.0` - `output/sections/02/section.md` - Von grobem Template zu tutorfähigem Talk-Playbook ausgebaut (Erklärziele, Live-Schritte, Schlagabtausch, klare Doc-Links).
+- `v0.3.0` - `output/sections/03/section.md` - Von grobem Template zu tutorfähigem Talk-Playbook ausgebaut (Erklärziele, Live-Schritte, Schlagabtausch, klare Doc-Links).
+- `v0.3.0` - `output/sections/04/section.md` - Von grobem Template zu tutorfähigem Talk-Playbook ausgebaut (Erklärziele, Live-Schritte, Schlagabtausch, klare Doc-Links).
+- `v0.3.0` - `output/sections/05/section.md` - Von grobem Template zu tutorfähigem Talk-Playbook ausgebaut (Erklärziele, Live-Schritte, Schlagabtausch, klare Doc-Links).
+- `v0.3.0` - `output/sections/06/section.md` - Von grobem Template zu tutorfähigem Talk-Playbook ausgebaut (Erklärziele, Live-Schritte, Schlagabtausch, klare Doc-Links).
+- `v0.3.0` - `output/sections/07/section.md` - Von grobem Template zu tutorfähigem Talk-Playbook ausgebaut (Erklärziele, Live-Schritte, Schlagabtausch, klare Doc-Links).
+- `v0.3.0` - `output/sections/08/section.md` - Von grobem Template zu tutorfähigem Talk-Playbook ausgebaut (Erklärziele, Live-Schritte, Schlagabtausch, klare Doc-Links).
+
 ## 2026-03-11
 - `v0.2.0` - `output/Workshop.md` - Docs-Mapping-Tabelle aus `cursor.com/llms.txt` ergänzt und Meta-Stand aktualisiert.
 - `v0.2.0` - `output/sections/01/section.md` - Abschnitt `Docs-Referenzen` mit Cursor-Links ergänzt.

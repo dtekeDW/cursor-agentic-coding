@@ -1,11 +1,11 @@
-# Section 04 - Kontext und Rules
+# Section 04 - Kontext richtig steuern (Rules, Context, Indexing)
 
 | Feld | Wert |
 | --- | --- |
 | Section-ID | `04` |
 | Owner | `Miguel` |
 | Zeit | `6 Min` |
-| Status | `draft` |
+| Status | `ready-for-content` |
 | Kern-Demo | `nein` |
 
 ## Navigation
@@ -13,38 +13,42 @@
 - [Prev: Section 03](../03/section.md)
 - [Next: Section 05](../05/section.md)
 
-## Lernziel
-- Verstehen, wie Kontextquellen (`@`, Files, Rules) Output-Qualität und Kosten steuern.
+## Ziel dieser Section
+- Section 04 zeigt, wie Kontext, Rules und Indexing die Qualität der Antworten direkt beeinflussen.
 
-## Kernbotschaft
-- Kontext-Hygiene ist ein Hebel: weniger Rauschen, bessere Entscheidungen.
+## Was du konkret erklärst
+1. Zu viel Kontext macht Antworten schlechter und teurer.
+2. Rules geben Team-Standards vor und stabilisieren Output.
+3. Indexing/Suche entscheidet, was Cursor überhaupt finden kann.
+4. Sauberer Kontext = bessere Pläne + weniger Halluzinationen.
 
-## Live-Demo-Setup
-- Keine Kern-Demo; kurze Gegenüberstellung „zu viel“ vs „gezielter Kontext“.
+## Was du live in Cursor zeigst
+1. Eine Frage mit unscharfem Kontext.
+2. Gleiche Frage mit präzisem Kontext (Datei/Ordner/Rules).
+3. Unterschied im Output in 30-60 Sekunden zeigen.
 
-## Demo-Skript
-- Zwei Prompt-Varianten vergleichen und Qualitätsunterschied benennen.
+## Presenter dieser Section
+- Miguel führt die Section vollständig durch.
 
-## Prompt/Command-Beispiele
+## Prompt-/Command-Bausteine
 ```text
-Before proceeding, list which context sources you used and which you ignored.
+Before answering, list the context sources you will use.
+If context is insufficient, ask for exactly what is missing.
 ```
 
 ```text
-Summarize the minimum context required for the next step in 5 bullets.
+Give me the minimum context set required for this task.
+Limit to 5 bullets.
 ```
 
-## Docs-Referenzen
+## Was die Audience nach Section 04 verstanden haben soll
+- Kontext ist ein aktiver Steuerhebel.
+- Rules + fokussierte Inputs schlagen „alles reinschieben“.
+
+## Doc-Referenzen (Web)
+- [Rules (DE)](https://cursor.com/de/docs/rules)
+- [Context (Help)](https://cursor.com/help/customization/context.md)
 - [Rules](https://cursor.com/docs/rules.md)
 - [Help: Context](https://cursor.com/help/customization/context.md)
 - [Help: Indexing](https://cursor.com/help/customization/indexing.md)
 - [Help: Ignore Files](https://cursor.com/help/customization/ignore-files.md)
-
-## Fallback bei Demo-Fehler
-- Vorbereitete Beispiele aus den Input-Dokumenten nutzen.
-
-## Takeaway
-- Kontext ist ein Engineering-Asset und muss bewusst verwaltet werden.
-
-## Übergang zur nächsten Section
-- Übergabe an Dogan: Skills, Commands und Sub-Agents für wiederkehrende Abläufe.

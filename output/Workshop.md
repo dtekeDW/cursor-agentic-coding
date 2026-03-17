@@ -1,8 +1,8 @@
 # Cursor Agentic Coding in Practice - Workshop Backbone
 
 ## Meta
-- Version: `v0.2.0`
-- Stand: `2026-03-11 16:51 CET`
+- Version: `v0.4.11`
+- Stand: `2026-03-17 11:27 CET`
 - Speaker: `Dogan Teke`, `Miguel Franken`
 - Zielgruppe: Entwickler:innen, die bisher primär Chat-Prompting nutzen
 - Dauer: `48 Min` Talk + `10 Min` Q&A
@@ -12,14 +12,14 @@
 
 | ID | Titel | Min | Presenter | Kern-Demo | Status | Datei |
 | --- | --- | --- | --- | --- | --- | --- |
-| 01 | Einstieg und Zielbild | 5 | Dogan | nein | draft | [Section 01](sections/01/section.md) |
-| 02 | Modes und Agentischer Loop | 6 | Miguel | nein | draft | [Section 02](sections/02/section.md) |
-| 03 | Plan-First in der Praxis | 8 | Dogan | ja | draft | [Section 03](sections/03/section.md) |
-| 04 | Kontext und Rules | 6 | Miguel | nein | draft | [Section 04](sections/04/section.md) |
-| 05 | Skills, Commands, Sub-Agents | 8 | Dogan | ja | draft | [Section 05](sections/05/section.md) |
-| 06 | Safety, Sandbox, Review | 5 | Miguel | nein | draft | [Section 06](sections/06/section.md) |
-| 07 | End-to-End Live Case | 6 | Dogan | ja | draft | [Section 07](sections/07/section.md) |
-| 08 | Takeaways und Q&A Übergabe | 4 | Miguel | nein | draft | [Section 08](sections/08/section.md) |
+| 01 | Einstieg und Zielbild | 5 | Dogan | nein | ready-for-presentation | [Section 01](sections/01/section.md) |
+| 02 | Modes und Agentischer Loop | 6 | Miguel | nein | ready-for-content | [Section 02](sections/02/section.md) |
+| 03 | Plan-First in der Praxis | 8 | Dogan | ja | ready-for-demo | [Section 03](sections/03/section.md) |
+| 04 | Kontext und Rules | 6 | Miguel | nein | ready-for-content | [Section 04](sections/04/section.md) |
+| 05 | Skills, Commands, Sub-Agents | 8 | Dogan | ja | ready-for-demo | [Section 05](sections/05/section.md) |
+| 06 | Safety, Sandbox, Review | 5 | Miguel | nein | ready-for-content | [Section 06](sections/06/section.md) |
+| 07 | End-to-End Live Case | 6 | Dogan | ja | ready-for-demo | [Section 07](sections/07/section.md) |
+| 08 | Takeaways und Q&A Übergabe | 4 | Miguel | nein | ready-for-content | [Section 08](sections/08/section.md) |
 
 Gesamtzeit Talk: `48 Min`  
 Q&A: `10 Min`
@@ -29,7 +29,7 @@ Q&A: `10 Min`
 
 | Section | Fokus | Primäre Docs |
 | --- | --- | --- |
-| 01 | Einstieg, Grundverständnis | [Docs Overview](https://cursor.com/docs.md), [Quickstart](https://cursor.com/docs/get-started/quickstart.md) |
+| 01 | Einstieg, Agent-Grundverständnis | [Agent Overview](https://cursor.com/docs/agent/overview), [Docs Overview](https://cursor.com/docs.md) |
 | 02 | Ask/Plan/Agent/Debug Modes | [Agent Overview](https://cursor.com/docs/agent/overview.md), [Plan Mode](https://cursor.com/docs/agent/plan-mode.md), [Debug Mode](https://cursor.com/docs/agent/debug-mode.md) |
 | 03 | Plan-First Workflow | [Plan Mode](https://cursor.com/docs/agent/plan-mode.md), [Prompting](https://cursor.com/docs/agent/prompting.md) |
 | 04 | Kontext, Rules, Indexing | [Rules](https://cursor.com/docs/rules.md), [Help: Context](https://cursor.com/help/customization/context.md), [Help: Indexing](https://cursor.com/help/customization/indexing.md) |

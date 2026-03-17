@@ -1,11 +1,11 @@
-# Section 07 - End-to-End Live Case
+# Section 07 - End-to-End Mini-Case: kompletter Loop in 6 Minuten
 
 | Feld | Wert |
 | --- | --- |
 | Section-ID | `07` |
 | Owner | `Dogan` |
 | Zeit | `6 Min` |
-| Status | `draft` |
+| Status | `ready-for-demo` |
 | Kern-Demo | `ja` |
 
 ## Navigation
@@ -13,41 +13,48 @@
 - [Prev: Section 06](../06/section.md)
 - [Next: Section 08](../08/section.md)
 
-## Lernziel
-- Den kompletten Mini-Loop einmal live sehen: Ask -> Plan -> Agent -> Check.
+## Ziel dieser Section
+- Section 07 verbindet alles zu einem kompakten End-to-End-Run (Ask -> Plan -> Agent -> Review).
 
-## Kernbotschaft
-- Kleine, verifizierte Schritte schlagen große riskante One-Shots.
+## Was du konkret erklärst
+1. Ask: Ist-Zustand verstehen.
+2. Plan: kleinsten sinnvollen Schritt definieren.
+3. Agent: einen Schritt ausführen.
+4. Review: Diff + Check + Entscheidung „weiter/stop“.
 
-## Live-Demo-Setup
-- Sehr kleiner Use Case (z. B. kleine Doku-/Code-Anpassung mit kurzer Validierung).
+## Was du live in Cursor zeigst (Kern-Demo)
+1. 1 konkrete Mini-Aufgabe wählen (kein großes Refactoring).
+2. Ask + Plan in unter 2 Minuten.
+3. Genau einen Implementierungsschritt laufen lassen.
+4. Diff und kurze Validierung zeigen.
 
-## Demo-Skript
-1. Ask: Ist-Zustand kurz klären.
-2. Plan: Schrittfolge mit Tests.
-3. Agent: genau 1 Phase umsetzen.
-4. Check: Diff + kurzer Test + Rest-Risiken.
+## Presenter dieser Section
+- Dogan führt die Section vollständig durch.
 
-## Prompt/Command-Beispiele
+## Prompt-/Command-Bausteine
 ```text
-Work in a tight loop: inspect, propose smallest step, execute, validate, and stop for review.
+Run a tight loop:
+1) inspect current state
+2) propose smallest useful step
+3) execute only that step
+4) validate and stop for review
 ```
 
 ```bash
 git diff --stat
 ```
 
-## Docs-Referenzen
+## Plan B (wenn Demo fehlschlägt)
+- Vorbereitete Schrittfolge mit erwarteten Outputs zeigen.
+
+## Was die Audience nach Section 07 verstanden haben soll
+- Der Loop ist praktisch, wiederholbar und teamfähig.
+
+## Doc-Referenzen (Web)
+- [Prompting (DE)](https://cursor.com/de/docs/agent/prompting)
+- [Search Tool (DE)](https://cursor.com/de/docs/agent/tools/search)
+- [Browser Tool (DE)](https://cursor.com/de/docs/agent/tools/browser)
 - [Agent Prompting](https://cursor.com/docs/agent/prompting.md)
 - [Search Tool](https://cursor.com/docs/agent/tools/search.md)
 - [Browser Tool](https://cursor.com/docs/agent/tools/browser.md)
 - [Terminal Tool](https://cursor.com/docs/agent/tools/terminal.md)
-
-## Fallback bei Demo-Fehler
-- Vorbereiteter „Recorded Path“: erwarteter Input/Output je Schritt.
-
-## Takeaway
-- Der agentische Loop ist praktisch und reproduzierbar, wenn man ihn klein hält.
-
-## Übergang zur nächsten Section
-- Übergabe an Miguel für Abschluss, Adoption-Tipps und Q&A.

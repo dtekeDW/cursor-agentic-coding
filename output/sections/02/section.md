@@ -1,11 +1,11 @@
-# Section 02 - Modes und Agentischer Loop
+# Section 02 - Modes richtig einsetzen (Ask, Plan, Agent, Debug)
 
 | Feld | Wert |
 | --- | --- |
 | Section-ID | `02` |
 | Owner | `Miguel` |
 | Zeit | `6 Min` |
-| Status | `draft` |
+| Status | `ready-for-content` |
 | Kern-Demo | `nein` |
 
 ## Navigation
@@ -13,38 +13,44 @@
 - [Prev: Section 01](../01/section.md)
 - [Next: Section 03](../03/section.md)
 
-## Lernziel
-- Ask, Plan, Agent und Debug sauber unterscheiden und passend einsetzen.
+## Ziel dieser Section
+- Section 02 erklärt die Modes im Detail, damit das Publikum pro Aufgabe den passenden Startmodus wählen kann.
 
-## Kernbotschaft
-- Gute Ergebnisse entstehen durch Mode-Wechsel mit Absicht, nicht zufällig.
+## Was du konkret erklärst
+1. `Ask`: Analyse, Verständnis, Optionen, keine Änderungen.
+2. `Plan`: erst Spezifikation/Phasen, dann Umsetzung.
+3. `Agent`: führt aus, editiert, nutzt Tools.
+4. `Debug`: strukturiertes Bug-Vorgehen.
+5. Heuristik: Unsicherheit hoch -> Ask/Plan. Klarer kleiner Schritt -> Agent.
 
-## Live-Demo-Setup
-- Kein Coding-Block, nur kurze UI-Navigation durch die Modes.
+## Was du live in Cursor zeigst
+1. Gleiche Aufgabe in 2 Modi anstoßen (`Ask` vs `Agent`).
+2. Zeigen, wie sich Output-Typ unterscheidet (Analyse vs Aktion).
+3. Kurz `Plan` zeigen: Phasen + Risiken + Checks.
 
-## Demo-Skript
-- 1 Use Case, 4 Modes, je 1 Satz: Wann nutzen, welches Risiko vermeiden.
+## Presenter dieser Section
+- Miguel führt die Section vollständig durch.
 
-## Prompt/Command-Beispiele
+## Prompt-/Command-Bausteine
 ```text
-Use Ask mode first. Give me 2 implementation options and wait for approval.
+Use Ask mode. Do not edit files.
+Return 3 implementation options with trade-offs and expected risk.
 ```
 
 ```text
-Switch to Plan mode and create a phased plan with risks and test points.
+Switch to Plan mode and propose 3 phases.
+For each phase add: files, checks, rollback idea.
 ```
 
-## Docs-Referenzen
+## Was die Audience nach Section 02 verstanden haben soll
+- Modes sind kein UI-Detail, sondern Workflow-Entscheidung.
+- Ein guter Start-Mode spart Nacharbeit.
+
+## Doc-Referenzen (Web)
+- [Agent Overview (DE)](https://cursor.com/de/docs/agent/overview)
+- [Plan Mode (DE)](https://cursor.com/de/docs/agent/plan-mode)
+- [Debug Mode (DE)](https://cursor.com/de/docs/agent/debug-mode)
 - [Agent Overview](https://cursor.com/docs/agent/overview.md)
 - [Plan Mode](https://cursor.com/docs/agent/plan-mode.md)
 - [Debug Mode](https://cursor.com/docs/agent/debug-mode.md)
 - [Help: Ask Mode](https://cursor.com/help/ai-features/ask-mode.md)
-
-## Fallback bei Demo-Fehler
-- Vorbereitete Tabelle zeigen: Modus, Zweck, Tooling, typische Fehler.
-
-## Takeaway
-- Der richtige Modus reduziert Fehlaktionen und erhöht Lernkurve im Team.
-
-## Übergang zur nächsten Section
-- Übergabe an Dogan: Plan-First als konkreter Ablauf mit Kern-Demo.

@@ -1,11 +1,11 @@
-# Section 06 - Safety, Sandbox, Review
+# Section 06 - Safety und Governance: schnell, aber kontrolliert
 
 | Feld | Wert |
 | --- | --- |
 | Section-ID | `06` |
 | Owner | `Miguel` |
 | Zeit | `5 Min` |
-| Status | `draft` |
+| Status | `ready-for-content` |
 | Kern-Demo | `nein` |
 
 ## Navigation
@@ -13,21 +13,29 @@
 - [Prev: Section 05](../05/section.md)
 - [Next: Section 07](../07/section.md)
 
-## Lernziel
-- Teilnehmer kennen die minimalen Guardrails: Diff vor Vertrauen, Least Privilege, Review-Gates.
+## Ziel dieser Section
+- Section 06 liefert einen klaren Safety- und Review-Standard für den praktischen Alltag mit Cursor.
 
-## Kernbotschaft
-- Agentisches Arbeiten ist nur dann robust, wenn Safety-Checks fest eingebaut sind.
+## Was du konkret erklärst
+1. Diff vor Vertrauen.
+2. Least Privilege bei Tools/Terminal.
+3. Keine sensiblen Daten ungefiltert in Prompts/Logs.
+4. Vor Ausführung: Risiko, Blast Radius, Rollback klären.
 
-## Live-Demo-Setup
-- Kein Kern-Demo-Block, Fokus auf konkrete Review-Checkliste.
+## Was du live in Cursor zeigst
+1. Kurzer Review-Flow vor Ausführung.
+2. Welche Frage man dem Agent zwingend stellt, bevor man „go“ sagt.
 
-## Demo-Skript
-- 5-Punkte-Check vor Merge: Status, Diff, Tests, Risiken, Rollback.
+## Presenter dieser Section
+- Miguel führt die Section vollständig durch.
 
-## Prompt/Command-Beispiele
+## Prompt-/Command-Bausteine
 ```text
-Show compact diff summary and list rollback steps before any non-trivial change.
+Before executing, provide:
+- confidence level
+- blast radius
+- rollback approach
+- what must be reviewed first
 ```
 
 ```bash
@@ -35,17 +43,13 @@ git status
 git diff --stat
 ```
 
-## Docs-Referenzen
+## Was die Audience nach Section 06 verstanden haben soll
+- Agent-Speed ist nur wertvoll mit klaren Stop- und Review-Punkten.
+
+## Doc-Referenzen (Web)
+- [Security (DE)](https://cursor.com/de/docs/agent/security)
+- [Terminal Tool (DE)](https://cursor.com/de/docs/agent/tools/terminal)
 - [Agent Security](https://cursor.com/docs/agent/security.md)
 - [Terminal Tool](https://cursor.com/docs/agent/tools/terminal.md)
 - [Help: Privacy](https://cursor.com/help/security-and-privacy/privacy.md)
 - [Enterprise: Privacy and Data Governance](https://cursor.com/docs/enterprise/privacy-and-data-governance.md)
-
-## Fallback bei Demo-Fehler
-- Checkliste als statische Folie verwenden.
-
-## Takeaway
-- Ohne Review-Disziplin wird Agent-Speed schnell zum Risiko.
-
-## Übergang zur nächsten Section
-- Übergabe an Dogan: End-to-End Mini-Case mit Plan, Umsetzung und Feedback.
