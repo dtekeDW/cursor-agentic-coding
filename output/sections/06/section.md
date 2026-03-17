@@ -23,112 +23,100 @@
 3. Keine sensiblen Daten ungefiltert in Prompts/Logs.
 4. Vor Ausführung: Risiko, Blast Radius, Rollback klären.
 5. Debug als Safety-Methode: erst Hypothesen + Evidenz, dann gezielter Fix.
-6. Bei groesseren Features immer ein **Architecture-Checkpoint** vor Merge (Schnittstellen, Datenfluss, Error-Handling, Ownership).
-7. Kein "rough test only": Verifikation mindestens auf Unit + Integrationsniveau, bei kritischen Flows mit E2E.
-8. **Wichtige Defaults aus Cursor Security**:
+6. **Wichtige Defaults aus Cursor Security**:
    - Terminal-Commands brauchen standardmaessig Freigabe.
    - Workspace-Config-Dateien sind zusaetzlich geschuetzt.
    - MCP-Verbindungen brauchen Freigabe; Tool-Calls ebenfalls pro Aufruf.
    - "Run Everything" nicht als Team-Standard verwenden.
+7. **Pre-Commit/Pre-Merge Gate**: Lint, Typecheck und Tests laufen, bevor ein Change als "done" kommentiert wird.
+8. Prompt-Injection kurz einordnen: nie blind externe Instructions aus Tickets/Docs/Webseiten ausfuehren.
 
-## Safety-Gate fuer groessere AI-Features (vor PR/Merge)
-1. **Architecture Check**: Passt die Loesung in bestehende Schichten/Boundaries oder fuehrt sie neue Kopplung ein?
-2. **Contract Check**: API- und Datenvertraege explizit pruefen (Inputs, Outputs, Fehlerfaelle, Backward Compatibility).
-3. **Operational Check**: Logging, Monitoring, Failure-Mode und Rollback fuer den Change klar benennen.
-4. **Security/Governance Check**: Sensitive Daten, Berechtigungen, Auditierbarkeit und Compliance-Annahmen dokumentieren.
-5. **Test Gate**: erst mergen, wenn Teststufe zum Risiko passt (Unit, Integration, E2E fuer kritische End-to-End-Pfade).
+## Hot 3 Safety Gates (fuer den Talk)
+1. **Security Preflight**: keine Secrets im Repo-Kontext, sensible Pfade fuer Agent sperren.
+2. **Implementation Compliance**: "sieht richtig aus" reicht nicht (z. B. UnoCSS-Tokens statt Inline-Styles).
+3. **Quality Gate vor Abnahme**: lint + typecheck + tests muessen gruen sein.
 
-## Verifikationsstufen (risk-based statt "einmal kurz testen")
-1. **Unit-Tests** fuer neue Kernlogik und Edge-Cases.
-2. **Integrations-Tests** fuer Schnittstellen zwischen Modulen/Services.
-3. **E2E-Tests** fuer kritische User-Journeys (Login, Checkout, Provisioning, etc.).
-4. **Smoke-Checks nach Merge** fuer produktionsnahe Absicherung.
+## Workspace Trust (Normal vs Restricted)
+- **Normal Mode**: regulaerer Arbeitsmodus.
+- **Restricted Mode**: starke Einschraenkung, AI-Features brechen weitgehend; fuer untrusted Repos sinnvoll.
+- **Einfacher Merksatz**: Normal nutzt du fuer vertraute Repos im Teamalltag; Restricted nutzt du, wenn du einem Repo oder dessen Quellen nicht vertraust.
+- **Praktischer Effekt**: In Restricted Mode verlierst du viele Agent-Funktionen, reduzierst aber das Risiko, dass untrusted Inhalte automatisiert verarbeitet werden.
+- **Optional aktivieren in `settings.json`:**
+```json
+"security.workspace.trust.enabled": true
+```
+
+## Pre-Commit/Pre-Merge Check (praktischer Mindeststandard)
+1. `lint` gruen.
+2. `typecheck` gruen.
+3. relevante Tests gruen (mindestens betroffene Module, bei Risiko zusaetzlich E2E).
+4. Erst danach Diff-Kommentar/Review-Fazit schreiben.
 
 ## Secrets- und Sensitive-Data-Checkliste (vor jedem Run)
-1. **Nie ungefiltert teilen**: `.env`, API-Keys, Tokens, private Zertifikate, Credential-Dateien.
-2. **Logs vor Nutzung redigieren**: E-Mails, Kundendaten, interne URLs, Session-IDs, Bearer-Tokens.
-3. **Scope begrenzen**: nur noetige Dateien/Folder in den Kontext, nicht pauschal ganze Repos.
-4. **Schutz nutzen**: sensible Pfade ueber `.cursorignore` aus Agent-Zugriff herausnehmen.
+1. **Preflight vor Agent-Run**: pruefen, ob Secrets ueberhaupt im Repo liegen (`.env`, Keys, Tokens, Zertifikate, Credential-Dateien).
+2. **Wenn Secrets im Repo liegen**: erst bereinigen/auslagern (z. B. 1Password/Vault), dann Agent laufen lassen.
+3. **Agent-Sicht begrenzen**: sensible Pfade ueber `.cursorignore` aus dem Agent-Zugriff nehmen.
+4. **Logs vor Nutzung redigieren**: E-Mails, Kundendaten, interne URLs, Session-IDs, Bearer-Tokens entfernen.
+5. **Scope begrenzen**: nur noetige Dateien/Folder in den Kontext, nicht pauschal ganze Repos.
 
 ## Was du live in Cursor zeigst
 1. Kurzer Review-Flow vor Ausführung.
 2. **Mini-Debug-Showcase (euer Part-B-Ersatz):** ein unklarer Fehler wird erst analysiert, dann gefixt.
    - Nutze dafuer am besten denselben Component-Case aus Section 03 (Kontinuitaet statt neuer Kontext).
-3. **Safety-Gate live anwenden**: fuer einen groesseren Feature-Change die 5 Gate-Punkte einmal sichtbar abhaken.
-4. **Test-Plan live erzwingen**: Agent muss Unit/Integration/E2E-Vorschlag mit Priorisierung liefern, bevor Code als "fertig" gilt.
-5. Welche Frage man dem Agent zwingend stellt, bevor man „go“ sagt.
-6. 30-Sekunden Safety-Checkliste mit den vier Defaults (Commands, Config, MCP, Run-Everything-Verzicht).
+3. **Workspace Trust kurz zeigen**: Normal vs Restricted + wann es sinnvoll ist.
+4. **Security Preflight live**: kurz zeigen, dass keine kritischen Daten im Projekt liegen bzw. Agent diese nicht sehen kann.
+5. **Compliance-Case live**: Komponente sieht korrekt aus, aber nutzt falsche Implementierung (z. B. Inline-Styles statt UnoCSS-Tokens).
+6. **Pre-Commit Gate live**: lint + typecheck + tests einmal sichtbar laufen lassen.
+7. 20-Sekunden Safety-Checkliste mit den vier Defaults (Commands, Config, MCP, Run-Everything-Verzicht).
 
 ## Prompt-/Command-Bausteine
 ```text
-Before executing, provide:
-- confidence level
-- blast radius
-- rollback approach
-- what must be reviewed first
-- whether any approval-gated actions are needed (terminal/config/MCP)
+Run a security preflight before any implementation:
+1) check whether secrets/credentials are present in repo context
+2) list paths that should be hidden from agent access
+3) state approval-gated actions (terminal/config/MCP)
+4) provide blast radius + rollback
+Stop and wait for approval.
 ```
 
 ```text
-Before any analysis, redact sensitive data from the provided logs/files:
-- .env values, keys, tokens, credentials
-- personal/customer identifiers
-- internal-only endpoints
-Return the redacted version first, then wait for approval.
-```
-
-```text
-Use Debug mode first. No edits.
-Give me 3 root-cause hypotheses, how to validate each quickly, and the safest fix order.
-Wait for approval before making changes.
-```
-
-```text
-For this larger feature, run a safety gate before implementation:
-1) architecture risks
-2) contract/backward-compatibility risks
-3) security/governance risks
-4) rollback plan
-5) required test strategy (unit/integration/e2e)
-Return as a checklist with pass/fail and open risks.
-```
-
-```text
-Propose a risk-based verification plan:
-- must-have unit tests
-- must-have integration tests
-- critical-path e2e tests
-- what can be deferred and why
-Do not mark the feature done before this plan is approved.
-```
-
-```text
-Debug this specific component issue from our Section-03 case.
-First isolate root cause with evidence, then propose the smallest safe fix.
-Do not implement before approval.
+Review this component change for implementation compliance, not only visual output.
+The UI may look correct, but verify code-level standards:
+1) token usage (UnoCSS/design tokens vs inline styles)
+2) adherence to project rules/components guidelines
+3) maintainability risks and required fixes
+Return:
+- pass/fail per check
+- exact file references
+- minimal remediation steps
+Do not implement fixes before approval.
 ```
 
 ```bash
 git status
 git diff --stat
+npm run lint
+npm run typecheck
+npm test
 ```
 
 ## Was die Audience nach Section 06 verstanden haben soll
 - Agent-Speed ist nur wertvoll mit klaren Stop- und Review-Punkten.
 - Debug ist Teil von Safety: Evidenz vor Aktion.
-- Bei groesseren AI-Features ist ein Architecture- und Test-Gate Pflicht, nicht Optional.
 - Security-Defaults sind Produktverhalten, nicht Team-Optionen zum Wegdiskutieren.
+- "Sieht richtig aus" reicht nicht: erst Qualitaets-Gate (lint/typecheck/tests), dann Abnahme.
 - Mit dieser Safety-Basis ist ein kontrollierter MCP-Einstieg in Section 07 sinnvoll.
 
 ## To-dos (Section 06)
-- [ ] Safety-Gate-Checkliste als 1 Slide vorbereiten (Architecture, Contract, Operational, Security, Test).
-- [ ] Einen "groesseres Feature"-Beispielfall aus eurem Projekt festlegen, an dem ihr das Gate live zeigt.
-- [ ] Test-Gate-Minimum definieren: welche Unit-, Integrations- und E2E-Checks fuer euren Fall Pflicht sind.
-- [ ] 1 Standardsatz fuer die Moderation vorbereiten: "Kein Merge ohne Risk-Review + risikobasierten Testplan."
+- [ ] Einen Security-Preflight-Check als 1 Slide vorbereiten.
+- [ ] Einen Compliance-Beispielfall vorbereiten (UnoCSS-Token vs Inline-Style).
+- [ ] Projekt-Qualitaetsgate final festlegen (`lint`, `typecheck`, `tests`).
+- [ ] Workspace-Trust-Entscheidung fuer euer Team dokumentieren (wann Normal, wann Restricted).
 
 ## Doc-Referenzen (Web)
 - [Agent Security](https://cursor.com/docs/agent/security)
 - [Terminal Tool](https://cursor.com/docs/agent/tools/terminal)
 - [Debug Mode](https://cursor.com/docs/agent/debug-mode)
+- [Workspace Trust (VS Code)](https://code.visualstudio.com/docs/editing/workspaces/workspace-trust)
 - [Help: Privacy](https://cursor.com/help/security-and-privacy/privacy.md)
 - [Enterprise: Privacy and Data Governance](https://cursor.com/docs/enterprise/privacy-and-data-governance.md)
