@@ -1,6 +1,10 @@
 # Changelog
 
 ## 2026-03-17
+- `v0.4.21` - `output/sections/01/section.md` - Teil 0 gebündelt: Kontext-Fenster (Context Window), Modellauswahl (Model Selection) und Local/Worktree/Cloud jeweils mit Erklärung und Medien verlinkt (context-window.png, model-selection.png, work-tree.png); Fokus auf Context Window und Model Selection in Teil 0 verstärkt; Live-Demo-Step auf diese drei UI-Controls ausgerichtet.
+- `v0.4.20` - `output/sections/01/section.md` - Teil 0 ausgebaut: Local/Worktree/Cloud (Zahnrad/Dropdown) mit klaren Unterscheidungen – Local = aktueller Workspace, Worktree = lokale Sandbox + Apply, Cloud = separater Branch + Push/PR; Worktree-Beispiel (main → Worktree-Agent → Apply); Cloud ohne Direkt-Merge; Live-Demo und Audience-Takeaway angepasst.
+- `v0.4.19` - `output/sections/01/section.md` - Teil 0 ergänzt: Wo ihr arbeitet (Cloud, Branch), UI-Orientierung (Kontext-Indicator, Modellauswahl), Bild-Upload; Live-Demo um Schritt „Composer öffnen“ erweitert; Zeit auf 6 Min, Audience-Takeaway um Orientierungspunkte ergänzt.
+- `v0.4.19` - `output/Workshop.md` - Section 01 auf 6 Min gestellt, Gesamtzeit Talk auf 49 Min.
 - `v0.4.18` - `output/sections/02/section.md`, `output/Workshop.md` - Section 02 auf Dogan synchronisiert (`Owner` + `Presenter`).
 - `v0.4.18` - `output/00-roadmap.md` - Ticket `T02` auf `✅` und `done` gesetzt (Section 02 ist `ready-for-presentation`).
 - `v0.4.17` - `output/sections/02/section.md` - Plan-Mode-Inhalt ergänzt: To-dos im Plan erstellen/bearbeiten/aktualisieren sowie optionales Aufteilen in weitere Agents (z. B. Frontend/Backend) als eigener Arbeitsstrang.

@@ -26,9 +26,6 @@
 1. Kurzer Review-Flow vor Ausführung.
 2. Welche Frage man dem Agent zwingend stellt, bevor man „go“ sagt.
 
-## Presenter dieser Section
-- Miguel führt die Section vollständig durch.
-
 ## Prompt-/Command-Bausteine
 ```text
 Before executing, provide:

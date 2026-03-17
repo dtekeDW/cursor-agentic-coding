@@ -27,9 +27,6 @@
 2. Ein kleines Command-Muster durchspielen (Analyse -> Diff -> Summary).
 3. Kurz zeigen, wie Output konsistenter wird als bei Ad-hoc-Prompting.
 
-## Presenter dieser Section
-- Dogan führt die Section vollständig durch.
-
 ## Prompt-/Command-Bausteine
 ```text
 Use the relevant skill for this task.

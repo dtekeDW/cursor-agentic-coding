@@ -27,9 +27,6 @@
 2. Gleiche Frage mit präzisem Kontext (Datei/Ordner/Rules).
 3. Unterschied im Output in 30-60 Sekunden zeigen.
 
-## Presenter dieser Section
-- Miguel führt die Section vollständig durch.
-
 ## Prompt-/Command-Bausteine
 ```text
 Before answering, list the context sources you will use.

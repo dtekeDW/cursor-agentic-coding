@@ -1,18 +1,18 @@
 # Cursor Agentic Coding in Practice - Workshop Backbone
 
 ## Meta
-- Version: `v0.4.18`
-- Stand: `2026-03-17 12:29 CET`
+- Version: `v0.4.21`
+- Stand: `2026-03-17` (Section 01: Teil 0 mit Context Window, Model Selection, Worktree + Medien)
 - Speaker: `Dogan Teke`, `Miguel Franken`
 - Zielgruppe: Entwickler:innen, die bisher primär Chat-Prompting nutzen
-- Dauer: `48 Min` Talk + `10 Min` Q&A
+- Dauer: `49 Min` Talk + `10 Min` Q&A
 - Ziel: Cursor agentisch nutzen (Plan Mode, Sub-Agents, Skills, Commands, Guardrails)
 
 ## Agenda
 
 | ID | Titel | Min | Presenter | Kern-Demo | Status | Datei |
 | --- | --- | --- | --- | --- | --- | --- |
-| 01 | Einstieg und Zielbild | 5 | Dogan | nein | ready-for-presentation | [Section 01](sections/01/section.md) |
+| 01 | Einstieg und Zielbild | 6 | Dogan | nein | ready-for-presentation | [Section 01](sections/01/section.md) |
 | 02 | Modes und Agentischer Loop | 6 | Dogan | nein | ready-for-presentation | [Section 02](sections/02/section.md) |
 | 03 | Plan-First in der Praxis | 8 | Dogan | ja | ready-for-demo | [Section 03](sections/03/section.md) |
 | 04 | Kontext und Rules | 6 | Miguel | nein | ready-for-content | [Section 04](sections/04/section.md) |
@@ -21,7 +21,7 @@
 | 07 | End-to-End Live Case | 6 | Dogan | ja | ready-for-demo | [Section 07](sections/07/section.md) |
 | 08 | Takeaways und Q&A Übergabe | 4 | Miguel | nein | ready-for-content | [Section 08](sections/08/section.md) |
 
-Gesamtzeit Talk: `48 Min`  
+Gesamtzeit Talk: `49 Min`  
 Q&A: `10 Min`
 
 ## Docs Mapping (aus `https://cursor.com/llms.txt`)

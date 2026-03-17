@@ -28,9 +28,6 @@
 3. Genau einen Implementierungsschritt laufen lassen.
 4. Diff und kurze Validierung zeigen.
 
-## Presenter dieser Section
-- Dogan führt die Section vollständig durch.
-
 ## Prompt-/Command-Bausteine
 ```text
 Run a tight loop:

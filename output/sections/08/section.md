@@ -21,12 +21,9 @@
 2. Welche Guardrails verpflichtend sind.
 3. Wie Erfolg gemessen wird (kleine KPIs: Zeit, Qualität, Rework).
 
-## Was du live zeigst
+## Was du live in Cursor zeigst
 1. Kurze „First Week Adoption“-Liste in 3 Punkten.
 2. Q&A-Übergabe: welche Fragen wir gerne hören wollen.
-
-## Presenter dieser Section
-- Miguel führt die Section vollständig durch.
 
 ## Prompt-/Command-Bausteine
 ```text
