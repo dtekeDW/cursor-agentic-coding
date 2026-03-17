@@ -1,6 +1,18 @@
 # Changelog
 
 ## 2026-03-17
+- `v0.4.17` - `output/sections/02/section.md` - Plan-Mode-Inhalt ergänzt: To-dos im Plan erstellen/bearbeiten/aktualisieren sowie optionales Aufteilen in weitere Agents (z. B. Frontend/Backend) als eigener Arbeitsstrang.
+- `v0.4.17` - `output/Workshop.md` - Version/Stand für diese Iteration aktualisiert.
+- `v0.4.16` - `output/sections/02/section.md` - Medienformatierung verbessert: zentralen Mode-Medienblock entfernt und GIF-/Bild-Links direkt unter die passenden Bullet-Points in "Beispiele in der Praxis" verschoben (`Ask`, `Agent`, `Plan`, `Debug`).
+- `v0.4.16` - `output/Workshop.md` - Version/Stand für diese Iteration aktualisiert.
+- `v0.4.15` - `output/sections/02/section.md` - Lokalen Medienblock für alle Modes ergänzt (`ask.gif`, `agent.gif`, `plan.gif`, `todos.gif`, `plan-final.png`, `debug.gif`) für direkte Demo-Öffnung im Talk.
+- `v0.4.15` - `output/Workshop.md` - Version/Stand aktualisiert und Section 02 in der Agenda auf `ready-for-presentation` gesetzt.
+- `v0.4.14` - `output/sections/02/section.md` - Section 02 auf Pattern von Section 01 umgestellt (Teil 1/2/3, kein Presenter-Block, Audience vor Prompt, Prompt vor Docs) und inhaltlich auf `Ask`, `Plan`, `Agent`, `Debug` geschärft; Plan-/Debug-Flows gemäß offizieller Doku ergänzt.
+- `v0.4.14` - `output/Workshop.md` - Version/Stand für diese Iteration aktualisiert.
+- `v0.4.13` - `README.md`, `Workflow.md` - Arbeitsmuster dokumentiert (Input vs Output, Workshop-first + Roadmap-Sync).
+- `v0.4.13` - `output/Workshop.md`, `output/00-roadmap.md`, `input/03-constraints.md` - Changelog-Referenzen auf `Changelog.md` (großes C) vereinheitlicht; Workshop-Version/Stand aktualisiert.
+- `v0.4.12` - `output/00-roadmap.md` - Neues kompaktes Docs-first-Roadmap erstellt (Tickets T01-T08 mit Section-Mapping, Datei-Pfaden, Primär-Docs, Status-Markern `✅/❌` und Iterationshinweisen `done/next`).
+- `v0.4.12` - `output/Workshop.md` - Version/Stand aktualisiert und Roadmap-Link im Navigationsindex ergänzt.
 - `v0.4.11` - `output/sections/01/section.md` - Teil-Überschriften geschärft (`Agent-Grundlagen`, `Modellverhalten und Live-Steuerung`, `Checkpoints und Sicherheit`) und Tool-Block mit klaren Key Points verdichtet.
 - `v0.4.11` - `output/Workshop.md` - Version/Stand für diese Iteration aktualisiert.
 - `v0.4.10` - `output/sections/01/section.md` - Tool-Block ergänzt (Semantic Search, Search, Web/Fetch, Rules, Read/Edit, Shell, Browser, Image Generation, Ask Questions), `Presenter`-Block entfernt, Reihenfolge auf Pattern gebracht (`Audience` über `Prompt/Command`, `Prompt/Command` direkt vor `Doc-Referenzen`), Status auf `ready-for-presentation` gesetzt.

@@ -1,0 +1,33 @@
+# 00 - Roadmap (Docs-first)
+
+## Ziel
+
+Kurzer Fahrplan, damit wir die Cursor-Doku Stück für Stück abdecken und pro Iteration klar sehen, was bereits präsentationsreif ist.
+
+## Status-Logik
+
+- `✅` = zugeordnete Section steht in `Workshop.md` auf `ready-for-presentation`
+- `❌` = Section ist noch nicht auf `ready-for-presentation`
+
+## Ticket-Roadmap
+
+
+| Ticket | Ziel (kurz)                                                                           | Section | Datei                                | Primäre Docs                                                                                                                                                                                | Status | Iteration |
+| ------ | ------------------------------------------------------------------------------------- | ------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | --------- |
+| T01    | Agent-Grundlagen für Chat-User: Komponenten, Queue vs Immediate, Checkpoints          | `01`    | [Section 01](sections/01/section.md) | [Agent Overview](https://cursor.com/docs/agent/overview)                                                                                                                                    | ✅      | `done`    |
+| T02    | Modi sicher unterscheiden (`Ask`, `Plan`, `Agent`, `Debug`) und Einsatzfälle erklären | `02`    | [Section 02](sections/02/section.md) | [Agent Overview](https://cursor.com/docs/agent/overview.md), [Plan Mode](https://cursor.com/docs/agent/plan-mode.md), [Debug Mode](https://cursor.com/docs/agent/debug-mode.md)             | ❌      | `next`    |
+| T03    | Plan-first Workflow zeigen: erst Plan, dann Umsetzung, dann kurze Verifikation        | `03`    | [Section 03](sections/03/section.md) | [Plan Mode](https://cursor.com/docs/agent/plan-mode.md), [Prompting](https://cursor.com/docs/agent/prompting.md)                                                                            | ❌      | `next`    |
+| T04    | Kontext & Rules verständlich machen (`@`-Mentions, Indexing, Semantic Search)         | `04`    | [Section 04](sections/04/section.md) | [Rules](https://cursor.com/docs/rules.md), [Context](https://cursor.com/help/customization/context.md), [Indexing](https://cursor.com/help/customization/indexing.md)                       | ❌      | `next`    |
+| T05    | Skills, Commands, Subagents und MCP pragmatisch zeigen (kein tiefer MCP-Dev)          | `05`    | [Section 05](sections/05/section.md) | [Skills](https://cursor.com/docs/skills.md), [Subagents](https://cursor.com/docs/subagents.md), [MCP](https://cursor.com/docs/mcp.md), [Hooks](https://cursor.com/docs/hooks.md)            | ❌      | `next`    |
+| T06    | Safety-Block: Sandbox, Review/Diff, Guardrails, Risikoeinordnung                      | `06`    | [Section 06](sections/06/section.md) | [Agent Security](https://cursor.com/docs/agent/security.md), [Terminal Tool](https://cursor.com/docs/agent/tools/terminal.md)                                                               | ❌      | `next`    |
+| T07    | End-to-End Live Case: realer Agent-Loop mit Search/Browser/Edits                      | `07`    | [Section 07](sections/07/section.md) | [Agent Prompting](https://cursor.com/docs/agent/prompting.md), [Search Tool](https://cursor.com/docs/agent/tools/search.md), [Browser Tool](https://cursor.com/docs/agent/tools/browser.md) | ❌      | `next`    |
+| T08    | Abschluss: Adoption, Team-Setup, nächste Schritte und Q&A-Übergabe                    | `08`    | [Section 08](sections/08/section.md) | [Rules](https://cursor.com/docs/rules.md), [Skills](https://cursor.com/docs/skills.md), [Teams Setup](https://cursor.com/help/account-and-billing/teams-setup.md)                           | ❌      | `next`    |
+
+
+## Iterations-Update (immer gleich)
+
+1. `output/Workshop.md` zuerst aktualisieren (Version, Stand, Section-Status).
+2. Betroffene Section-Datei(en) in `output/sections/*/section.md` schärfen.
+3. Status in dieser Roadmap synchronisieren (`✅/❌`, `done/next`).
+4. Kurz in `output/Changelog.md` dokumentieren.
+

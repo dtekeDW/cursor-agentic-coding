@@ -1,8 +1,8 @@
 # Cursor Agentic Coding in Practice - Workshop Backbone
 
 ## Meta
-- Version: `v0.4.11`
-- Stand: `2026-03-17 11:27 CET`
+- Version: `v0.4.17`
+- Stand: `2026-03-17 12:24 CET`
 - Speaker: `Dogan Teke`, `Miguel Franken`
 - Zielgruppe: Entwickler:innen, die bisher primär Chat-Prompting nutzen
 - Dauer: `48 Min` Talk + `10 Min` Q&A
@@ -13,7 +13,7 @@
 | ID | Titel | Min | Presenter | Kern-Demo | Status | Datei |
 | --- | --- | --- | --- | --- | --- | --- |
 | 01 | Einstieg und Zielbild | 5 | Dogan | nein | ready-for-presentation | [Section 01](sections/01/section.md) |
-| 02 | Modes und Agentischer Loop | 6 | Miguel | nein | ready-for-content | [Section 02](sections/02/section.md) |
+| 02 | Modes und Agentischer Loop | 6 | Miguel | nein | ready-for-presentation | [Section 02](sections/02/section.md) |
 | 03 | Plan-First in der Praxis | 8 | Dogan | ja | ready-for-demo | [Section 03](sections/03/section.md) |
 | 04 | Kontext und Rules | 6 | Miguel | nein | ready-for-content | [Section 04](sections/04/section.md) |
 | 05 | Skills, Commands, Sub-Agents | 8 | Dogan | ja | ready-for-demo | [Section 05](sections/05/section.md) |
@@ -43,9 +43,10 @@ Q&A: `10 Min`
 2. Bei jeder Iteration `Version` und `Stand` aktualisieren.
 3. Jede Section muss Vor-/Rücklinks enthalten (`Workshop`, `Prev`, `Next`).
 4. Jede Section nutzt den gleichen Kopf-Contract: `ID`, `Owner`, `Zeit`, `Status`.
-5. Änderungen immer kurz in [changelog.md](changelog.md) eintragen.
+5. Änderungen immer kurz in [Changelog.md](Changelog.md) eintragen.
 
 ## Navigationsindex
+- [Roadmap](00-roadmap.md)
 - [Section 01](sections/01/section.md)
 - [Section 02](sections/02/section.md)
 - [Section 03](sections/03/section.md)
@@ -54,4 +55,4 @@ Q&A: `10 Min`
 - [Section 06](sections/06/section.md)
 - [Section 07](sections/07/section.md)
 - [Section 08](sections/08/section.md)
-- [Changelog](changelog.md)
+- [Changelog](Changelog.md)

@@ -6,3 +6,11 @@
 ### - Docs for LLM Research: [Cursor LLM TXT](https://cursor.com/llms.txt)
 
 ## Workshop Agenda
+
+## Working Pattern
+- `input/` = Brainstorm, Constraints, Quellen (nicht-iterative Inputs)
+- `output/` = iterative Arbeitsartefakte
+  - `output/Workshop.md` (Master-Backbone)
+  - `output/00-roadmap.md` (Ticket-/Status-Roadmap)
+  - `output/sections/*/section.md` (Inhalte pro Section)
+  - `output/Changelog.md` (Änderungshistorie)
