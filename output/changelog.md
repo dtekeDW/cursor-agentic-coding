@@ -1,6 +1,8 @@
 # Changelog
 
 ## 2026-03-17
+- `v0.4.18` - `output/sections/02/section.md`, `output/Workshop.md` - Section 02 auf Dogan synchronisiert (`Owner` + `Presenter`).
+- `v0.4.18` - `output/00-roadmap.md` - Ticket `T02` auf `✅` und `done` gesetzt (Section 02 ist `ready-for-presentation`).
 - `v0.4.17` - `output/sections/02/section.md` - Plan-Mode-Inhalt ergänzt: To-dos im Plan erstellen/bearbeiten/aktualisieren sowie optionales Aufteilen in weitere Agents (z. B. Frontend/Backend) als eigener Arbeitsstrang.
 - `v0.4.17` - `output/Workshop.md` - Version/Stand für diese Iteration aktualisiert.
 - `v0.4.16` - `output/sections/02/section.md` - Medienformatierung verbessert: zentralen Mode-Medienblock entfernt und GIF-/Bild-Links direkt unter die passenden Bullet-Points in "Beispiele in der Praxis" verschoben (`Ask`, `Agent`, `Plan`, `Debug`).

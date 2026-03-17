@@ -4,7 +4,7 @@
 | Feld       | Wert                     |
 | ---------- | ------------------------ |
 | Section-ID | `02`                     |
-| Owner      | `Miguel`                 |
+| Owner      | `Dogan`                  |
 | Zeit       | `6 Min`                  |
 | Status     | `ready-for-presentation` |
 | Kern-Demo  | `nein`                   |
