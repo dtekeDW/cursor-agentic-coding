@@ -3,7 +3,7 @@
 | Feld | Wert |
 | --- | --- |
 | Section-ID | `03` |
-| Owner | `Dogan` |
+| Owner | `Miguel` |
 | Zeit | `8 Min` |
 | Status | `ready-for-demo` |
 | Kern-Demo | `ja` |
