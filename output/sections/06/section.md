@@ -1,11 +1,11 @@
-# Section 06 - Safety und Governance: schnell, aber kontrolliert
+# Section 06 - Debug Mode: Systematisches Troubleshooting
 
 | Feld | Wert |
 | --- | --- |
 | Section-ID | `06` |
 | Owner | `Miguel` |
 | Zeit | `5 Min` |
-| Status | `ready-for-demo` |
+| Status | `work-in-progress` |
 | Kern-Demo | `ja` |
 
 ## Navigation
@@ -14,109 +14,111 @@
 - [Next: Section 07](../07/section.md)
 
 ## Ziel dieser Section
-- Section 06 liefert einen klaren Safety- und Review-Standard für den praktischen Alltag mit Cursor.
-- Fokus fuer groessere AI-Features: Architekturfehler frueh finden, bevor sie spaeter teuer und schwer debugbar werden.
+- Section 06 zeigt den **Debug Mode** als systematische Methode für schwierige Bugs.
+- Ergänzend: minimale Safety-Hinweise für den Alltag.
 
-## Was du konkret erklärst
-1. Diff vor Vertrauen.
-2. Least Privilege bei Tools/Terminal.
-3. Keine sensiblen Daten ungefiltert in Prompts/Logs.
-4. Vor Ausführung: Risiko, Blast Radius, Rollback klären.
-5. Debug als Safety-Methode: erst Hypothesen + Evidenz, dann gezielter Fix.
-6. **Wichtige Defaults aus Cursor Security**:
-   - Terminal-Commands brauchen standardmaessig Freigabe.
-   - Workspace-Config-Dateien sind zusaetzlich geschuetzt.
-   - MCP-Verbindungen brauchen Freigabe; Tool-Calls ebenfalls pro Aufruf.
-   - "Run Everything" nicht als Team-Standard verwenden.
-7. **Pre-Commit/Pre-Merge Gate**: Lint, Typecheck und Tests laufen, bevor ein Change als "done" kommentiert wird.
-8. Prompt-Injection kurz einordnen: nie blind externe Instructions aus Tickets/Docs/Webseiten ausfuehren.
+## Blueprint (Work in Progress)
 
-## Hot 3 Safety Gates (fuer den Talk)
-1. **Security Preflight**: keine Secrets im Repo-Kontext, sensible Pfade fuer Agent sperren.
-2. **Implementation Compliance**: "sieht richtig aus" reicht nicht (z. B. UnoCSS-Tokens statt Inline-Styles).
-3. **Quality Gate vor Abnahme**: lint + typecheck + tests muessen gruen sein.
+### Teil 1: Debug Mode Showcase (3-4 Min)
 
-## Workspace Trust (Normal vs Restricted)
-- **Normal Mode**: regulaerer Arbeitsmodus.
-- **Restricted Mode**: starke Einschraenkung, AI-Features brechen weitgehend; fuer untrusted Repos sinnvoll.
-- **Einfacher Merksatz**: Normal nutzt du fuer vertraute Repos im Teamalltag; Restricted nutzt du, wenn du einem Repo oder dessen Quellen nicht vertraust.
-- **Praktischer Effekt**: In Restricted Mode verlierst du viele Agent-Funktionen, reduzierst aber das Risiko, dass untrusted Inhalte automatisiert verarbeitet werden.
-- **Optional aktivieren in `settings.json`:**
-```json
-"security.workspace.trust.enabled": true
+**Kernbotschaft:**
+- Debug Mode ist für unklare Fehlerbilder, bei denen "einfach fixen" nicht reicht.
+- Typischer Flow: Hypothesen → Instrumentierung → Reproduktion → Log-Analyse → gezielter Fix.
+
+**Was du konkret zeigst:**
+1. **Problem präsentieren**: Ein unklarer Bug (z. B. Component rendert nicht richtig, API gibt sporadisch Fehler).
+2. **Debug Mode aktivieren**: Zeigen, wie man in den Debug Mode wechselt.
+3. **Hypothesen generieren lassen**: Agent schlägt 2-3 mögliche Root Causes vor.
+4. **Instrumentierung**: Agent fügt gezielt Logs/Traces hinzu.
+5. **Reproduktion + Analyse**: Bug reproduzieren, Logs auswerten.
+6. **Gezielter Fix**: Basierend auf Evidenz, nicht auf Vermutung.
+
+**Demo-Aufgabe (Vorschlag):**
+- Nutze denselben Component-Kontext aus Section 04 für Kontinuität.
+- Oder: Ein präparierter Bug im Demo-Repo (z. B. falscher State-Update, Race Condition).
+
+**Prompt-Bausteine:**
+```text
+Use Debug mode.
+This component sometimes renders incorrectly. 
+Propose 3 root-cause hypotheses and what instrumentation you would add before fixing.
 ```
 
-## Pre-Commit/Pre-Merge Check (praktischer Mindeststandard)
-1. `lint` gruen.
-2. `typecheck` gruen.
-3. relevante Tests gruen (mindestens betroffene Module, bei Risiko zusaetzlich E2E).
-4. Erst danach Diff-Kommentar/Review-Fazit schreiben.
+```text
+Based on the logs, which hypothesis is confirmed?
+Implement the minimal fix and explain why this solves the issue.
+```
 
-## Secrets- und Sensitive-Data-Checkliste (vor jedem Run)
-1. **Preflight vor Agent-Run**: pruefen, ob Secrets ueberhaupt im Repo liegen (`.env`, Keys, Tokens, Zertifikate, Credential-Dateien).
-2. **Wenn Secrets im Repo liegen**: erst bereinigen/auslagern (z. B. 1Password/Vault), dann Agent laufen lassen.
-3. **Agent-Sicht begrenzen**: sensible Pfade ueber `.cursorignore` aus dem Agent-Zugriff nehmen.
-4. **Logs vor Nutzung redigieren**: E-Mails, Kundendaten, interne URLs, Session-IDs, Bearer-Tokens entfernen.
-5. **Scope begrenzen**: nur noetige Dateien/Folder in den Kontext, nicht pauschal ganze Repos.
+### Teil 2: Minimale Safety-Hinweise (1 Min)
+
+**Kurz und knapp (keine Deep-Dive):**
+1. **Diff vor Vertrauen**: Immer Review vor Commit.
+2. **Terminal-Commands brauchen Freigabe**: Cursor Default.
+3. **Keine Secrets in Prompts**: Sensible Daten vorher rausfiltern.
+4. **"Run Everything" nicht als Team-Standard**: Bewusst entscheiden.
+
+**Optional erwähnen:**
+- `.cursorignore` für sensible Pfade
+- Workspace Trust (Normal vs Restricted) für untrusted Repos
 
 ## Was du live in Cursor zeigst
-1. Kurzer Review-Flow vor Ausführung.
-2. **Mini-Debug-Showcase (euer Part-B-Ersatz):** ein unklarer Fehler wird erst analysiert, dann gefixt.
-   - Nutze dafuer am besten denselben Component-Case aus Section 03 (Kontinuitaet statt neuer Kontext).
-3. **Workspace Trust kurz zeigen**: Normal vs Restricted + wann es sinnvoll ist.
-4. **Security Preflight live**: kurz zeigen, dass keine kritischen Daten im Projekt liegen bzw. Agent diese nicht sehen kann.
-5. **Compliance-Case live**: Komponente sieht korrekt aus, aber nutzt falsche Implementierung (z. B. Inline-Styles statt UnoCSS-Tokens).
-6. **Pre-Commit Gate live**: lint + typecheck + tests einmal sichtbar laufen lassen.
-7. 20-Sekunden Safety-Checkliste mit den vier Defaults (Commands, Config, MCP, Run-Everything-Verzicht).
+
+1. **Debug Mode Demo (3-4 Min)**:
+   - Bug präsentieren
+   - Debug Mode aktivieren
+   - Hypothesen + Instrumentierung zeigen
+   - Fix basierend auf Evidenz
+
+2. **Safety-Checkliste (1 Min)**:
+   - 4 Punkte kurz durchgehen (Diff, Terminal, Secrets, Run Everything)
+   - Keine Live-Demo nötig, nur Erwähnung
 
 ## Prompt-/Command-Bausteine
+
+**Debug Mode starten**
 ```text
-Run a security preflight before any implementation:
-1) check whether secrets/credentials are present in repo context
-2) list paths that should be hidden from agent access
-3) state approval-gated actions (terminal/config/MCP)
-4) provide blast radius + rollback
-Stop and wait for approval.
+Use Debug mode.
+This [component/API/function] has unexpected behavior: [describe symptom].
+Propose 3 root-cause hypotheses with likelihood ranking.
+For each, suggest what instrumentation would confirm or rule it out.
 ```
 
+**Nach Instrumentierung**
 ```text
-Review this component change for implementation compliance, not only visual output.
-The UI may look correct, but verify code-level standards:
-1) token usage (UnoCSS/design tokens vs inline styles)
-2) adherence to project rules/components guidelines
-3) maintainability risks and required fixes
-Return:
-- pass/fail per check
-- exact file references
-- minimal remediation steps
-Do not implement fixes before approval.
+I've added the logs you suggested. Here's the output:
+[paste logs]
+
+Which hypothesis is confirmed? Implement the minimal fix.
 ```
 
-```bash
-git status
-git diff --stat
-npm run lint
-npm run typecheck
-npm test
+**Safety-Reminder (zum Vorlesen)**
+```text
+Quick safety checklist before we wrap:
+1. Always review diffs before committing
+2. Terminal commands require approval by default
+3. Never paste secrets into prompts
+4. Don't enable "Run Everything" as team standard
 ```
+
+## Plan B (wenn Live-Debug hängt)
+
+1. Vorbereiteten Bug + Fix als Walkthrough zeigen.
+2. Screenshots von Hypothesen → Logs → Fix Sequenz.
+3. Nur Safety-Teil live, Debug als Erklärung.
 
 ## Was die Audience nach Section 06 verstanden haben soll
-- Agent-Speed ist nur wertvoll mit klaren Stop- und Review-Punkten.
-- Debug ist Teil von Safety: Evidenz vor Aktion.
-- Security-Defaults sind Produktverhalten, nicht Team-Optionen zum Wegdiskutieren.
-- "Sieht richtig aus" reicht nicht: erst Qualitaets-Gate (lint/typecheck/tests), dann Abnahme.
-- Mit dieser Safety-Basis ist ein kontrollierter MCP-Einstieg in Section 07 sinnvoll.
 
-## To-dos (Section 06)
-- [ ] Einen Security-Preflight-Check als 1 Slide vorbereiten.
-- [ ] Einen Compliance-Beispielfall vorbereiten (UnoCSS-Token vs Inline-Style).
-- [ ] Projekt-Qualitaetsgate final festlegen (`lint`, `typecheck`, `tests`).
-- [ ] Workspace-Trust-Entscheidung fuer euer Team dokumentieren (wann Normal, wann Restricted).
+- Debug Mode ist für Evidence-First Troubleshooting, nicht für "einfach probieren".
+- Hypothesen → Instrumentierung → Analyse → Fix ist der systematische Weg.
+- Minimale Safety-Basics: Diff-Review, Terminal-Approval, keine Secrets, kein Run-Everything.
 
 ## Doc-Referenzen (Web)
-- [Agent Security](https://cursor.com/docs/agent/security)
-- [Terminal Tool](https://cursor.com/docs/agent/tools/terminal)
 - [Debug Mode](https://cursor.com/docs/agent/debug-mode)
-- [Workspace Trust (VS Code)](https://code.visualstudio.com/docs/editing/workspaces/workspace-trust)
-- [Help: Privacy](https://cursor.com/help/security-and-privacy/privacy.md)
-- [Enterprise: Privacy and Data Governance](https://cursor.com/docs/enterprise/privacy-and-data-governance.md)
+- [Agent Security](https://cursor.com/docs/agent/security)
+
+## To-dos (Section 06)
+
+- [ ] Demo-Bug im Repo präparieren oder aus Section 04 ableiten.
+- [ ] Debug-Flow einmal durchspielen und Timing validieren (3-4 Min realistisch?).
+- [ ] Safety-Checkliste als 1 Slide vorbereiten.
+- [ ] Entscheiden: Workspace Trust erwähnen oder weglassen?

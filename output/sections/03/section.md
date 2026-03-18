@@ -1,12 +1,12 @@
-# Section 03 - Plan-First: Von Idee zu sauberem Umsetzungsplan
+# Section 03 - Kontext richtig steuern (Rules, Context, Indexing)
 
 | Feld | Wert |
 | --- | --- |
 | Section-ID | `03` |
 | Owner | `Miguel` |
-| Zeit | `7 Min` |
-| Status | `ready-for-demo` |
-| Kern-Demo | `ja` |
+| Zeit | `6 Min` |
+| Status | `ready-for-content` |
+| Kern-Demo | `nein` |
 
 ## Navigation
 - [Workshop Master](../../../Workshop.md)
@@ -14,75 +14,78 @@
 - [Next: Section 04](../04/section.md)
 
 ## Ziel dieser Section
-- Section 03 zeigt praktisch, wie aus einer Anforderung ein sauberer Plan mit kleinen Phasen entsteht.
-- Diese Section ist der bewusste Execution-Teil nach der Mode-Entscheidung aus Section 02.
+- Section 03 zeigt, wie **Rules**, **Context** und **Indexing** zusammen die Antwortqualität steuern.
+- Zusätzlich setzt du den Übergang zu gutem **Prompting** (ohne schon tief in Skills/Subagents aus Section 05 zu gehen).
 
-## Beispielprojekt für diese Section
-- **Repository:** `ms_frontend` (Nuxt + Storybook + `packages/ui`).
-- **Guard Rails:** kurz `.cursor/rules` und ggf. 1 Skill zeigen.
-- **Hinweis:** Debug-Showcase wurde aus Timebox-Gründen nach Section 06 verschoben.
+## Kernbotschaft (in 60 Sekunden)
+1. Rules geben dauerhaftes Verhalten vor.
+2. Context bestimmt, worauf das Modell konkret schaut.
+3. Indexing entscheidet, was im Projekt auffindbar ist.
+4. Prompting ist der Hebel, um das alles gezielt zu aktivieren.
 
-## Was du konkret erklärst
-1. Plan-First bedeutet: keine Umsetzung ohne Optionen und Freigabe.
-2. Jede Option braucht: betroffene Dateien, Risiko, Validation-Check.
-3. Eine gute Entscheidung ist klein, risikoarm und schnell prüfbar.
-4. Ergebnis ist ein freigegebener 3-Phasen-Plan statt einer langen Wunschliste.
+## Rule-Typen auf einen Blick (was macht was?)
+1. **Project Rules (`.cursor/rules`)**: versioniert im Repo, gut fuer projektweite Standards und file-scoped Regeln.
+2. **User Rules**: persoenliche globale Praeferenzen, gelten projektuebergreifend fuer deinen Account.
+3. **Team Rules**: zentral im Team gesteuert, optional enforcebar fuer alle Teammitglieder.
+4. **AGENTS.md**: einfache Markdown-Variante fuer Agent-Instruktionen, schnell und leicht lesbar.
 
-## Was du live in Cursor zeigst (Kern-Demo)
-1. **Beispielrepo öffnen:** ms_frontend öffnen; kurz README und `.cursor/rules` (ggf. eine Skill) zeigen, damit die Guard Rails sichtbar sind.
-2. **Demo-Aufgabe:** optionalen sekundären CTA auf der Featured Reservation Card ergänzen.
-3. Ask-Mode: 2-3 Optionen erzeugen, 1 Option auswählen.
-4. Plan-Mode: gewählte Option in 3 Phasen brechen.
-5. Agent-Mode: genau **eine** freigegebene Phase umsetzen, danach Diff + kurzer Check.
-6. Übergang: „Debug-Vorgehen vertiefen wir in Section 06.“
-
-## Praktische Demo-Beispiele (falls Aufgabe wechseln soll)
-1. Einen kleinen API-Response-Text erweitern (ohne Architekturumbau).
-2. Einen optionalen UI-Prop mit Storybook-Variante ergänzen.
-3. Eine bestehende Validierungsregel minimal erweitern und Ergebnis prüfen.
-
-## Prompt-/Command-Bausteine (zum Vorlesen oder Kopieren)
-
-**Demo-Kontext**
+## Hierarchie (visuell fuer den Talk)
 ```text
-Example repo: <path-to-ms_frontend>
-Task: Add an optional secondary CTA to the featured ReservationCard (e.g. "Modify booking" link) shown when a new optional prop is set.
+                AGENTS.md
+         (repo guidance, simple format)
+                       |
+                       v
+Team Rules  ------>  Project Rules  ------>  User Rules
+ (org-level)          (repo-level)          (personal)
+
+Konfliktregel (Rules): Team > Project > User
 ```
 
-**Ask-Mode**
-```text
-We're in the ms_frontend repo (Nuxt + Storybook + packages/ui with tokens). Use Ask mode only — no edits.
+## Was aktuell oft noch fehlt (und was du ergänzen solltest)
+1. **Rules konkret machen**: kurz die Typen nennen (Project, User, Team, AGENTS.md) und wofür sie gedacht sind.
+2. **Context aktiv steuern**: @-Mentions für Datei/Ordner/Symbol statt "ganzen Repo-Kontext".
+3. **Indexing sichtbar machen**: kurz zeigen, dass ohne sauberes Indexing gute Prompts trotzdem limitiert sind.
+4. **Prompting-Brücke bauen**: von "Kontext geben" zu "präzise Arbeitsanweisung geben".
+5. **Projektbezug zeigen**: 1-2 echte Rule-Beispiele aus eurem Setup nennen (z. B. UnoCSS-Konventionen, API-Guidelines, Component-Rule/Template), damit der Effekt greifbar wird.
 
-Task: Add an optional secondary CTA to the featured ReservationCard (e.g. "Modify booking" link) shown when a new optional prop is set.
+## Was du live in Cursor zeigst (6-Minuten-Ablauf)
+1. **UI-Anchor (Screenshot)**: "Rules, Skills, Subagents" öffnen und klar sagen: Fokus jetzt nur auf **Rules**.
+  - Medium: [rules.png](../../../input/ui-controls/rules.png)
+2. **Rule-Typen kurz benennen**: Project vs User vs Team vs AGENTS.md (je 1 Satz, kein Deep-Dive).
+3. **Unscharfer Prompt**: gleiche Aufgabe ohne gezielte Context-Auswahl.
+4. **Präziser Prompt mit Context**: dieselbe Aufgabe mit `@Datei` oder `@Ordner`.
+5. **Rule-Hinweis**: kurz zeigen, wo Rules liegen/konfiguriert werden.
+6. **Vergleich**: Qualität, Präzision und Rückfragen im Output gegenüberstellen.
+7. **Bridge zu Section 04**: "Mit diesem Fundament aus Rules und Context sind wir bereit für einen vollständigen Plan-First Workflow."
 
-Give me 3 implementation options. For each: files/components affected, risk level, easiest validation check.
-Recommend one option and wait for approval.
-```
-
-**Plan-Mode**
-```text
-Switch to Plan mode. We're in the ms_frontend repo; follow .cursor rules and existing patterns.
-
-Break the approved option into 3 small phases. For each phase: goal, file(s) to change, success criteria, rollback note. No code — plan only.
-```
-
-**Implementierung**
-```text
-Switch to Agent mode. Implement only Phase 1.
-After implementation, stop and show:
-- changed files
-- short diff summary
-- validation result
-```
-
-## Plan B (wenn Live-Output schwach ist)
-- Vorgefertigten Beispiel-Plan zeigen und gemeinsam gegenprüfen.
+## Empfohlener Demo-Stil (was mehr Sinn macht)
+1. **Nicht nur Settings-Tour**: reine Konfiguration erklärt "wo", aber nicht den messbaren Effekt.
+2. **A/B ist stärker**: ein kurzer Chat-Vergleich mit identischer Aufgabe zeigt den Nutzen sofort.
+3. **Empfohlene Reihenfolge**:
+   - 60s UI/Rules-Konfiguration erklären,
+   - 2-3 Min Prompt ohne Rule/AGENTS.md,
+   - 2-3 Min gleicher Prompt mit Rule/AGENTS.md + gezieltem Context.
+4. **Klarer Lernpunkt**: Rules/AGENTS.md sind kein Doku-Detail, sondern wirken direkt auf Antwortqualität und Konsistenz.
 
 ## Was die Audience nach Section 03 verstanden haben soll
-- Gute Agent-Arbeit beginnt mit Optionen, Entscheidung und kleinem Plan.
-- Plan-First reduziert Rework, weil Scope, Risiko und Checks vorab klar sind.
+- Context ist ein aktiver Steuerhebel und kein Nebenprodukt.
+- Rules stabilisieren Qualität teamweit.
+- Die Rule-Typen (Project/User/Team/AGENTS.md) haben unterschiedliche Rollen im Alltag.
+- Section 04 setzt dieses Wissen in einem vollständigen Plan-First Workflow um.
 
 ## Doc-Referenzen (Web)
-- [Plan Mode](https://cursor.com/docs/agent/plan-mode)
-- [Agent Prompting](https://cursor.com/docs/agent/prompting)
-- [Agent Overview](https://cursor.com/docs/agent/overview)
+- [Rules](https://cursor.com/docs/rules)
+- [Prompting Agents](https://cursor.com/docs/agent/prompting)
+
+## Fokus-Set fuer 6 Minuten (fuer euch zu zweit)
+1. **Rules-Typen in 1 Minute**: Project Rules, User Rules, Team Rules, AGENTS.md (nur Zweck, keine Tiefe).
+2. **A/B-Chat in 3-4 Minuten**: gleicher Prompt einmal ohne und einmal mit Rule/AGENTS.md + `@`-Context.
+3. **Prompting in 1 Minute**: `@`-Mentions als schnellster Qualitaetshebel (Datei/Ordner/Symbol).
+4. **Takeaway in 30 Sekunden**: "Nicht mehr Prompt-Text, sondern besserer Kontext + klare Rules."
+
+## To-dos (Section 03)
+- [ ] Screenshot fuer **Agent Configuration** einbauen (Settings-Ansicht als Medium-Link).
+- [ ] Screenshot fuer **Rules Configuration** einbauen (vorhanden: `rules.png`, final platzieren/validieren).
+- [ ] Ein A/B-Beispielprompt final festlegen (ohne Rule vs. mit Rule/AGENTS.md).
+- [ ] 1-Satz-Sprechtext fuer Rule-Precedence vorbereiten: Team -> Project -> User.
+- [ ] Sprecheraufteilung zu zweit festlegen: Person A = UI/Rules (2 Min), Person B = A/B-Chat + Takeaway (4 Min).

@@ -71,14 +71,14 @@
 1. **Szenario-Raster zeigen (2-3 kurze Aufgaben):** Audience entscheidet zuerst den Modus, dann loest ihr auf.
 2. **Ask vs Agent** an derselben Frage einordnen (was darf passieren, was nicht).
 3. **Plan/Debug** als Spezialfaelle einordnen (wann Pflicht, wann optional).
-4. **Uebergang zu Section 03:** "Jetzt nehmen wir genau einen Fall und fuehren ihn Plan-First wirklich aus."
+4. **Uebergang zu Section 03:** "Bevor wir in die Praxis gehen, schauen wir uns an, wie Rules und Context die Antwortqualität steuern."
 
 ## Was die Audience nach Section 02 verstanden haben soll
 
 - Modes sind ein Steuerungshebel für Qualität, Tempo und Risiko.
 - `Plan` ist ideal für komplexe Änderungen, `Debug` für unklare Fehlerbilder.
 - Ein bewusster Mode-Wechsel spart Nacharbeit und macht Agent-Workflows stabiler.
-- Die Umsetzung passiert erst nach Mode-Entscheidung (Section 03).
+- Die Umsetzung passiert erst nach Mode-Entscheidung (Section 04).
 
 ## Prompt-/Command-Bausteine (zum Vorlesen oder Kopieren)
 

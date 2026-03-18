@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-03-18
+- `v0.4.26` - Section 04: Subagent-Delegation in Plan Mode ergänzt (Todos an Subagents delegieren für Frontend/Backend-Parallelarbeit).
+- `v0.4.26` - Section 05: Fokus auf Skills reduziert (Subagents entfernt); konkrete Demo-Skills: Changeset-Skill und Jira-Skill; Zeit auf 7 Min angepasst.
+- `v0.4.26` - Section 06: Umgebaut zu "Debug Mode und Safety" (work-in-progress); Debug-Showcase als Hauptinhalt, Safety auf minimale Hinweise reduziert.
+- `v0.4.26` - Workshop.md und Roadmap auf neue Struktur synchronisiert.
+- `v0.4.25` - Section 03 und Section 04 getauscht: Section 03 ist jetzt "Kontext und Rules" (foundational), Section 04 ist jetzt "Plan-First in der Praxis" (Kern-Demo); Workshop.md Agenda und Docs-Mapping angepasst; Roadmap T03/T04 synchronisiert; Section 02 Übergangstext aktualisiert.
+
 ## 2026-03-17
 - `v0.4.24` - `Workshop.md` - Presenter in der Agenda auf Section-Owner synchronisiert (ab Section 03 auf Miguel); Version/Stand aktualisiert.
 - `v0.4.23` - Reorg abgeschlossen: `Workshop.md` nach Root verschoben, `output/changelog.md` nach `output/Changelog.md` normalisiert, Workflow-/Brainstorm-Dateien nach `input/workflow/*` und `input/brainstorm/*` verschoben, `models.gif` und `queue.gif` nach `input/ui-controls/*` verschoben.
