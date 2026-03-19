@@ -13,93 +13,93 @@
 - [Prev: Section 05](../05/section.md)
 - [Next: Section 07](../07/section.md)
 
-## Ziel dieser Section
-- Zwei **kleine MCP-Beispiele**: (1) **Google Chrome** über **Chrome DevTools MCP**, (2) **Figma MCP** mit einer echten Design-System-Komponente.
-- **Kernbotschaft Chrome:** Chrome läuft im MCP-Kontext — der Agent hat **direkten Zugriff** auf das, was im Browser passiert. Ihr müsst **nichts** aus DevTools kopieren; die KI bekommt die **exakten Daten**, die sie braucht, mit **wenig Rauschen** und **klarem Kontext**.
-- **Kernbotschaft Figma:** Gleiches Prinzip für Design — Specs aus Figma statt Screenshot-Interpretation; optional **Inline-HTML** für die Komponente; **Prototyping in Figma** als Ergänzung, wenn ihr im Design iteriert.
+## Hauptquelle (MCP)
 
-## Inputs für diese Section (Repo)
+**[Model Context Protocol (MCP) — Cursor Docs](https://cursor.com/docs/mcp)**
 
-| Ressource | Pfad |
-| --------- | ---- |
-| Übersicht | [input/sections/06/README.md](../../../input/sections/06/README.md) |
-| Chrome MCP (A11y vs INP, Prompts) | [input/sections/06/chrome-devtools-mcp.md](../../../input/sections/06/chrome-devtools-mcp.md) |
-| Figma MCP (Link, Storyline, Prompts) | [input/sections/06/figma-mcp.md](../../../input/sections/06/figma-mcp.md) |
-| Plan B A11y-Beispiel | [a11y-localhost-3000-de.md](../../a11y-localhost-3000-de.md) |
-| Plan B INP-Beispiel | [inp-localhost-3000-de.md](../../inp-localhost-3000-de.md) |
+Diese Section fasst MCP **schematisch** nach dieser Doku zusammen. **Details und Ablauf der zwei Demos** stehen **nur** in den zwei Dateien unter `input/sections/06/` — dort chronologisch zum Mitgehen während Cursor/Browser.
 
-## Demo-Reihenfolge (empfohlen)
+---
 
-1. **Chrome DevTools MCP** (ca. 2 min)  
-2. **Figma MCP** (ca. 1:30 min)
+## Zwei Demo-Runbooks (Input)
 
-## Was du konkret erklärst
+| Demo | Datei | Inhalt |
+| ---- | ----- | ------ |
+| **1 — Chrome DevTools MCP** | [01-chrome-devtools-mcp-demo.md](../../../input/sections/06/01-chrome-devtools-mcp-demo.md) | Chronologie + **Anforderungs-Template** (Accessibility **oder** INP), Prompts, Link zum [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) |
+| **2 — Figma MCP** | [02-figma-mcp-demo.md](../../../input/sections/06/02-figma-mcp-demo.md) | Chronologie + Anforderungs-Template, Figma-Link, Prompts |
 
-1. **MCP:** Verbindet den Agent mit externen Tools — hier Browser und Figma.
-2. **Chrome im MCP-Kontext:** Voller Zugriff auf das, was Chrome/DevTools liefern (Audits, DOM, Automation) — **kein Copy-Paste**; präziser, strukturierter Kontext für A11y **oder** INP/Interaktion (eine Variante pro Talk reicht).
-3. **Figma MCP:** Komponente aus dem **ONE Core Library** Design System; danach zeigen, wie man daraus z. B. **inline HTML** ableitet; **Prototyping in Figma** kurz erwähnen (Design-Iteration bleibt in Figma, Agent nutzt weiterhin den Node/Link).
-4. **Sicherheit:** MCP und Tool-Calls approval-pflichtig; kleine, begrenzte Tasks.
+Im Talk: Section 6 kurz erklären; **live** die jeweilige MD offen und Schritt für Schritt durchgehen, dann im Chat ausführen.
 
-## Figma-Link (Design-System-Komponente)
+---
 
-- [ONE — Core Library (Dev Mode)](https://www.figma.com/design/MqE19YSYeVMGeOi4Oa8wWs/ONE---Core-Library?node-id=1718-8124&m=dev) — `node-id=1718-8124`
+## MCP — kurz nach Cursor Docs
 
-## Was du live in Cursor zeigst (Kern-Demo)
+### Was & warum
 
-1. **Einordnung** (ca. 30 s): Zwei Beispiele — Chrome = Laufzeit/exakte Browser-Daten, Figma = Design-Specs ohne Rauschen.
+| Punkt | Kurz |
+| ----- | ---- |
+| **Was** | [MCP](https://modelcontextprotocol.io/introduction) verbindet Cursor mit **externen Tools und Datenquellen** ([Cursor Docs](https://cursor.com/docs/mcp)). |
+| **Warum** | Statt Kontext immer wieder manuell zu erklären: **direkt** an eure Tools anbinden (Browser, Figma, …). Server in vielen Sprachen möglich (stdout oder HTTP). |
 
-2. **Chrome DevTools MCP** (ca. 2 min):
-   - Chrome über MCP angebunden; Seite z. B. `localhost` oder Staging.
-   - **Entweder** kurzer **Accessibility**-Check (Lighthouse/axe über MCP) **oder** kurzer **INP/Interaktions**-Check — gleiche Story: *„Die KI liest direkt aus Chrome, nicht aus dem Chat-Text.“*
-   - Takeaway: Gezielte Daten, kein manuelles Übertragen.
+### Wie es technisch läuft
 
-3. **Figma MCP** (ca. 1:30 min):
-   - Obigen Link öffnen / dem Agent geben.
-   - Agent holt Kontext (Struktur, Tokens, Specs) über Figma MCP.
-   - Kurz zeigen: **„Mach die Komponente als inline HTML“** (oder minimaler Snippet) — nachvollziehbar aus Figma-Kontext.
-   - Optional: **Prototyping in Figma** — wenn ihr im File prototypisiert, bleibt der Workflow „Design in Figma, Umsetzung mit Agent + MCP“ konsistent.
+MCP-Server stellen Fähigkeiten über das Protokoll bereit. **Transports** (Auszug aus den Docs):
 
-4. **Abschluss:** Welcher MCP-Pilot passt zuerst zu eurem Team — Browser, Figma, beides?
+| Transport | Umgebung | Deployment | Nutzer | Input | Auth |
+| --------- | -------- | ---------- | ------ | ----- | ---- |
+| **stdio** | Lokal | Cursor | Single | Shell command | Manuell |
+| **SSE** | Lokal/Remote | Server | Multiple | SSE-URL | OAuth |
+| **Streamable HTTP** | Lokal/Remote | Server | Multiple | HTTP-URL | OAuth |
 
-## Prompt-/Command-Bausteine
+**Protokoll / Erweiterungen** (Auszug):
 
-**Chrome — A11y (read-only):**
-```text
-Use Chrome DevTools MCP. Bounded accessibility check on [URL].
-Return: top issues with severity, location, one remediation hint each. Analysis only.
-```
+| Feature | Support | Kurz |
+| ------- | ------- | ---- |
+| Tools | ja | Funktionen, die das Modell ausführen kann |
+| Prompts | ja | Vorlagen / Workflows |
+| Resources | ja | Strukturierte Datenquellen |
+| Roots / Elicitation / Apps | ja | siehe [Docs](https://cursor.com/docs/mcp) |
 
-**Chrome — INP / Interaktion (Lab):**
-```text
-Use Chrome DevTools MCP on [URL]. Probe key interactions and summarize latency / INP-relevant findings (lab context). One concrete next debugging step.
-```
+### Installation & Konfiguration (Stichworte)
 
-**Figma — Komponente + inline HTML:**
-```text
-Use Figma MCP with:
-https://www.figma.com/design/MqE19YSYeVMGeOi4Oa8wWs/ONE---Core-Library?node-id=1718-8124&m=dev
+- **Marketplace** / **cursor.directory** — One-Click; OAuth wo nötig.
+- **`mcp.json`:** `command`/`args`/`env` (stdio) oder `url`/`headers`/`auth` (remote, z. B. statisches OAuth für Figma/Linear).
+- **Orte:** `.cursor/mcp.json` (Projekt) · `~/.cursor/mcp.json` (global).
+- **Interpolation:** z. B. `${env:NAME}`, `${workspaceFolder}` — siehe [Docs](https://cursor.com/docs/mcp).
 
-Summarize dev-relevant specs (tokens, spacing, type). Then propose minimal inline HTML that matches this component. Read-only in Figma.
-```
+### Nutzung im Chat
 
-**Allgemein:**
-```text
-Use MCP for one bounded task only: fetch the exact context needed, summarize actionable findings, one next step. Approve writes explicitly.
-```
+- Agent nutzt MCP-Tools unter **Available Tools** wenn passend — auch im **Plan Mode** ([Docs](https://cursor.com/docs/mcp)).
+- **Tool approval** standardmäßig; Auto-run optional (wie Terminal).
+- OAuth-Redirect u. a.: `cursor://anysphere.cursor-mcp/oauth/callback` (in Docs beschrieben).
 
-## Plan B (wenn Live-Demo hakt)
+### Sicherheit (Checkliste aus den Docs)
 
-- Vorbereitete Outputs zeigen: [a11y-localhost-3000-de.md](../../a11y-localhost-3000-de.md) oder [inp-localhost-3000-de.md](../../inp-localhost-3000-de.md).
-- Nur Chrome **oder** nur Figma live; die andere Demo in 2 Sätzen + Link ([figma-mcp.md](../../../input/sections/06/figma-mcp.md)).
+- Quelle vertrauen · Berechtigungen prüfen · API-Keys minimal · bei Kritischem Code reviewen · MCP-Server können externe Dienste und Code für euch ansprechen.
 
-## Was die Audience nach Section 06 verstanden haben soll
+### Praxis-Beispiele (Cursor)
 
-- Chrome über MCP = direkter, präziser Browser-Kontext (A11y oder INP), ohne Copy-Paste.
-- Figma über MCP = Design-System-Specs für echte Umsetzung (z. B. inline HTML); Prototyping in Figma als optionaler Design-Teil.
-- MCP mit kleinem Scope und klaren Prompts — Section 07: Q&A und nächste Schritte.
+- [Web Development guide](https://cursor.com/for/web-development) — Linear, Figma, Browser im Workflow.
+
+---
+
+## Was du in dieser Section sagst (ohne Doppelung zu den Runbooks)
+
+1. **MCP** = externes Tool/Datenquelle an den Agent (siehe Tabellen oben + [cursor.com/docs/mcp](https://cursor.com/docs/mcp)).
+2. **Demo 1:** Ablauf und Anforderungen **nur** aus [01-chrome-devtools-mcp-demo.md](../../../input/sections/06/01-chrome-devtools-mcp-demo.md) — im Chat zeigen, MCP-Tool freigeben, Ergebnis.
+3. **Demo 2:** Ablauf **nur** aus [02-figma-mcp-demo.md](../../../input/sections/06/02-figma-mcp-demo.md).
+4. **Keine** langen INP-/A11y-Erklärungen hier — das steckt im Template der Datei `01` als **Anforderungs-Checkliste**.
+
+## Was die Audience mitnehmen soll
+
+- MCP verbindet Cursor kontrolliert mit externen Systemen (Docs: Transports, Tools, Approval).
+- Zwei konkrete Pfade: **Chrome DevTools MCP** + **Figma MCP** — Ablauf in den zwei Input-MDs.
+- Section 07: Q&A.
 
 ## Doc-Referenzen (Web)
-- [MCP](https://cursor.com/docs/mcp)
-- [Chrome DevTools MCP (GitHub)](https://github.com/ChromeDevTools/chrome-devtools-mcp)
-- [Agent Security](https://cursor.com/docs/agent/security)
-- [Prompting Agents](https://cursor.com/docs/agent/prompting)
+
+1. [MCP (Cursor Docs)](https://cursor.com/docs/mcp)  
+2. [MCP Introduction (modelcontextprotocol.io)](https://modelcontextprotocol.io/introduction)  
+3. [Chrome DevTools MCP (GitHub)](https://github.com/ChromeDevTools/chrome-devtools-mcp)  
+4. [Agent Security](https://cursor.com/docs/agent/security)  
+5. [Web Development (Cursor)](https://cursor.com/for/web-development)

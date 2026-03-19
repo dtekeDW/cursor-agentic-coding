@@ -1,7 +1,8 @@
 # Changelog
 
 ## 2026-03-19
-- Section 06: MCP-Demo geschärft (Chrome DevTools MCP im Kontext — A11y oder INP; Figma MCP mit ONE Core Library Link node-id 1718-8124, Inline-HTML + Prototyping); `input/sections/06/` mit README, chrome-devtools-mcp.md, figma-mcp.md; Verweise auf a11y/inp Beispiel-Outputs.
+- Section 06: `output/sections/06/section.md` auf **schematische** MCP-Zusammenfassung nach [Cursor MCP Docs](https://cursor.com/docs/mcp) (Transports, Features, Config, Chat/Approval, Security); **keine** Doppelung der Live-Demos.
+- `input/sections/06/` nur noch zwei chronologische Runbooks: `01-chrome-devtools-mcp-demo.md` (A11y- oder INP-Template + Prompts), `02-figma-mcp-demo.md` (Figma MCP); alte Dateien (mcp-schema, README, getrennte chrome/figma-Schemata) entfernt.
 
 ## 2026-03-18
 - `v0.4.28` - Section 05: Jira- und Changeset-Skills aus ms_frontend unter `input/sections/05/` eingepackt (planning-jira-ticket-implementation inkl. scripts/get-jira-issue.sh, create-changeset-from-main-diff); Section-Text mit Jira zuerst, dann Changeset, allgemeinem Skill-Block und Links zu den eingepackten Skills; Zeit auf 8 Min, Workshop gesamt 44 Min.
