@@ -3,7 +3,7 @@
 | Feld       | Wert             |
 | ---------- | ---------------- |
 | Section-ID | `05`             |
-| Owner      | `Miguel`         |
+| Owner      | `Dogan & Miguel` |
 | Zeit       | `7 Min`          |
 | Status     | `ready-for-demo` |
 | Kern-Demo  | `ja`             |
@@ -99,7 +99,7 @@ disable-model-invocation: true
    - Zeigen, wie Code-Kontext in Ticket-Beschreibung fließt
 5. **0:30 Takeaway + Bridge**:
    - "Skills standardisieren Team-Workflows und reduzieren Prompt-Varianz."
-   - Übergang zu Section 06 (Debug-Showcase).
+   - Übergang zu Section 06 (MCP Small Demo).
 
 ## Prompt-Bausteine für die Demo
 
