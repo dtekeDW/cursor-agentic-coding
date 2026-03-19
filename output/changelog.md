@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-03-19
+- Section 06: MCP-Demo geschärft (Chrome DevTools MCP im Kontext — A11y oder INP; Figma MCP mit ONE Core Library Link node-id 1718-8124, Inline-HTML + Prototyping); `input/sections/06/` mit README, chrome-devtools-mcp.md, figma-mcp.md; Verweise auf a11y/inp Beispiel-Outputs.
+
 ## 2026-03-18
 - `v0.4.28` - Section 05: Jira- und Changeset-Skills aus ms_frontend unter `input/sections/05/` eingepackt (planning-jira-ticket-implementation inkl. scripts/get-jira-issue.sh, create-changeset-from-main-diff); Section-Text mit Jira zuerst, dann Changeset, allgemeinem Skill-Block und Links zu den eingepackten Skills; Zeit auf 8 Min, Workshop gesamt 44 Min.
 - `v0.4.27` - Workshop auf 7 Sections umgestellt: Section 06 (Debug) entfallen; Section 06 = MCP Small Demo (Dogan), Section 07 = Q&A (Dogan & Miguel); Section 08 als Stub belassen (Verweis auf Section 07).
