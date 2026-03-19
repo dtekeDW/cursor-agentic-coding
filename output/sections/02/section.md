@@ -1,6 +1,5 @@
 # Section 02 - Modes richtig einsetzen (Ask, Plan, Agent, Debug)
 
-
 | Feld       | Wert                     |
 | ---------- | ------------------------ |
 | Section-ID | `02`                     |
@@ -8,7 +7,6 @@
 | Zeit       | `6 Min`                  |
 | Status     | `ready-for-presentation` |
 | Kern-Demo  | `nein`                   |
-
 
 ## Navigation
 
@@ -18,96 +16,89 @@
 
 ## Ziel dieser Section
 
-- Section 02 ist das **Entscheidungs-Framework** fuer Modes: welcher Startmodus passt zu welchem Problem.
-- Keine Umsetzungsdemo in dieser Section; die praktische Execution folgt in Section 03.
+- Section 02 führt die **vier Modi** (Ask, Plan, Agent, Debug) ein und gibt eine **kurze Entscheidungshilfe**: wann welcher Modus.
+- **Bewusst knapp:** Den kompletten Ablauf und die Live-Demo spielen wir in **Section 04** durch. Hier nur das nötige Raster, damit die Audience die Modi einordnen kann.
 
-## Was du konkret erklärst
+## Erklärung & Präsentation (kompakt, an Cursor Docs angelehnt)
 
-### Teil 1: Modus-Überblick und Entscheidungslogik
+**Quellen:** [Agent](https://cursor.com/help/ai-features/agent), [Ask Mode](https://cursor.com/help/ai-features/ask-mode), [Plan Mode](https://cursor.com/docs/agent/plan-mode), [Prompting](https://cursor.com/docs/agent/prompting).
 
-1. `Ask`: Analyse, Verständnis, Optionen und Rückfragen, ohne direkte Dateiänderungen.
-2. `Agent`: direkte Umsetzung mit Tools (lesen, editieren, ausführen).
-3. Grundregel: Nicht mit dem schnellsten, sondern mit dem passendsten Modus starten.
+### Welchen Modus wann?
 
-### Teil 2: Plan und Debug als Spezial-Modi
+| Modus | Wofür am besten | Darf Dateien ändern? |
+| ----- | ----------------- | -------------------- |
+| **Ask** | Code verstehen, Architektur erkunden, Optionen klären | Nein (read-only) |
+| **Agent** | Features bauen, refactoren, Bugs fixen, Tests schreiben | Ja |
+| **Plan** | Komplexe Aufgaben: zuerst Plan prüfen, dann umsetzen | Ja (nach Freigabe des Plans) |
+| **Debug** | Schwierige Bugs, bei denen Laufzeit/Logs nötig sind | Ja |
 
-1. `Plan`: zuerst Anforderungen klären, Kontext sammeln und einen überprüfbaren Plan erzeugen, dann umsetzen.
-  - Typischer Flow: Fragen -> Recherche -> Plan -> Review -> Build.
-  - Im Plan können To-dos explizit erstellt, umsortiert, präzisiert und im Verlauf aktualisiert werden.
-  - Optional kann der Plan in Arbeitsstränge aufgeteilt werden, z. B. zusätzlicher Agent für `frontend` und weiterer Agent für `backend`.
-2. `Debug`: runtime-basiertes Vorgehen für schwierige Bugs statt "blindem Fixen".
-  - Typischer Flow: Hypothesen -> Instrumentierung -> Reproduktion -> Log-Analyse -> gezielter Fix.
+**Faustregel:** Mit dem **passendsten** Modus starten, nicht mit dem schnellsten. Bei Unklarheit oder vielen Dateien: Ask oder Plan. Bei klarer, kleiner Aufgabe: Agent. Bei unklarem Fehlerbild: Debug.
 
-### Teil 3: Workflow-Heuristik im Alltag
+### Die vier Modi in einem Satz
 
-1. Heuristik:
-  - Unsicherheit hoch, Scope groß, mehrere Wege -> `Ask` oder `Plan`.
-  - Task klar und klein -> `Agent`.
-  - Reproduzierbarer, aber unklarer Fehler -> `Debug`.
-2. Mode-Wechsel ist normal:
-  - von `Ask` zu `Plan` für Struktur,
-  - von `Plan` zu `Agent` für Umsetzung,
-  - bei Problemen gezielt in `Debug`.
-3. **Vermeiden:** Großen Refactoring oder unklares Feature direkt in Agent starten – erst Ask/Plan, dann Agent.
+- **Ask:** Read-only. Der Agent beantwortet Fragen, erkundet die Codebase, macht **keine** Änderungen. Gut für „Wie funktioniert X?“ oder „Welche Optionen gibt es?“ ([Ask Mode](https://cursor.com/help/ai-features/ask-mode)).
+- **Agent:** Der Agent sucht, editiert, führt Befehle aus und behebt Fehler. Für die meisten Umsetzungsaufgaben ([Agent](https://cursor.com/help/ai-features/agent)).
+- **Plan:** Zuerst Anforderungen klären, Codebase recherchieren, **Plan erstellen und von euch freigeben**, dann umsetzen. Ideal bei komplexen Features, vielen Dateien oder unklarem Scope ([Plan Mode](https://cursor.com/docs/agent/plan-mode)).
+- **Debug:** Laufzeit- und evidenzbasiert: Hypothesen, Instrumentierung, Reproduktion, dann gezielter Fix. Für Bugs, die sich nicht auf Anhieb erklären lassen.
 
-### Beispiele in der Praxis (nur Entscheidung, keine Umsetzung)
+### Modus wechseln
 
+- **Mode-Picker** im Agent-Panel (Dropdown).
+- **Shift+Tab** zum Durchrotieren der Modi.
+- Jeder Modus hat eigenen Kontext; bei Aufgabenwechsel neuen Chat starten.
 
-| Situation                                | Modus | Kurz                          |
-| ---------------------------------------- | ----- | ----------------------------- |
-| Verstehen, Optionen, keine Änderung      | Ask   | Read-only, Rückfragen         |
-| Task klar und klein, Plan steht          | Agent | Edits + Terminal              |
-| Mehrere Phasen, Risiko, Rollback wichtig | Plan  | Phasen + Checks vor Umsetzung |
-| Unklares Fehlerbild, Laufzeit/Log nötig  | Debug | Evidenz vor Fix               |
+### Kurz: Prompting und Kontext
 
-- **Mode-Karten live vergleichen (ohne Code-Edits):**
-  - Ask/Agent als Gegenueberstellung: [ask.gif](../../../input/modes/ask/ask.gif), [agent.gif](../../../input/modes/agent/agent.gif)
-- **Plan/Debug kurz einordnen:**
-  - Plan-Medien: [plan.gif](../../../input/modes/plan/plan.gif), [todos.gif](../../../input/modes/plan/todos.gif), [plan-final.png](../../../input/modes/plan/plan-final.png)
-  - Debug-Medium: [debug.gif](../../../input/modes/debug/debug.gif)
+- Im Chat mit **@** gezielt Kontext anhängen: Dateien, Ordner, Symbole, Docs ([Prompting](https://cursor.com/docs/agent/prompting)). Wenn unsicher, welche Dateien relevant sind: weglassen, der Agent sucht selbst.
+- **Bilder** per Paste oder Drag & Drop für UI/Debug; **Spracheingabe** per Mikrofon-Icon möglich.
+
+Details zu Kontext und Rules kommen in **Section 03**; den vollständigen Workflow (Ask → Plan → Agent) zeigt **Section 04** live.
+
+## Beispiele (nur Einordnung, keine Umsetzung)
+
+| Situation | Modus | Kurz |
+| --------- | ----- | ---- |
+| Verstehen, Optionen, keine Änderung | Ask | Read-only, Rückfragen |
+| Task klar und klein, Plan steht | Agent | Edits + Terminal |
+| Mehrere Phasen, Risiko, Rollback wichtig | Plan | Erst Plan, dann Umsetzung |
+| Unklares Fehlerbild, Laufzeit/Log nötig | Debug | Evidenz vor Fix |
+
+- **Medien (ohne Code-Edits):** Ask/Agent gegenüberstellen ([ask.gif](../../../input/modes/ask/ask.gif), [agent.gif](../../../input/modes/agent/agent.gif)); Plan/Debug kurz einordnen ([plan.gif](../../../input/modes/plan/plan.gif), [todos.gif](../../../input/modes/plan/todos.gif), [plan-final.png](../../../input/modes/plan/plan-final.png), [debug.gif](../../../input/modes/debug/debug.gif)).
 
 ## Was du live in Cursor zeigst
 
-1. **Szenario-Raster zeigen (2-3 kurze Aufgaben):** Audience entscheidet zuerst den Modus, dann loest ihr auf.
-2. **Ask vs Agent** an derselben Frage einordnen (was darf passieren, was nicht).
-3. **Plan/Debug** als Spezialfaelle einordnen (wann Pflicht, wann optional).
-4. **Uebergang zu Section 03:** "Bevor wir in die Praxis gehen, schauen wir uns an, wie Rules und Context die Antwortqualität steuern."
+1. **Modi kurz benennen:** Welchen Modus wann (Tabelle „Welchen Modus wann?“), ein Satz pro Modus.
+2. **1–2 Szenarien:** Audience wählt Modus, ihr löst auf (ohne tiefe Demo).
+3. **Modus wechseln:** Mode-Picker oder Shift+Tab zeigen.
+4. **Übergang:** „Bevor wir den kompletten Flow in Section 04 durchspielen, geht es in Section 03 um Rules und Context.“
 
 ## Was die Audience nach Section 02 verstanden haben soll
 
-- Modes sind ein Steuerungshebel für Qualität, Tempo und Risiko.
-- `Plan` ist ideal für komplexe Änderungen, `Debug` für unklare Fehlerbilder.
-- Ein bewusster Mode-Wechsel spart Nacharbeit und macht Agent-Workflows stabiler.
-- Die Umsetzung passiert erst nach Mode-Entscheidung (Section 04).
+- Die vier Modi (Ask, Plan, Agent, Debug) und wann welcher sinnvoll ist.
+- Ask = read-only, Agent = Umsetzung, Plan = erst Plan dann Build, Debug = evidenzbasiert.
+- Modus-Wechsel ist normal; die **vollständige Demo** folgt in Section 04.
 
-## Prompt-/Command-Bausteine (zum Vorlesen oder Kopieren)
+## Prompt-Bausteine (nur zur Einordnung, nicht ausführen)
 
-**Szenario:** Optionen vor Refactoring oder Feature klären
-
+**Ask (keine Änderungen):**
 ```text
-Use Ask mode. Do not edit files.
-Return 3 implementation options with trade-offs and expected risk.
+Use Ask mode. Do not edit files. Return 3 implementation options with trade-offs.
 ```
 
-**Szenario:** Komplexe Änderung in Phasen strukturieren
-
+**Plan (Struktur vor Umsetzung):**
 ```text
-Switch to Plan mode and propose 3 phases.
-For each phase add: files, checks, rollback idea.
+Switch to Plan mode. Propose 3 phases; for each: files, checks, rollback idea.
 ```
 
-**Szenario:** Unklarer Bug – Hypothesen und Instrumentierung vor Fix
-
+**Debug (Evidenz vor Fix):**
 ```text
-Use Debug mode.
-Propose 3 root-cause hypotheses and what instrumentation you would add before fixing.
+Use Debug mode. Propose 3 root-cause hypotheses and what instrumentation you would add before fixing.
 ```
 
 ## Doc-Referenzen (Web)
 
-- [Agent Overview](https://cursor.com/docs/agent/overview)
-- [Plan Mode](https://cursor.com/docs/agent/plan-mode)
-- [Debug Mode](https://cursor.com/docs/agent/debug-mode)
-- [How Agents Work](https://cursor.com/learn/agents.md)
-- [Help: Ask Mode](https://cursor.com/help/ai-features/ask-mode.md)
-
+- [Agent (Help)](https://cursor.com/help/ai-features/agent) — Was Agent kann, Modus-Tabelle, Wechsel, Subagents, Checkpoints.
+- [Ask Mode (Help)](https://cursor.com/help/ai-features/ask-mode) — Read-only, wann nutzen.
+- [Plan Mode (Docs)](https://cursor.com/docs/agent/plan-mode) — Wie Plan Mode funktioniert, wann nutzen, von vorn anfangen.
+- [Prompting (Docs)](https://cursor.com/docs/agent/prompting) — @-Mentions, Bilder, Sprache, Modellwechsel.
+- [Debug Mode](https://cursor.com/docs/agent/debug-mode) — für Details zu Debug (evidenzbasiert, Instrumentierung).
