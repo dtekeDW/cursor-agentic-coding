@@ -21,146 +21,138 @@
 
 ## Talk-Referenz (Sprechtext & Tiefe)
 
-*Direkt nach dem Einstieg in die Section nutzen — dann unten die kompakten Stichpunkte für Details.*
+*Direkt nach dem Einstieg in die Section nutzen — **Roter Faden:** erst **Chat-Kontext (`@` / Session)**, dann **Tools**, dann **Laufumgebung & UI**, dann **Queue / Immediate**.*
 
 ### Einstieg (~45s)
 
-Willkommen beim Agent — nicht als „noch ein Chat“, sondern als **gesteuerter Workflow**. Kurz zur Einordnung aus der Doku: Der Agent baut auf **[Instructions](https://cursor.com/docs/rules)**, **[Tools](https://cursor.com/docs/agent/overview#tools)** und dem gewählten **Modell** — ihr steuert mit euren Nachrichten (u. a. Queue vs. Immediate). In den nächsten Minuten: **was** das praktisch heißt, **wo** er läuft, **wie** ihr nachsteuert.
+Willkommen beim Agent — nicht als „noch ein Chat“, sondern als **gesteuerter Workflow**. Aus der Doku: **[Instructions](https://cursor.com/docs/rules)**, **[Tools](https://cursor.com/docs/agent/overview#tools)** und **Modell** — plus eure **Nachrichten** und der **Kontext**, den ihr gezielt anpinnt. **Zuerst** schauen wir, **was ihr dem Agenten in die Session legt** (`@`, Doku, Verlauf) — **danach**, welche **Tools** er selbst ausführt (Suche, Shell, **Browser**, …). Dann: **wo** er läuft und **wie** ihr mit Queue vs. Immediate nachsteuert.
 
 ### Abschluss dieser Section (~30s)
 
-**Merksatz für die Audience:** Agent-Arbeit ist kontrolliert — mit klarer Laufumgebung und mit **Queue vs. Immediate**, damit ihr entscheidet: erst fertig arbeiten lassen oder sofort eingreifen.
+**Merksatz:** Agent-Arbeit ist kontrolliert — **Kontext bewusst setzen**, **Laufumgebung** wählen, **Queue vs. Immediate** nutzen.
 
-### Beat-Folge (Referenz)
+### Beat-Folge (Referenz) — Reihenfolge im Talk
 
-| Beat | Was du sagst | Was du zeigst |
-| --- | --- | --- |
-| 1 | Laut Doku: **Instructions** + **Tools** + **Modell** — kein One-Shot-Chat; der Agent orchestriert viele Tool-Calls nacheinander. | Agent-Panel; optional [Agent Overview](https://cursor.com/docs/agent/overview) per Klick öffnen (Cursor / Browser). |
-| 2 | **Tools (~30s, Stichworte):** u. a. **[Semantic Search](https://cursor.com/docs/agent/tools/search)** in der indexierten Codebase, Dateien lesen/schreiben, Shell, Web-Suche, **[Browser](https://cursor.com/docs/agent/tools/browser)** (Seite steuern, Screenshots), **Bildgenerierung** (Mockups o. Ä., speichert i. d. R. unter `assets/`). Details: [Overview → Tools](https://cursor.com/docs/agent/overview#tools), Tiefe: [Tool calling](https://cursor.com/learn/tool-calling). | Nur mündlich oder eine Doku-Seite kurz aufklappen. |
-| 3 | **Wo** arbeitet der Agent? **Local** / **Worktree** / **Cloud** — Risiko & Kollaboration. | [work-tree.png](../../../input/ui-controls/work-tree.png) |
-| 4 | **UI in 90s + `@`:** Context Window, Modell, Laufumgebung. Im Chat: **`@` tippen** → Vorschläge für **Datei** (z. B. `@components/Card.vue`), **Ordner**, **Code-Symbol**, **`@Docs`** (indexierte Doku), **`@Past Chats`**. Wenn ihr unsicher seid: `@` weglassen — der Agent sucht selbst ([Prompting](https://cursor.com/docs/agent/prompting)). | Composer: kurz `@` zeigen, eine Datei anpinnen. |
-| 5 | **`@` vs. Browser-Tool:** `@` **bindet Kontext an die Nachricht** (Repo/Doku im Kontextfenster). Das **[Browser-Tool](https://cursor.com/docs/agent/tools/browser)** lässt den Agenten eine **echte Browser-Session steuern** (navigieren, klicken, Screenshot) — für **gezielte UI-/Live-Prüfung**, nicht nur „Link lesen“. Doku parallel lesen: **Cmd+Klick** auf `https://…` oder Simple Browser (optional). | Ein Satz Abgrenzung; kein Deep-Dive. |
-| 6 | **Live-Steuerung:** `Enter` = Queue; `Cmd+Enter` / `Ctrl+Enter` = Immediate. | Zwei kurze Nachrichten. |
-| 7 | Optional: **Bild-Input** (Paste/Drop) bzw. **Bildgenerierung**-Tool (Beat 2). | Kurz Paste/Drop zeigen. |
+| # | Thema | Was du sagst (Kern) | Was du zeigst |
+| --- | --- | --- | --- |
+| 1 | Rahmen | **Instructions + Tools + Modell**; viele Tool-Calls pro Task möglich ([Overview](https://cursor.com/docs/agent/overview)). | Agent-Panel |
+| 2 | **Chat-Kontext / `@`** | Mit **`@`** pinnt ihr **Dateien**, **Ordner**, **Code-Symbole**, **`@Docs`** (fremde + **eigene** Doku über *Add new doc*), **`@Past Chats`**. **Branch / Diff zu `main`:** seit Cursor 2.0 kein `@Git` mehr im Menü — stattdessen **klar im Prompt** z. B. „Vergleiche meinen Branch mit `main` / zeig das Diff“; der Agent nutzt **Git/Shell** als Tool. **Terminal:** laufende Befehle steuert der Agent über das **Shell-Tool**; ihr pinnt mit `@` eher **Dateien/Ordner**, die dazu passen. | Screenshot/Beispiel: [Context.png](../../../input/sections/01/Context.png) — `@`-Menü im Composer; live kurz `@` öffnen |
+| 3 | **Tools (kurz)** | Semantic Search, Read/Edit, **Shell**, Web, **[Browser-Tool](https://cursor.com/docs/agent/tools/browser)** (Seite steuern), Bildgenerierung … | [Overview → Tools](https://cursor.com/docs/agent/overview#tools) |
+| 4 | **Wo** | **Local / Worktree / Cloud** — Risiko & Zusammenarbeit. | [work-tree.png](../../../input/ui-controls/work-tree.png) |
+| 5 | **UI** | Context Window, Modell, Laufumgebung (~90s). | [context-window.png](../../../input/ui-controls/context-window.png), [model-selection.png](../../../input/ui-controls/model-selection.png) |
+| 6 | **`@` vs. Browser-Tool** | `@` = Kontext **in den Prompt**; Browser-Tool = Agent **bedient eine echte Seite** (UI-Checks). | Ein Satz |
+| 7 | **Queue / Immediate** | `Enter` vs. `Cmd+Enter` / `Ctrl+Enter`. | Zwei kurze Nachrichten |
+| 8 | Optional | Bild Paste/Drop; Bildgenerierung (Tool). | Kurz |
 
-**Audience line (merken):** *„Queue lässt den Agent fertigarbeiten, Immediate korrigiert den Lauf sofort.“*
+**Audience line:** *„Queue lässt den Agent fertigarbeiten, Immediate korrigiert den Lauf sofort.“*
 
 ### Live-Demo Schritt für Schritt
 
-1. Agent-Chat in einem kleinen Beispiel-Workspace öffnen.
-2. **Context Window** und **Model Selection** zeigen — ein Satz je Control.
-3. **Local / Worktree / Cloud** am Laufort zeigen.
-4. Im Chat-Eingabefeld **`@`** tippen — eine **Datei** oder einen **Ordner** wählen; optional erwähnen: **`@Docs`**, Symbole ([Prompting](https://cursor.com/docs/agent/prompting)).
-5. Nachricht mit **Enter** — laut: Queue nach aktuellem Schritt.
-6. Mit **Cmd+Enter** kurze Korrektur — laut: Immediate.
-7. Optional: Bild aus Zwischenablage einfügen (Input in den Chat).
-8. Optional: **Cmd+Klick** auf [Agent Overview](https://cursor.com/docs/agent/overview) — Doku im Browser (oder Simple Browser) **parallel** zum Chat; das ist Lesen für euch — **nicht** dasselbe wie das **Browser-Tool** des Agenten (der steuert die Seite aktiv für Checks).
+1. Agent-Chat öffnen.
+2. **`@` im Composer:** Menü zeigen — **Datei**, **Ordner**, **Symbol**, **`@Docs`**, **`@Past Chats`**; optional Screenshot [Context.png](../../../input/sections/01/Context.png) einblenden.
+3. **Satz zu Branch/Diff:** „Diff zu `main` macht ihr per **Prompt**, nicht über ein altes `@Git` — der Agent holt sich das über Tools.“
+4. **Tools in einem Satz** verbinden: danach nutzt der Agent z. B. **Shell** / **Suche** / **Browser** selbst.
+5. **Local / Worktree / Cloud** zeigen.
+6. **Context Window**, **Modellauswahl** — je ein Satz.
+7. **Enter** (Queue) und **Cmd+Enter** (Immediate).
+8. Optional: Bild Paste/Drop; optional **Cmd+Klick** [Overview](https://cursor.com/docs/agent/overview) parallel lesen (nicht = Browser-Tool).
 
 ### FAQ (wenn sie fragen)
 
 | Frage | Kurzantwort |
 | --- | --- |
-| Ist das nicht „nur Chat“? | Nein — Tools, Rules und Laufumgebung machen daraus einen **Arbeitsablauf** mit Ausführung und Kontrolle. |
-| Wann Cloud vs. Local? | Local für schnelle Iteration; Cloud/Worktree für Isolation — Team-Policy beachten. |
-| `@` vs. Browser-Tool? | **`@`** = Kontext in den Prompt pinnen. **Browser-Tool** = Agent führt eine Session auf einer echten Seite aus (Tests, Screenshots). |
+| Ist das nicht „nur Chat“? | Nein — **Kontext + Tools + Modell** — orchestrierter Ablauf. |
+| Wann Cloud vs. Local? | Iteration vs. Isolation — Team-Policy. |
+| `@` vs. Browser-Tool? | **`@`** = Kontext pinnen. **Browser-Tool** = Agent steuert eine Session auf der Seite. |
+| Diff zu `main`? | **Prompt** — kein `@Git` im `@`-Menü mehr (Cursor 2.0); Agent nutzt Git über Tools. |
 
 ### Übergang zu Section 02
 
-„Als Nächstes ordnen wir die **vier Modi** ein — Ask, Plan, Agent, Debug — damit ihr wisst, **welches Werkzeug** ihr für welche Aufgabe wählt.“
+„Als Nächstes die **vier Modi** — Ask, Plan, Agent, Debug.“
 
 ---
 
 ## Feedback (Probe / Dry-Run)
 
-*Nach einer Probe durchgehen — was behalten, was schärfen.*
-
-- [ ] Timing passt (~6 Min)?
-- [ ] Hook + 3 Anker sitzen?
-- [ ] **Tools**-Stichworte (Semantic Search, Browser, Bildgen) im Zeitbudget?
-- [ ] **`@`** im Composer kurz gezeigt (Datei/Ordner)?
-- [ ] UI-90s + Medien flüssig?
-- [ ] Queue / Immediate live klar?
-- [ ] Optional Bild: ja/nein — Notiz: _________________________
+- [ ] Timing (~6 Min)?
+- [ ] **Reihenfolge** sitzt: `@`/Kontext → Tools → Wo → UI → Queue?
+- [ ] [Context.png](../../../input/sections/01/Context.png) sichtbar / durch echten Screenshot ersetzt?
+- [ ] Branch/Diff-Erklärung kurz und klar?
+- [ ] Queue / Immediate live?
 - [ ] Sonstiges: _________________________
 
 ---
 
 ## Ziel dieser Section
 
-- Section 01 gibt ein schnelles Betriebsmodell: was der Agent ist, wo er arbeitet und wie du ihn waehrend eines laufenden Tasks steuerst.
+- Schnelles Betriebsmodell: Agent, Kontext (`@`), Tools, Laufumgebung, Nachsteuerung.
 
 ## Die 3 Anker fuer den Einstieg
 
-1. **Was ist Agent-Arbeit?**
-  - Kein normaler Chat: laut [Agent Overview](https://cursor.com/docs/agent/overview) aus **Instructions** (System + [Rules](https://cursor.com/docs/rules)), **Tools** (siehe unten) und dem gewählten **Modell** — plus eure Nachrichten (Queue / Immediate).
-2. **Wo arbeitet der Agent?**
-  - `Local` (aktueller Workspace), `Worktree` (lokale isolierte Umgebung), `Cloud` (separater Branch/Remote-Run).
-3. **Wie steuerst du live nach?**
-  - `Enter` = Queue (nach aktuellem Schritt), `Cmd+Enter` = Immediate (sofortiger Eingriff).
+1. **Was ist Agent-Arbeit?** — [Overview](https://cursor.com/docs/agent/overview): **Instructions**, **Tools**, **Modell** + eure Nachrichten & **Kontext** (`@`).
+2. **Wo arbeitet der Agent?** — `Local`, `Worktree`, `Cloud`.
+3. **Wie steuerst du live nach?** — `Enter` = Queue, `Cmd+Enter` = Immediate.
 
-## Tools (kurz — laut Cursor Docs)
+## Kontext im Chat (`@`) — vor den Tools durchgehen
 
-*Keine vollständige Liste; nur was im Talk erwähnenswert ist. Klickbare Links (im Cursor-Editor: **Cmd+Klick** / „Open Link“ → meist euer System-Browser).*
+*Siehe [Prompting agents](https://cursor.com/docs/agent/prompting). Vertiefung Rules/A/B → [Section 03](../03/section.md).*
+
+**Medien:** [@-Kontext / Composer](../../../input/sections/01/Context.png) (`input/sections/01/Context.png` — Platzhalter durch euren Screenshot ersetzen)
+
+| Was | Kurz |
+| --- | --- |
+| **Datei / Ordner** | `@pfad/zur/Datei.ts`, `@src/components/` |
+| **Code-Symbol** | z. B. `@getUserById` |
+| **Dokumentation** | **`@Docs`** — auch **eigene** Quellen (*Add new doc*) |
+| **Verlauf** | **`@Past Chats`** |
+| **Branch / Diff zu `main`** | Nicht per `@Git` im Menü (Cursor 2.0) — **im Prompt** formulieren; Agent nutzt **Git/Shell** |
+| **Terminal / Befehle** | Agent führt **Shell** aus (Tool); Kontext mit `@` auf relevante Dateien pinnen |
+| **Browser** | **Separat:** [Browser-Tool](https://cursor.com/docs/agent/tools/browser) steuert eine Seite — nicht dasselbe wie `@` |
+
+- Unsicher, was anpinnen? **`@` weglassen** — Agent sucht selbst ([Prompting](https://cursor.com/docs/agent/prompting)).
+
+## Tools (kurz — nach dem Chat-Kontext)
 
 | Stichwort | Kurz | Doku |
 | --- | --- | --- |
-| **Semantic Search** | Suche nach Bedeutung in der **indexierten** Codebase | [Agent tools: Search](https://cursor.com/docs/agent/tools/search) |
-| **Dateien / Shell / Web** | Lesen, Edits, Terminal, Web-Recherche | [Overview → Tools](https://cursor.com/docs/agent/overview#tools) |
-| **Browser** | Seite steuern, klicken, Screenshots — für UI-Checks | [Browser tool](https://cursor.com/docs/agent/tools/browser) |
-| **Bildgenerierung** | Bilder aus Text (z. B. Mockups); oft Ablage unter `assets/` | [Overview → Tools](https://cursor.com/docs/agent/overview#tools) |
-| **Fundamentals** | Wie Tool-Calling funktioniert | [Tool calling (Learn)](https://cursor.com/learn/tool-calling) |
+| **Semantic Search** | Bedeutung in indexierter Codebase | [Search](https://cursor.com/docs/agent/tools/search) |
+| **Dateien / Shell / Web** | Lesen, Edits, Terminal, Web | [Overview → Tools](https://cursor.com/docs/agent/overview#tools) |
+| **Browser** | Seite steuern, Screenshots | [Browser tool](https://cursor.com/docs/agent/tools/browser) |
+| **Bildgenerierung** | z. B. Mockups → oft `assets/` | [Overview → Tools](https://cursor.com/docs/agent/overview#tools) |
+| **Fundamentals** | Tool-Calling | [Learn](https://cursor.com/learn/tool-calling) |
 
-*Hinweis: Laut [Overview](https://cursor.com/docs/agent/overview) gibt es **kein festes Limit**, wie viele Tool-Calls der Agent in einem Task ausführen kann.*
-
-## @-Mentions (Kontext im Chat)
-
-*Kurz nach [Prompting agents](https://cursor.com/docs/agent/prompting). Vertiefung „Kontext bewusst steuern“ → [Section 03](../03/section.md).*
-
-- Im Agent-Chat **`@` eingeben** — Cursor schlägt passende **Dateien**, **Ordner**, **Symbole** (Funktion, Klasse, …), **`@Docs`** (indexierte Doku; eigene Quellen über `@Docs` → *Add new doc*), **`@Past Chats`** vor.
-- **Beispiele:** `@src/auth.ts`, `@packages/ui/components/`, `@getUserById`, `@Docs`.
-- **Wenn ihr nicht wisst**, welche Dateien zählen: **`@` weglassen** — der Agent sucht über seine Tools selbst.
-- **Cursor 2.0:** Explizite Einträge wie früher `@Web`, `@Git` usw. sind aus dem Kontextmenü entfernt; viel holt der Agent **automatisch** nach ([Prompting](https://cursor.com/docs/agent/prompting)).
+*Kein festes Limit an Tool-Calls pro Task ([Overview](https://cursor.com/docs/agent/overview)).*
 
 ### @-Kontext vs. Browser-Tool
 
 | | `@` im Chat | [Browser-Tool](https://cursor.com/docs/agent/tools/browser) |
 | --- | --- | --- |
-| **Zweck** | Repo-/Doku-Inhalt **in den Prompt** legen | **Live-Seite** vom Agenten **steuern** (Klicks, Screenshots, UI prüfen) |
-| **Wo** | Composer / Kontext | Echte Browser-Session im Auftrag des Agenten |
-| **Parallel Doku lesen** | **Cmd+Klick** auf Links, optional Simple Browser | Zusätzlich möglich — unabhängig vom Tool |
+| **Zweck** | Repo/Doku/Chat-Verlauf **in den Prompt** | **Live-Seite** vom Agenten **bedienen** |
+| **Parallel Doku lesen** | **Cmd+Klick**, optional Simple Browser | Zusätzlich möglich |
 
 ## Was du live in Cursor zeigst
 
-1. ***UI-Orientierung in 90 Sekunden**:*
-  - *Context Window (woher der aktive Kontext kommt),*
-  - *Modellauswahl,*
-  - *Laufumgebung (*`Local` */* `Worktree` */* `Cloud`).
-  - Medien: [context-window.png](../../../input/ui-controls/context-window.png), [model-selection.png](../../../input/ui-controls/model-selection.png), [work-tree.png](../../../input/ui-controls/work-tree.png)
-2. **`@` im Composer:** kurz eine Datei oder einen Ordner anpinnen (siehe [Prompting](https://cursor.com/docs/agent/prompting)).
-3. **Mini-Steuerung live**:
-  - Eine Nachricht mit `Enter` (queued),
-  - eine mit `Cmd+Enter` (immediate).
-4. **Kurzsatz fuer die Audience**:
-  - "Queue laesst den Agent fertigarbeiten, Immediate korrigiert den Lauf sofort."
+1. **`@`-Menü / Kontext:** Composer + optional [Context.png](../../../input/sections/01/Context.png).
+2. **Kurz Tools** benennen (nach dem `@`-Block).
+3. **UI-Orientierung (~90s):** Context Window, Modell, Laufumgebung — [context-window.png](../../../input/ui-controls/context-window.png), [model-selection.png](../../../input/ui-controls/model-selection.png), [work-tree.png](../../../input/ui-controls/work-tree.png).
+4. **Mini-Steuerung:** `Enter` / `Cmd+Enter`.
+5. **Kurzsatz Audience:** Queue vs. Immediate.
 
-## Optional bei Restzeit (30-45s)
+## Optional bei Restzeit
 
-- Bildinput kurz zeigen (`Cmd+V` / Drag-and-drop), damit klar ist: UI-Feedback und Fehlerscreenshots koennen direkt in den Prompt.
+- Bild Paste/Drop (`Cmd+V` / Drag-and-drop).
 
 ## Was die Audience nach Section 01 verstanden haben soll
 
-- Agent-Arbeit ist ein kontrollierter Workflow, kein One-shot-Chat — aufgebaut aus Instructions, Tools und Modell ([Overview](https://cursor.com/docs/agent/overview)).
-- Es gibt eine **Palette von Tools** (u. a. semantische Suche, Browser, Bildgenerierung), nicht „nur Text“.
-- Laufumgebung ist eine Produktentscheidung (Local/Worktree/Cloud) mit direktem Einfluss auf Risiko und Kollaboration.
-- Steuerung waehrend der Ausfuehrung ist Teil der Arbeit (`Enter` vs `Cmd+Enter`).
-- Mit **`@`** kann man Dateien, Ordner, Symbole und Doku **gezielt in den Kontext** hängen — anders als das **Browser-Tool**, mit dem der Agent eine Seite **aktiv bedient**.
+- Agent = Instructions + Tools + Modell; **Kontext** steuert ihr u. a. mit **`@`** (Datei, Ordner, Docs, Past Chats); **Diff/Branch** per **Prompt**; **Browser-Tool** ist zusätzlich für **UI auf der echten Seite**.
+- Tool-Palette (Suche, Shell, Browser, …) ergänzt den Chat.
+- Laufumgebung: Local / Worktree / Cloud.
+- Queue vs. Immediate.
 
 ## Doc-Referenzen (Web)
 
-- [Prompting agents](https://cursor.com/docs/agent/prompting) — @-Mentions, Bild, Sprache, Modell
-- [Agent Overview](https://cursor.com/docs/agent/overview) — drei Säulen, Tools, Queue, Checkpoints
-- [Semantic Search (Tool)](https://cursor.com/docs/agent/tools/search)
-- [Browser (Tool)](https://cursor.com/docs/agent/tools/browser)
-- [Tool calling fundamentals](https://cursor.com/learn/tool-calling)
+- [Prompting agents](https://cursor.com/docs/agent/prompting)
+- [Agent Overview](https://cursor.com/docs/agent/overview)
+- [Semantic Search](https://cursor.com/docs/agent/tools/search) · [Browser](https://cursor.com/docs/agent/tools/browser) · [Tool calling](https://cursor.com/learn/tool-calling)
 - [Documentation Overview](https://cursor.com/docs)
-- Medien: [context-window.png](../../../input/ui-controls/context-window.png) · [model-selection.png](../../../input/ui-controls/model-selection.png) · [work-tree.png](../../../input/ui-controls/work-tree.png)
+- **Section 01 Medien:** [Context.png (@-Menü)](../../../input/sections/01/Context.png) · [context-window.png](../../../input/ui-controls/context-window.png) · [model-selection.png](../../../input/ui-controls/model-selection.png) · [work-tree.png](../../../input/ui-controls/work-tree.png)

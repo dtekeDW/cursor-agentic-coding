@@ -1,6 +1,8 @@
 # Changelog
 
 ## 2026-03-23
+- Section 01: **`input/sections/01/Context.png`** (Platzhalter — durch Screenshot vom `@`-Menü ersetzen); **Roter Faden** in Talk/Checkliste/Folien: `@`/Chat-Kontext (inkl. Docs, Past Chats, Diff zu `main` per Prompt, Shell) → **Tools** → Wo → UI → Queue; Medienlinks überall ergänzt.
+
 - Section 01: **@-Mentions** ([Prompting](https://cursor.com/docs/agent/prompting)) — Datei, Ordner, Symbol, `@Docs`, `@Past Chats`; Abgrenzung **@ vs. Browser-Tool**; Live-Schritte + Beats + Folien + Checkliste; Verweis Vertiefung → Section 03.
 
 - Section 01: **Tools** kurz ergänzt (Semantic Search, Browser, Bildgenerierung, Links auf [Agent Overview](https://cursor.com/docs/agent/overview), [Search](https://cursor.com/docs/agent/tools/search), [Browser](https://cursor.com/docs/agent/tools/browser), [Tool calling](https://cursor.com/learn/tool-calling)); Drei-Säulen-Modell **Instructions / Tools / Modell**; Beats + Folien + Checkliste angepasst.

@@ -3,6 +3,8 @@
 **Zeit:** 6 Min · **Owner:** Dogan  
 **Alles inhaltlich:** [section.md](section.md) · **Folien (Publikum):** [slides.md](slides.md)
 
+**Roter Faden:** `@`/Chat-Kontext → **Tools** → Laufumgebung → UI → Queue/Immediate.
+
 ## Navigation
 
 - [Workshop Master](../../../Workshop.md)
@@ -11,16 +13,16 @@
 
 ## Checkliste (in dieser Reihenfolge)
 
-- [ ] **Hook (≈45s):** Agent = Workflow; Instructions + Tools + Modell (Doku: [Overview](https://cursor.com/docs/agent/overview)) — Sprechtext [section.md](section.md)
-- [ ] **Tools ~30s:** Semantic Search, Web/Shell/Edit, **Browser**, **Bildgenerierung** — Tabelle **Tools** in [section.md](section.md)
-- [ ] **`@` ~45s:** Composer ` @ ` → Datei/Ordner/Symbol/`@Docs`; **Abgrenzung** zu [Browser-Tool](https://cursor.com/docs/agent/tools/browser) (Agent steuert Seite — nicht nur Kontext pinnen) — Abschnitt **@-Mentions** in [section.md](section.md)
-- [ ] **3 Anker:** Local / Worktree / Cloud; Enter vs. Cmd+Enter
-- [ ] **UI 90s:** Context Window, Modell, Laufumgebung — Medien in [section.md](section.md)
-- [ ] **Live:** Enter (Queue) + Cmd+Enter (Immediate) zeigen
+- [ ] **Hook (~45s):** Workflow; zuerst **Kontext-Session**, dann **Tools** — [section.md](section.md) Talk-Referenz
+- [ ] **`@` / Chat-Kontext:** Datei, Ordner, Symbol, `@Docs` (eigene Doku), `@Past Chats`; **Diff zu `main` = Prompt** (kein `@Git`); Terminal → **Shell-Tool**; Bild [Context.png](../../../input/sections/01/Context.png)
+- [ ] **Tools (~30s):** Semantic Search, Shell, Web, **Browser-Tool**, Bildgen — Tabelle in [section.md](section.md)
+- [ ] **`@` vs. Browser-Tool** (ein Satz)
+- [ ] **Wo:** Local / Worktree / Cloud
+- [ ] **UI ~90s:** Context Window, Modell, Laufumgebung (+ Medien in [section.md](section.md))
+- [ ] **Live:** Enter (Queue) + Cmd+Enter (Immediate)
 - [ ] **Optional:** Bild Paste/Drop
-- [ ] **Merksatz** zur Audience: Queue vs. Immediate
-- [ ] **Übergang:** Section 02 — vier Modi
+- [ ] **Merksatz** + **Übergang** Section 02
 
 ## Notfall
 
-- Wenn Live hakt: Merksatz + Screenshots zeigen, Queue/Immediate nur erklären.
+- Nur [Context.png](../../../input/sections/01/Context.png) + Merksatz zu Queue/Immediate; Tools nur Stichworte.

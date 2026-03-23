@@ -8,7 +8,7 @@ footer: 'Cursor Agentic Coding — Section 01'
 
 ## Section 01 — Einstieg: Der Agent
 
-**Fragestellungen:** Was ist Agent-Arbeit? Wo läuft sie? Wie steuert ihr nach?
+**Fragestellungen:** Kontext im Chat? Tools? Wo läuft es? Wie steuert ihr nach?
 
 [Vollständige Agenda](../../../Workshop.md)
 
@@ -16,59 +16,66 @@ footer: 'Cursor Agentic Coding — Section 01'
 
 # Agent-Arbeit ist kein „normaler Chat“
 
-- Laut [Cursor Agent Overview](https://cursor.com/docs/agent/overview): **Instructions**, **Tools**, **Modell**
-- Ihr steuert mit **Nachrichten** (z. B. Queue mit Enter, sofort mit Cmd+Enter)
+- [Overview](https://cursor.com/docs/agent/overview): **Instructions**, **Tools**, **Modell**
+- Ihr steuert **Nachrichten** + **Kontext** (`@`) und **Queue** (Enter / Cmd+Enter)
+
+**Roter Faden:** erst **Chat-Kontext**, dann **Tools**, dann **Laufumgebung & UI**
 
 ---
 
-# Tools (Auszug)
+# Kontext im Chat: `@`
+
+- **Datei** · **Ordner** · **Code-Symbol**
+- **`@Docs`** — auch **eigene** Dokumentation (*Add new doc*)
+- **`@Past Chats`**
+- **Diff / Branch zu `main`:** im **Prompt** beschreiben (Cursor 2.0: kein `@Git` im Menü)
+- **Terminal:** Agent nutzt **Shell**-Tool; Dateien mit `@` anpinnen
+
+![@-Menü (Beispiel)](../../../input/sections/01/Context.png)
+
+[Prompting agents](https://cursor.com/docs/agent/prompting)
+
+---
+
+# Tools (was der Agent ausführt)
 
 | | |
 | --- | --- |
-| **Semantic Search** | Bedeutung in der Codebase |
-| **Browser** | Seite steuern, Screenshots ([Doku](https://cursor.com/docs/agent/tools/browser)) |
-| **Bilder** | Generierung z. B. für Mockups; oft unter `assets/` |
+| **Semantic Search** | Codebase nach Bedeutung |
+| **Shell / Web / Edit** | Terminal, Recherche, Dateien |
+| **Browser-Tool** | Seite **steuern**, Screenshots ([Doku](https://cursor.com/docs/agent/tools/browser)) |
+| **Bildgenerierung** | z. B. Mockups → oft `assets/` |
 
-Mehr: [Overview → Tools](https://cursor.com/docs/agent/overview#tools) · [Tool calling](https://cursor.com/learn/tool-calling)
+**Abgrenzung:** **`@`** = Kontext **in den Prompt** · **Browser-Tool** = echte **UI-Session**
 
----
-
-# Kontext mit `@` (Chat)
-
-- **`@` tippen** → Vorschläge: **Datei**, **Ordner**, **Code-Symbol**, **`@Docs`**, **`@Past Chats`**
-- Beispiele: `@auth.ts`, `@src/components/`, `@getUserById`
-- Unsicher, was relevant ist? **`@` weglassen** — der Agent sucht selbst  
-  ([Prompting agents](https://cursor.com/docs/agent/prompting))
-
-**Nicht verwechseln:** **`@`** = Kontext **in den Prompt**. **[Browser-Tool](https://cursor.com/docs/agent/tools/browser)** = Agent **steuert eine echte Seite** (für UI-Checks).
-
-*Mehr zu Kontext + Rules → [Section 03](../03/slides.md) (später im Talk).*
+[Overview → Tools](https://cursor.com/docs/agent/overview#tools)
 
 ---
 
 # Wo arbeitet der Agent?
 
-| Laufumgebung | Bedeutung (kurz) |
+| Laufumgebung | Kurz |
 | --- | --- |
-| **Local** | Aktueller Workspace auf eurer Maschine |
-| **Worktree** | Isolierte lokale Umgebung (Sandbox) |
-| **Cloud** | Separater Lauf / Branch — z. B. für Remote oder getrennte Experimente |
+| **Local** | Euer Workspace |
+| **Worktree** | Isolierte lokale Sandbox |
+| **Cloud** | Separater Lauf / Branch |
 
-→ Beeinflusst **Risiko**, **Isolation** und **Zusammenarbeit**
+→ **Risiko** & **Zusammenarbeit**
 
 ---
 
-# Drei Dinge im UI (Orientierung)
+# UI: drei Anker
 
-1. **Context Window** — woher kommt der aktive Kontext fürs Modell?
-2. **Modellauswahl** — welches Modell arbeitet gerade?
-3. **Laufumgebung** — Local, Worktree oder Cloud
+1. **Context Window** — woher kommt der Kontext?
+2. **Modellauswahl**
+3. **Laufumgebung** (Local / Worktree / Cloud)
 
-**Medien (zum Öffnen im Repo):**
+**Medien:**
 
+- [Context `@`](../../../input/sections/01/Context.png)
 - [Context Window](../../../input/ui-controls/context-window.png)
 - [Model Selection](../../../input/ui-controls/model-selection.png)
-- [Worktree / Laufumgebung](../../../input/ui-controls/work-tree.png)
+- [Worktree](../../../input/ui-controls/work-tree.png)
 
 ---
 
@@ -76,29 +83,28 @@ Mehr: [Overview → Tools](https://cursor.com/docs/agent/overview#tools) · [Too
 
 | Aktion | Wirkung |
 | --- | --- |
-| **Enter** | Nachricht in die **Queue** — kommt nach dem aktuellen Schritt dran |
-| **Cmd+Enter** (Mac) / **Ctrl+Enter** (Win) | **Sofort** — Eingriff in den laufenden Ablauf |
+| **Enter** | **Queue** — nach aktuellem Schritt |
+| **Cmd+Enter** / **Ctrl+Enter** | **Sofort** — Eingriff |
 
-**Merksatz**
-
-> Queue lässt den Agent fertigarbeiten — Immediate korrigiert den Lauf sofort.
+> Queue lässt fertigarbeiten — Immediate korrigiert den Lauf.
 
 ---
 
 # Bilder im Prompt
 
-- Screenshots, UI-Fehler, Mockups: **Paste** (`Cmd+V`) oder **Drag & Drop**
-- Das Modell sieht denselben visuellen Kontext wie ihr
+- **Paste** (`Cmd+V`) oder **Drag & Drop** — Screenshots, Fehler, Mockups
+- Zusätzlich: Agent kann **Bilder generieren** (Tool)
 
 ---
 
 # Nächster Teil
 
-**Section 02:** Die vier Modi — **Ask**, **Plan**, **Agent**, **Debug** — und wann welcher Modus passt.
+**Section 02:** **Ask**, **Plan**, **Agent**, **Debug** — wann welcher Modus?
 
 ---
 
-# Weiterführend (Cursor Docs)
+# Weiterführend
 
 - [Agent Overview](https://cursor.com/docs/agent/overview)
+- [Prompting agents](https://cursor.com/docs/agent/prompting)
 - [Documentation Overview](https://cursor.com/docs)
