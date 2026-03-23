@@ -10,8 +10,12 @@
 ## Working Pattern
 - `input/` = Brainstorm, Constraints, Quellen (nicht-iterative Inputs)
 - `output/` = iterative Arbeitsartefakte
-  - `output/sections/*/section.md` (Inhalte pro Section)
-  - `output/Changelog.md` (Änderungshistorie)
+  - `output/sections/*/section.md` (volle Referenz inkl. **Talk-Referenz**: Sprechtext, Beats, FAQ)
+  - `output/changelog.md` (Änderungshistorie)
+  - `output/sections/*/presentation.md` (kurze **Ablauf-Checkliste** nur für Referent:innen)
+  - `output/sections/*/slides.md` (Folien / Handout für Zuhörende; Marp-freundlich mit `---`)
+  - `output/PRESENTATION-FULL.md` (alle Checklisten gebündelt; Build: `scripts/build-presentation-full.sh`)
+  - `output/SLIDES-FULL.md` (alle Audience-Folien; Build: `scripts/build-slides-full.sh`)
 - Root-Artefakte / Steuerung
   - `Workshop.md` (Master-Backbone)
   - `input/workflow/00-roadmap.md` (Ticket-/Status-Roadmap)

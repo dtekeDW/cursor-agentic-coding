@@ -28,5 +28,5 @@ Kurzer Fahrplan, damit wir die Cursor-Doku Stück für Stück abdecken und pro I
 1. `Workshop.md` zuerst aktualisieren (Version, Stand, Section-Status).
 2. Betroffene Section-Datei(en) in `output/sections/*/section.md` schärfen.
 3. Status in dieser Roadmap synchronisieren (`✅/❌`, `done/next`).
-4. Kurz in `output/Changelog.md` dokumentieren.
+4. Kurz in `output/changelog.md` dokumentieren.
 

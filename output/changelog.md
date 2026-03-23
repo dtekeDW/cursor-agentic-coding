@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-03-23
+- Section 01: **@-Mentions** ([Prompting](https://cursor.com/docs/agent/prompting)) — Datei, Ordner, Symbol, `@Docs`, `@Past Chats`; Abgrenzung **@ vs. Browser-Tool**; Live-Schritte + Beats + Folien + Checkliste; Verweis Vertiefung → Section 03.
+
+- Section 01: **Tools** kurz ergänzt (Semantic Search, Browser, Bildgenerierung, Links auf [Agent Overview](https://cursor.com/docs/agent/overview), [Search](https://cursor.com/docs/agent/tools/search), [Browser](https://cursor.com/docs/agent/tools/browser), [Tool calling](https://cursor.com/learn/tool-calling)); Drei-Säulen-Modell **Instructions / Tools / Modell**; Beats + Folien + Checkliste angepasst.
+
+- Section 01: **Talk-Referenz** nach **Navigation** (oben); **Prompt-Bausteine** entfernt; **Feedback (Probe)** für Dry-Run; Audience-`slides.md` ohne Beispiel-Prompt-Folie; Doc-Links gestrafft.
+
+- `v0.4.31` — **Dreiteilung geschärft:** `section.md` = eine **Master-Referenz** pro Section (bisheriger Blueprint + neuer Block **Talk-Referenz**: Einstieg, Beats, Live-Demo detailliert, FAQ, Übergang). `presentation.md` = **kurze Ablauf-Checkliste** fürs Pult (Links zu `section.md` / `slides.md`). `slides.md` unverändert Publikums-Folien. [Workshop.md](../Workshop.md)-Agenda-Spalten umbenannt; [PRESENTATION-TEMPLATE.md](PRESENTATION-TEMPLATE.md), [SLIDES-TEMPLATE.md](SLIDES-TEMPLATE.md), [README.md](../README.md), `scripts/build-presentation-full.sh`-Intro angepasst.
+
+- `v0.4.30` — **Audience-Folien:** Pro Section `output/sections/NN/slides.md` — Marp-tauglich (`marp: true`, Folienwechsel `---`), nur Inhalt für Zuhörende (keine Referenten-„Was du sagst“-Tabellen, kein Live-Demo-Script). Vorlage [output/SLIDES-TEMPLATE.md](SLIDES-TEMPLATE.md); gebündelt [output/SLIDES-FULL.md](SLIDES-FULL.md) via `scripts/build-slides-full.sh`. Navigation in `section.md`, `presentation.md`, [Workshop.md](../Workshop.md) (Agenda-Spalte „Folien (Audience)“, Navigationsindex) ergänzt; [README.md](../README.md) Working Pattern aktualisiert.
+
+- `v0.4.29` — **Presentation layer:** Repo-weite Konvention `output/sections/NN/presentation.md` (sprecherfertiges Talk-Skript) neben Blueprint `section.md`; Vorlage [output/PRESENTATION-TEMPLATE.md](PRESENTATION-TEMPLATE.md); gebündeltes Skript [output/PRESENTATION-FULL.md](PRESENTATION-FULL.md) via `scripts/build-presentation-full.sh`. Navigation in Sections 01–07 und [Workshop.md](../Workshop.md) (Agenda-Spalte „Präsentation“, Navigationsindex, Version/Stand) aktualisiert; Changelog-Pfade in Workshop, README und `input/workflow/*` auf `output/changelog.md` vereinheitlicht.
+
 ## 2026-03-19
 - Section 06: `output/sections/06/section.md` auf **schematische** MCP-Zusammenfassung nach [Cursor MCP Docs](https://cursor.com/docs/mcp) (Transports, Features, Config, Chat/Approval, Security); **keine** Doppelung der Live-Demos.
 - `input/sections/06/` nur noch zwei chronologische Runbooks: `01-chrome-devtools-mcp-demo.md` (A11y- oder INP-Template + Prompts), `02-figma-mcp-demo.md` (Figma MCP); alte Dateien (mcp-schema, README, getrennte chrome/figma-Schemata) entfernt.

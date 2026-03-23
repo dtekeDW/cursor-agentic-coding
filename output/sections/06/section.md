@@ -1,4 +1,7 @@
-# Section 06 - MCP Small Demo
+# Section 06 — MCP Small Demo
+
+**Vollständige Section-Referenz** (Inhalt + Sprechtext).  
+**Kurz am Pult:** [presentation.md](presentation.md) · **Folien:** [slides.md](slides.md)
 
 | Feld | Wert |
 | --- | --- |
@@ -9,6 +12,8 @@
 | Kern-Demo | `ja` |
 
 ## Navigation
+- [Ablauf-Checkliste (Referent:innen)](presentation.md)
+- [Folien (Audience)](slides.md)
 - [Workshop Master](../../../Workshop.md)
 - [Prev: Section 05](../05/section.md)
 - [Next: Section 07](../07/section.md)
@@ -103,3 +108,46 @@ MCP-Server stellen Fähigkeiten über das Protokoll bereit. **Transports** (Ausz
 3. [Chrome DevTools MCP (GitHub)](https://github.com/ChromeDevTools/chrome-devtools-mcp)  
 4. [Agent Security](https://cursor.com/docs/agent/security)  
 5. [Web Development (Cursor)](https://cursor.com/for/web-development)
+
+---
+
+## Talk-Referenz (Sprechtext & Tiefe)
+
+### Einstieg (~45s)
+
+**MCP** verbindet Cursor mit **externen Tools** — sichtbare Tool-Calls, **Approval**. Statt Kontext manuell zu basteln: **Browser**, **Figma**, … direkt angebunden ([MCP Docs](https://cursor.com/docs/mcp)).
+
+### Abschluss (~20s)
+
+Zwei Pfade: **Chrome DevTools MCP** + **Figma MCP** — chronologisch die **Runbooks** unter `input/sections/06/`.
+
+### Beat-Folge (Referenz)
+
+| Beat | Was du sagst | Was du zeigst |
+| --- | --- | --- |
+| 1 | Was & warum MCP; Transports | Docs / Stichworte |
+| 2 | Demo 1 Runbook | [01-chrome-devtools-mcp-demo.md](../../../input/sections/06/01-chrome-devtools-mcp-demo.md) |
+| 3 | Prompt, Approval, Output | Chat |
+| 4 | Demo 2 Runbook | [02-figma-mcp-demo.md](../../../input/sections/06/02-figma-mcp-demo.md) |
+| 5 | Sicherheit ein Satz | — |
+
+**Takeaways:** *Daten aus dem Browser über MCP.* · *Design-Kontext aus Figma, nicht raten.*
+
+### Live-Demo Schritt für Schritt
+
+1. **Vorbereitung:** Chrome/URL; MCP verbunden; Figma OAuth.
+2. **01-chrome-devtools-mcp-demo.md** — Chronologie; Prompt; **eine** Variante (A11y oder INP).
+3. Tool-Approval kurz **begründen**.
+4. **02-figma-mcp-demo.md** — Schritte + Prompts.
+5. Schließen: Section 07.
+
+### FAQ (wenn sie fragen)
+
+| Frage | Kurzantwort |
+| --- | --- |
+| Wo konfigurieren? | `.cursor/mcp.json` / `~/.cursor/mcp.json` |
+| Plan Mode? | MCP-Tools können auch dort verfügbar sein |
+
+### Übergang zu Section 07
+
+„**Adoption & Q&A** — nächste Schritte fürs Team.“

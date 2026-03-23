@@ -8,4 +8,4 @@
 6. check didactic clarity and content correctness
 7. bump version and timestamp in `Workshop.md`
 8. update `README.md` if necessary
-9. append short entry to `output/Changelog.md` (date, version, file, change)
+9. append short entry to `output/changelog.md` (date, version, file, change)

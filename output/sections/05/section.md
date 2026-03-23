@@ -1,4 +1,7 @@
-# Section 05 - Skills: Wiederverwendbare Team-Routinen
+# Section 05 — Skills: Wiederverwendbare Team-Routinen
+
+**Vollständige Section-Referenz** (Inhalt + Sprechtext).  
+**Kurz am Pult:** [presentation.md](presentation.md) · **Folien:** [slides.md](slides.md)
 
 | Feld       | Wert             |
 | ---------- | ---------------- |
@@ -10,6 +13,8 @@
 
 ## Navigation
 
+- [Ablauf-Checkliste (Referent:innen)](presentation.md)
+- [Folien (Audience)](slides.md)
 - [Workshop Master](../../../Workshop.md)
 - [Prev: Section 04](../04/section.md)
 - [Next: Section 06](../06/section.md)
@@ -256,6 +261,73 @@ disable-model-invocation: true
 
 - [Agent Skills \| Cursor Docs](https://cursor.com/docs/skills) — Hauptreferenz für diese Section (Definition, Verzeichnisse, Format, Frontmatter, Scripts, optionale Ordner, Viewing, GitHub-Install, Migration).
 - [Agent Skills Standard (agentskills.io)](https://agentskills.io/) — offener Standard, „Learn more“.
+
+---
+
+## Talk-Referenz (Sprechtext & Tiefe)
+
+### Einstieg (~30s)
+
+**Skills** sind das Team-Gedächtnis für wiederkehrende Workflows — portabel, versionierbar; der Agent wendet sie **automatisch** an oder ihr nutzt **`/skill-name`**. Heute: offizielle Doku + **Jira**- und **Changeset**-Skills aus diesem Repo.
+
+### Abschluss (~30s)
+
+Skills reduzieren **Prompt-Varianz**. **`disable-model-invocation: true`** = nur noch expliziter Slash-Command. Als Nächstes: **MCP**.
+
+### Beat-Folge (8-Minuten-Takt)
+
+| T | Beat | Was du sagst | Was du zeigst |
+| --- | --- | --- | --- |
+| ~2min | Konzept | Portable, version-controlled, actionable, progressive; Verzeichnisse; Frontmatter | [Agent Skills](https://cursor.com/docs/skills) |
+| ~2min | Jira | Ticket → Script → Codebase → Plan | [planning-jira…/SKILL.md](../../../input/sections/05/planning-jira-ticket-implementation/SKILL.md) |
+| ~2.5min | Changeset | Branch vs `origin/main` → Packages → `.changeset/*.md` | [create-changeset…/SKILL.md](../../../input/sections/05/create-changeset-from-main-diff/SKILL.md) |
+| ~1min | Invocation | Auto vs. `/skill-name`; optional Settings → Rules | UI oder nur erklären |
+
+### Live-Demo Schritt für Schritt
+
+1. Docs Skills **30s**.
+2. **Jira SKILL.md** öffnen — Frontmatter, `scripts/`; optional Demo-Prompt (API-Key).
+3. **Changeset SKILL.md** — Diff-Logik; optional Live auf Branch.
+4. Snippet **`disable-model-invocation: true`** zeigen.
+5. Übergang **Section 06 MCP**.
+
+### Zusätzliche Beispiel-Prompts (Referenz)
+
+**Ad-hoc vs. Skill (Vergleich):**
+
+```text
+# Ohne Skill
+"Kannst du mir ein Changeset für meine Änderungen schreiben?"
+
+# Mit Skill
+Use the create-changeset-from-main-diff skill: compare branch to main, detect packages, write .changeset/*.md.
+```
+
+**Mini-Frontmatter:**
+
+```yaml
+---
+name: my-team-skill
+description: Use for repeatable team workflow X with consistent output format.
+disable-model-invocation: true
+---
+
+# My Team Skill
+## Workflow
+1. Step one...
+2. Step two...
+```
+
+### FAQ (wenn sie fragen)
+
+| Frage | Kurzantwort |
+| --- | --- |
+| Skill vs. Rule? | **Rules** = dauerhaftes Verhalten; **Skills** = kapselte **Workflows** inkl. Scripts/Referenzen. |
+| Global vs. Projekt? | `.cursor/skills` / `.agents/skills` vs. `~/.cursor/skills`. |
+
+### Übergang zu Section 06
+
+„**MCP** — Browser, Figma, Co. über kontrollierte Tools an den Agent.“
 
 ## To-dos (Section 05)
 

@@ -16,5 +16,5 @@
 ## - All section files must live in `output/sections/01..08/section.md`.
 ## - Every section must contain links to `Workshop`, `Prev`, and `Next`.
 ## - Every iteration must update version + timestamp in `Workshop.md`.
-## - Every iteration must add a short entry in `output/Changelog.md`.
+## - Every iteration must add a short entry in `output/changelog.md`.
 ## - `README.md` is only updated when navigation/onboarding changes.
