@@ -4,72 +4,86 @@ paginate: true
 footer: 'Cursor Agentic Coding — Section 02'
 ---
 
-# Section 02 — Modi: Ask, Plan, Agent, Debug
+# Section 02 — Modi & Settings (Überblick)
 
-**Ziel:** Das richtige Werkzeug für die Aufgabe — nicht „immer Agent“.
+**Nach Section 01:** viel Input auf einmal — das kommt **wieder**. Hier: **vier Modi** + **kurzer Settings-Blick** — dann **Miguel**.
 
 [Vollständige Agenda](../../../Workshop.md)
 
 ---
 
-# Die vier Modi auf einen Blick
+# Section 02 — Reihenfolge
 
-| Modus | Wofür? | Dateien ändern? |
+1. **Live:** Chat öffnen, frischer Tab, **Modell** (**⌘⇧/**)
+2. **Vier Modi** — wann **nicht** Agent?
+3. **Shift+Tab** — durchrotieren
+4. **Read-only vs. Edits**
+5. **Cursor Settings** — v. a. **Agents** & **Indexing**
+6. **Übergang:** **Miguel** → Section 03 / 04
+
+---
+
+# Die vier Modi (Kern)
+
+| Modus | Kurz |
+| ----- | ---- |
+| **Ask** | **Read-only**, schnell, sparsam — **semantische Suche**, einfache **Projektfragen** |
+| **Agent** | **Default** — sucht, editiert, Terminal; **„macht was“** |
+| **Plan** | **Planung**, **Gegenfragen** — komplexe Aufgaben strukturieren; **Demo → Section 04** |
+| **Debug** | **Logs**, **Hypothesen**, Fehlerfokus — oft stark bei **viel Debug-Zeit** |
+
+---
+
+# Default Agent — wann wechseln?
+
+- Viele sind **sofort im Agent** — das ist der **Standard**
+- Wenn ihr **nur Fragen** habt und **keine** Dateien / Konfigs geändert haben wollt → **Modus wechseln** (z. B. **Ask**)
+
+---
+
+# Read-only vs. direkt am Code
+
+| | **Ask** · **Plan** | **Agent** · **Debug** |
 | --- | --- | --- |
-| **Ask** | Verstehen, erkunden, Optionen | **Nein** (read-only) |
-| **Agent** | Bauen, refactoren, fixen, Tests | **Ja** |
-| **Plan** | Komplex: erst Plan, dann Freigabe, dann Umsetzung | **Ja** (nach Plan) |
-| **Debug** | Bugs mit Laufzeit / Logs / Hypothesen | **Ja** |
+| **Im Talk** | eher **read-only** / erst **klären & planen** | können **Dateien ändern** |
 
----
-
-# Faustregel
-
-- **Unklarheit** oder **viele Dateien** → **Ask** oder **Plan**
-- **Kleine, klare** Aufgabe → **Agent**
-- **Unklares Fehlerbild** → **Debug**
-
-> Immer den **passendsten** Modus wählen — nicht den schnellsten.
-
----
-
-# Ein Satz pro Modus
-
-- **Ask** — Antworten und Exploration, **keine** Edits ([Ask Mode](https://cursor.com/help/ai-features/ask-mode))
-- **Agent** — Suchen, Editieren, Terminal — Standard für Umsetzung ([Agent](https://cursor.com/help/ai-features/agent))
-- **Plan** — Anforderungen klären, Plan erstellen, **von euch freigeben**, dann bauen ([Plan Mode](https://cursor.com/docs/agent/plan-mode))
-- **Debug** — Hypothesen, Instrumentierung, Evidenz, dann Fix ([Debug Mode](https://cursor.com/docs/agent/debug-mode))
+*Feinheiten zu **Plan** und Umsetzung → **Section 04** / Doku.*
 
 ---
 
 # Modus wechseln
 
-- **Dropdown** im Agent-Panel (Mode-Picker)
+- **Dropdown** (Mode-Picker) im Chat / Agent-Panel
 - **Shift+Tab** — rotiert durch die Modi
-- Tipp: Bei **Themenwechsel** oft ein **neuer Chat** — sauberer Kontext
+- Neues Thema → oft **neuer Chat**
 
 ---
 
-# Kontext kurz: `@` und mehr
+# Cursor Settings — was ihr kurz zeigt
 
-- Mit **`@`** Dateien, Ordner, Symbole, Docs anhängen — gezielt statt „alles“
-- **Bilder** und **Spracheingabe** sind möglich
-- Details zu **Rules** und **Indexing** → **Section 03**
-
----
-
-# Visuelle Einordnung (optional)
-
-- [Ask (GIF)](../../../input/modes/ask/ask.gif) · [Agent (GIF)](../../../input/modes/agent/agent.gif)
-- [Plan (GIF)](../../../input/modes/plan/plan.gif) · [Todos (GIF)](../../../input/modes/plan/todos.gif)
-- [Plan-Abschluss (PNG)](../../../input/modes/plan/plan-final.png) · [Debug (GIF)](../../../input/modes/debug/debug.gif)
+| Tab / Thema | Inhalt |
+| --- | --- |
+| **General** | Look, Notifications, allgemeine Preferences |
+| **Agents** | **Zentral:** Shortcuts, **MCP**, **Allowlist**, **Web/Fetch**, **Ignore/Allow**, **Sandbox**, **lokal** |
+| **Modell** | wie Section 01 (**⌘⇧/**) |
+| **Cloud Agents** | kurz verweisen |
+| **Plugins** | **Marketplace** — Skills, Rules, Agents, MCP (Details später) |
+| **Indexing** | **„Brain“** der Codebase — Sync/Status bei großen Repos / neuen Dateien |
 
 ---
 
-# Was als Nächstes kommt
+# Merksatz
 
-- **Section 03:** **Rules**, **Context**, **Indexing** — wie ihr Antwortqualität steuert
-- **Section 04:** Kompletter **Plan-First**-Ablauf live
+- **Nur fragen** → nicht im **Agent** hängen bleiben
+- **Shift+Tab** kennen
+- **Agents-Tab** = Guardrails & Tool-Netz
+
+---
+
+# Als Nächstes
+
+- **Miguel** — **Section 03:** **Context**, **Rules**, **Indexing** vertiefen
+- **Section 04:** **Plan-First** / großer **Live-Flow**
 
 ---
 

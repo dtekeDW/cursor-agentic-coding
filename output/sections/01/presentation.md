@@ -1,6 +1,6 @@
 # Section 01 — Ablauf-Checkliste (Referent:innen)
 
-**Zeit:** 6 Min · **Owner:** Dogan  
+**Zeit:** 8 Min · **Owner:** Dogan  
 **Alles inhaltlich:** [section.md](section.md) · **Folien (Publikum):** [slides.md](slides.md)
 
 **Roter Faden (Dry-Run Dogan):** Begrüßung & Ziel → **VS Code + Cursor** & Shortcuts → **Live-Prompt** → **Modell** (⌘⇧/) → **Auto / Multiple Models** → **Kontextfenster** & Compaction → **Bild & Voice** → **`@`** (Datei, Ordner, Docs, Past Chats) → **Terminal** → **Diff zu `main`** → **Abschluss:** Feature-Recap (**semantische Suche**, **Simple Browser** ⌘⇧P, DOM/DevTools, **Bildgenerierung**) → **Queue** (**Enter**) vs. **Sofort** (**⌘Enter**) → optional **Laufort** → **Übergang Section 02**

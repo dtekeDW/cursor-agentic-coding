@@ -2,26 +2,26 @@
 
 ## Meta
 
-- Version: `v0.4.33`
+- Version: `v0.4.34`
 - Stand: `2026-03-25 CET`
 - Speaker: `Dogan Teke`, `Miguel Franken`
 - Zielgruppe: Entwickler:innen, die bisher primär Chat-Prompting nutzen
-- Dauer: `43 Min` Talk + `10 Min` Q&A
+- Dauer: `44 Min` Talk + `10 Min` Q&A
 - Ziel: Cursor agentisch nutzen (Plan Mode, Skills, MCP, Guardrails)
 
 ## Agenda
 
 | ID  | Titel                     | Min | Presenter      | Kern-Demo | Status                 | Referenz (`section.md`)              | Checkliste (`presentation.md`)         | Folien (`slides.md`)                 |
 | --- | ------------------------- | --- | -------------- | --------- | ---------------------- | ------------------------------------ | --------------------------------------- | ------------------------------------ |
-| 01  | Intro                      | 6   | Dogan          | nein      | ready-for-presentation | [Section 01](output/sections/01/section.md) | [presentation.md](output/sections/01/presentation.md) | [slides.md](output/sections/01/slides.md) |
-| 02  | Modes                      | 6   | Dogan          | nein      | ready-for-presentation | [Section 02](output/sections/02/section.md) | [presentation.md](output/sections/02/presentation.md) | [slides.md](output/sections/02/slides.md) |
+| 01  | Intro                      | 8   | Dogan          | nein      | ready-for-presentation | [Section 01](output/sections/01/section.md) | [presentation.md](output/sections/01/presentation.md) | [slides.md](output/sections/01/slides.md) |
+| 02  | Modes                      | 7   | Dogan          | nein      | ready-for-presentation | [Section 02](output/sections/02/section.md) | [presentation.md](output/sections/02/presentation.md) | [slides.md](output/sections/02/slides.md) |
 | 03  | Context, Rules             | 6   | Miguel         | nein      | ready-for-content      | [Section 03](output/sections/03/section.md) | [presentation.md](output/sections/03/presentation.md) | [slides.md](output/sections/03/slides.md) |
 | 04  | Full Demo (Ask + Plan)     | 7   | Miguel         | ja        | ready-for-demo         | [Section 04](output/sections/04/section.md) | [presentation.md](output/sections/04/presentation.md) | [slides.md](output/sections/04/slides.md) |
 | 05  | Skills + Demo              | 8   | Dogan & Miguel | ja        | ready-for-demo         | [Section 05](output/sections/05/section.md) | [presentation.md](output/sections/05/presentation.md) | [slides.md](output/sections/05/slides.md) |
 | 06  | MCP Small Demo             | 4   | Dogan          | ja        | ready-for-demo         | [Section 06](output/sections/06/section.md) | [presentation.md](output/sections/06/presentation.md) | [slides.md](output/sections/06/slides.md) |
 | 07  | Q&A                        | 4   | Dogan & Miguel | nein      | ready-for-content      | [Section 07](output/sections/07/section.md) | [presentation.md](output/sections/07/presentation.md) | [slides.md](output/sections/07/slides.md) |
 
-Gesamtzeit Talk: `44 Min`  
+Gesamtzeit Talk: `44 Min` (8+7+6+7+8+4+4)  
 Q&A: `10 Min`
 
 ## Docs Mapping (aus `https://cursor.com/llms.txt`)

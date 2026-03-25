@@ -1,8 +1,9 @@
 # Changelog
 
 ## 2026-03-25
-- Section 01 (Dry-Run Dogan): **Roter Faden** bis **Diff zu `main`**; **Abschluss:** semantische Suche, **Simple Browser** (**⌘⇧P**), Bildgenerierung, Agent-Browser-Abgrenzung; **Queue** (**Enter**) vs. **Sofort** (**⌘Enter**). `section.md`, `presentation.md`, `slides.md`; Full-Builds `PRESENTATION-FULL.md` / `SLIDES-FULL.md`.
-- Section 01 **slides.md:** Folie **„Reihenfolge (Roter Faden)“** (Deck = Checklisten-Ablauf); Live-Folie **„Live-Prompt“**; `SLIDES-FULL.md` neu gebaut. `Workshop.md` **v0.4.33**.
+- **Workshop.md** **v0.4.34:** Section **01** **8 Min**, Section **02** **7 Min**; Talk-Gesamt **44 Min** (Summe in Agenda).
+- **Section 01:** **8 Min**; zuvor Dry-Run-Abschluss (Simple Browser, Queue, Folien-Reihenfolge) — siehe frühere Einträge; `section.md` / `presentation.md` Zeiten angepasst.
+- **Section 02 (Dry-Run Dogan):** Modi + **Settings**-Sneak-Peek, **⌘I**/Tab/**⌘⇧/**, Default-Agent, **Shift+Tab**, Ask/Plan vs Agent/Debug, Übergang **Miguel**; `section.md`, `presentation.md`, `slides.md` (Marp-Frontmatter korrigiert); Full-Builds neu.
 
 ## 2026-03-23
 - Section 01: **`input/sections/01/Context.png`** (Platzhalter — durch Screenshot vom `@`-Menü ersetzen); **Roter Faden** in Talk/Checkliste/Folien: `@`/Chat-Kontext (inkl. Docs, Past Chats, Diff zu `main` per Prompt, Shell) → **Tools** → Wo → UI → Queue; Medienlinks überall ergänzt.
