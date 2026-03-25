@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-03-25
+- Section 01 (Dry-Run Dogan): **Roter Faden** bis **Diff zu `main`**; **Abschluss:** semantische Suche, **Simple Browser** (**⌘⇧P**), Bildgenerierung, Agent-Browser-Abgrenzung; **Queue** (**Enter**) vs. **Sofort** (**⌘Enter**). `section.md`, `presentation.md`, `slides.md`; Full-Builds `PRESENTATION-FULL.md` / `SLIDES-FULL.md`.
+- Section 01 **slides.md:** Folie **„Reihenfolge (Roter Faden)“** (Deck = Checklisten-Ablauf); Live-Folie **„Live-Prompt“**; `SLIDES-FULL.md` neu gebaut. `Workshop.md` **v0.4.33**.
+
 ## 2026-03-23
 - Section 01: **`input/sections/01/Context.png`** (Platzhalter — durch Screenshot vom `@`-Menü ersetzen); **Roter Faden** in Talk/Checkliste/Folien: `@`/Chat-Kontext (inkl. Docs, Past Chats, Diff zu `main` per Prompt, Shell) → **Tools** → Wo → UI → Queue; Medienlinks überall ergänzt.
 

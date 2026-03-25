@@ -18,30 +18,90 @@ footer: 'Cursor Agentic Coding — Full deck (Sections 01–07)'
 
 # Cursor Agentic Coding in Practice
 
-## Section 01 — Einstieg: Der Agent
+## Section 01 — Einstieg: Chat-Oberfläche & Kontext
 
-**Fragestellungen:** Kontext im Chat? Tools? Wo läuft es? Wie steuert ihr nach?
+**Heute:** mehr als nur Chat — Workflows, Demos — zuerst **Basics:** was ihr im Interface seht und was es bedeutet.
 
 [Vollständige Agenda](../../../Workshop.md)
 
 ---
 
-# Agent-Arbeit ist kein „normaler Chat“
+# Section 01 — Reihenfolge (Roter Faden)
 
-- [Overview](https://cursor.com/docs/agent/overview): **Instructions**, **Tools**, **Modell**
-- Ihr steuert **Nachrichten** + **Kontext** (`@`) und **Queue** (Enter / Cmd+Enter)
-
-**Roter Faden:** erst **Chat-Kontext**, dann **Tools**, dann **Laufumgebung & UI**
+1. **VS Code + Cursor** — gleiche Basis, Cursor-Layer & Shortcuts (**⌘T**, **⌘E**, …)
+2. **Live-Prompt** — eine Nachricht; Fokus auf **UI** neben der Antwort (Modell, Kontext, Usage)
+3. **Modellauswahl** (**⌘⇧/**) — Auto, Multiple Models, API-Keys …
+4. **Kontextfenster** — Token-Idee, **% used**, Compaction
+5. **Bild & Voice** — Paste/Drop, Spracheingabe
+6. **`@`‑Mentions** — Dateien, Ordner, Docs, Past Chats → Details **Section 03**
+7. **Terminal** — **`@Terminal`**, Logs mitgeben
+8. **Diff zu `main`** — im **Prompt** formulieren (kein `@Git`-Menü)
+9. **Kurz: Features** — semantische Suche, **Simple Browser** (**⌘⇧P**), Bildgenerierung
+10. **Message Queue** — **Enter** (wartet) vs. **⌘Enter** (sofort)
 
 ---
 
-# Kontext im Chat: `@`
+# Cursor ≈ VS Code + Cursor-Layer
 
-- **Datei** · **Ordner** · **Code-Symbol**
-- **`@Docs`** — auch **eigene** Dokumentation (*Add new doc*)
-- **`@Past Chats`**
-- **Diff / Branch zu `main`:** im **Prompt** beschreiben (Cursor 2.0: kein `@Git` im Menü)
-- **Terminal:** Agent nutzt **Shell**-Tool; Dateien mit `@` anpinnen
+- **Gleiche Basis** wie VS Code — dazu Cursor-spezifische Oberfläche (Agent, Modell, …)
+- **Shortcuts** wie gewohnt — u. a. **⌘E** Agent ein/aus, **⌘B** Sidebar, **⌘⇧F** Suche
+- **Neuer Chat:** z. B. **⌘T** (wie im Dry-Run)
+
+> Ziel: VS-Code-Nutzer fühlen sich zu Hause; Cursor ergänzt den **Agent-Workflow**.
+
+---
+
+# Live-Prompt: eine Nachricht im Chat
+
+- Beispiel-Prompt (gern mit „menschelndem“ Tippfehler): *What is this project about? Explain me like I'm 5.*
+- **Fokus nicht die Antwort** — sondern was **neben dem Text** passiert: Modell, Kontext, Tokens …
+
+---
+
+# Modellauswahl — das Herzstück
+
+- **Pro Chat / pro Lauf:** welches Modell soll der Agent nutzen?
+- **Shortcut im Chat:** **⌘⇧/** öffnet die Modell-Auswahl — durchtabben, Vorauswahl ist **team-/nutzerabhängig**
+- **All Models** — lange Liste; eigene **API-Keys** (z. B. Anthropic, Google, Azure) möglich, **Usage** ähnlich gelagert
+
+**Medien:** [Model Selection](../../../input/ui-controls/model-selection.png)
+
+[Models (Doku)](https://cursor.com/docs)
+
+---
+
+# Auto, Multiple Models, Max (optional)
+
+- **Auto** — Cursor wählt passendes Modell; oft **günstiger** / sparsamer mit Tokens
+- **Use Multiple Models** — mehrere Modelle an **eine** Aufgabe; lohnt zum **Ausprobieren** (Verhalten je nach Setup)
+- **Max Mode** — falls in eurer Lizenz nicht enthalten: **überspringen** oder nur erwähnen
+
+---
+
+# Kontextfenster (Context Window)
+
+- Zeigt, wie viel **Kontext** das gewählte Modell „im Kopf“ hat — in **Tokens** (grob: verarbeitete Menge)
+- **Rad / Prozent** (z. B. *x % context used*) — wie viel von diesem Fenster die **aktuelle Session** schon verbraucht
+- **Wenn es voll wird:** committen, sichern, **neue Session** — sonst **Compaction** (Zusammenfassung + Neustart) → ältere Details gehen verloren
+
+**Medien:** [Context Window](../../../input/ui-controls/context-window.png)
+
+---
+
+# Bild & Voice
+
+- **Bilder** in den Chat (Paste / Drop) — Screenshots, Mockups, Fehler
+- **Spracheingabe** — praktisch, gut nutzbar im Alltag
+
+---
+
+# `@` — Mentions & Kontext (Überblick)
+
+- **Dateien, Ordner, Symbole** anhängen — statt alles manuell zu beschreiben
+- **Ordner** statt viele Einzeldateien — Struktur auf einmal mitgeben
+- **`@Docs`** — Doku per Link / Eintrag (**+** / *Add doc*)
+- **`@Past Chats`** — frühere Chats einbinden, wenn die Aufgabe ähnlich ist
+- **Details & Regeln** → **Section 03**
 
 ![@-Menü (Beispiel)](../../../input/sections/01/Context.png)
 
@@ -49,63 +109,44 @@ footer: 'Cursor Agentic Coding — Full deck (Sections 01–07)'
 
 ---
 
-# Tools (was der Agent ausführt)
+# Terminal im Chat-Kontext
 
-| | |
+- **`@Terminal`** — Session / Output **mitgeben**, ohne ganzen Log abzutippen
+- Praktisch bei **laufenden Logs**: Verhalten prüfen, Fehler zeigen — oft **selbsterklärend** für das Modell
+
+---
+
+# Branch / Diff zu `main`
+
+- **Im Prompt** z. B. Vergleich Feature-Branch ↔ **`main`** (Produktion) — Agent holt sich Infos über **Git / Shell**
+- Cursor 2.0: kein **`@Git`** im Mention-Menü — **formulieren**, was ihr braucht
+- Praktisch z. B. für **Merge-Request-Beschreibung**; Referenz-Branch ggf. **konfigurierbar**
+
+---
+
+# Am Abschluss: Features (kurz durchzählen)
+
+- **Semantische Suche** über die indexierte Codebase — [Search](https://cursor.com/docs/agent/tools/search)
+- **Simple Browser:** **⌘⇧P** (Command Palette) → *Simple Browser* → URL — **DOM / Struktur** gezielt ins Chat, **DevTools** nutzbar
+- **Bildgenerierung** als Agent-Tool (z. B. Mockups) — [Overview → Tools](https://cursor.com/docs/agent/overview#tools)
+
+**Nicht verwechseln:** **Agent-Browser-Tool** = Seite wird vom Agenten bedient · **Simple Browser** = ihr steuert die Seite und schickt Kontext
+
+---
+
+# Queue vs. Sofort senden
+
+- **Enter** → Nachricht in die **Queue** (wie offene Punkte); erst fertig mit dem **aktuellen Prompt**, dann die nächste — gut für **Setup Stück für Stück**, Test-Matrizen, …
+- **⌘Enter** (**Ctrl+Enter**) → **sofort** raus; laufender Schritt wird **kurz unterbrochen**, Korrektur rein — z. B. **falsches Package**, Log sieht falsch aus
+
+---
+
+# Wo der Agent läuft (optional)
+
+| Thema | Kurz |
 | --- | --- |
-| **Semantic Search** | Codebase nach Bedeutung |
-| **Shell / Web / Edit** | Terminal, Recherche, Dateien |
-| **Browser-Tool** | Seite **steuern**, Screenshots ([Doku](https://cursor.com/docs/agent/tools/browser)) |
-| **Bildgenerierung** | z. B. Mockups → oft `assets/` |
-
-**Abgrenzung:** **`@`** = Kontext **in den Prompt** · **Browser-Tool** = echte **UI-Session**
-
-[Overview → Tools](https://cursor.com/docs/agent/overview#tools)
-
----
-
-# Wo arbeitet der Agent?
-
-| Laufumgebung | Kurz |
-| --- | --- |
-| **Local** | Euer Workspace |
-| **Worktree** | Isolierte lokale Sandbox |
-| **Cloud** | Separater Lauf / Branch |
-
-→ **Risiko** & **Zusammenarbeit**
-
----
-
-# UI: drei Anker
-
-1. **Context Window** — woher kommt der Kontext?
-2. **Modellauswahl**
-3. **Laufumgebung** (Local / Worktree / Cloud)
-
-**Medien:**
-
-- [Context `@`](../../../input/sections/01/Context.png)
-- [Context Window](../../../input/ui-controls/context-window.png)
-- [Model Selection](../../../input/ui-controls/model-selection.png)
-- [Worktree](../../../input/ui-controls/work-tree.png)
-
----
-
-# Nachsteuern während der Arbeit
-
-| Aktion | Wirkung |
-| --- | --- |
-| **Enter** | **Queue** — nach aktuellem Schritt |
-| **Cmd+Enter** / **Ctrl+Enter** | **Sofort** — Eingriff |
-
-> Queue lässt fertigarbeiten — Immediate korrigiert den Lauf.
-
----
-
-# Bilder im Prompt
-
-- **Paste** (`Cmd+V`) oder **Drag & Drop** — Screenshots, Fehler, Mockups
-- Zusätzlich: Agent kann **Bilder generieren** (Tool)
+| **Laufort** | **Local** / **Worktree** / **Cloud** — im Panel wählbar |
+| **Sonstige Tools** | **Shell**, **Web**, … — [Overview → Tools](https://cursor.com/docs/agent/overview#tools) |
 
 ---
 

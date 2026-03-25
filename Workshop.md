@@ -2,8 +2,8 @@
 
 ## Meta
 
-- Version: `v0.4.31`
-- Stand: `2026-03-23 CET`
+- Version: `v0.4.33`
+- Stand: `2026-03-25 CET`
 - Speaker: `Dogan Teke`, `Miguel Franken`
 - Zielgruppe: Entwickler:innen, die bisher primär Chat-Prompting nutzen
 - Dauer: `43 Min` Talk + `10 Min` Q&A
