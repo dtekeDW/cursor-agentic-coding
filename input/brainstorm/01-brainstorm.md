@@ -75,4 +75,3 @@
 - Nicht zu tief, dafür klar und reproduzierbar.
 - Pro Section ein Kernziel + ein klarer Takeaway.
 - Diffs/Checks/Review über „magische“ One-Shot-Demos stellen.
-

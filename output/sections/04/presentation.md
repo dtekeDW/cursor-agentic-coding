@@ -9,7 +9,12 @@
 - [Prev: Section 03](../03/presentation.md)
 - [Next: Section 05](../05/presentation.md)
 
-## Checkliste
+
+## NEW
+- [ ] **Übergang** Section 04 erklärt das grobe und ganze für:
+- [ ] **Context, Rules, Guidelines (Project, Team, Global), -> in die Cursor settings schauen
+
+## OLD
 
 - [ ] **Hook:** Optionen → Entscheidung → kleiner Plan vor großem Diff
 - [ ] Repo **ms_frontend** (o. ä.) + `.cursor/rules` zeigen

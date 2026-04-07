@@ -17,6 +17,7 @@
 - [ ] **~2.5min** **Changeset** SKILL; optional Live auf Branch
 - [ ] **~1min** Invocation: Auto vs. `/` · `disable-model-invocation`
 - [ ] **Übergang** Section 06 MCP
+- [ ] **Ablauf** Dogan die 2 Skills, Miguel macht Framework Agnotics, Docs, mehr
 
 ## Notfall
 
