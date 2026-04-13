@@ -42,7 +42,29 @@ Create/merge .changeset entry with affected package bumps
 
 ---
 
-# Demo 3 — ms_frontend Skills (Miguel)
+# Demo 3 - NextJS Skill
+
+https://nextjs.org/blog/next-16-2-ai#ai-ready-project-setup
+
+```
+<!-- BEGIN:nextjs-agent-rules -->
+ 
+# Next.js: ALWAYS read docs before coding
+ 
+Before any Next.js work, find and read the relevant doc in `node_modules/next/dist/docs/`. Your training data is outdated — the docs are the source of truth.
+ 
+<!-- END:nextjs-agent-rules -->
+```
+
+---
+
+# Demo 4 - Vercel/Workflow Skill
+
+https://skills.sh/vercel/workflow/workflow
+
+---
+
+# Demo 4 — ms_frontend Skills (Miguel)
 
 **Pfad:** `/Users/dteke/Developer/docker/projects/ms_frontend/.agents/skills`
 
