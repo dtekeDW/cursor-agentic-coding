@@ -4,11 +4,11 @@ paginate: true
 footer: 'Cursor Agentic Coding — Section 06'
 ---
 
-# Section 06 — MCP (kurz)
+# Section 06 — MCP (4 Min)
 
 ## Model Context Protocol
 
-**Kern:** Externe **Tools** und **Datenquellen** — angebunden an den Agent, mit **sichtbaren Tool-Calls** und **Freigabe**.
+**Kern:** Externe Tools und Datenquellen im Agent-Workflow, mit sichtbaren Tool-Calls und Approval.
 
 [Vollständige Agenda](../../../Workshop.md)
 
@@ -16,23 +16,31 @@ footer: 'Cursor Agentic Coding — Section 06'
 
 # Was MCP bringt
 
-- Weniger **Copy-Paste** von Kontext aus Browser, Design-Tools, Tickets, …
-- **Direkte** Anbindung über Server (lokal **stdio** oder remote **HTTP/SSE** — je nach Setup)
-- Passt zu **Plan Mode** und **Agent** (siehe [MCP Docs](https://cursor.com/docs/mcp))
+- Weniger Copy-Paste aus Browser, Figma, Tickets
+- Direkte Server-Anbindung (`stdio`, `SSE`, `HTTP`)
+- Funktioniert in Agent und Plan Mode
 
 ---
 
-# Zwei Demos in diesem Workshop
+# 1 Hauptpfad live
 
-| Demo | Inhalt |
+| Demo | Fokus |
 | --- | --- |
-| **Chrome DevTools MCP** | Live-Daten aus dem Browser (z. B. **A11y** oder **INP**) |
-| **Figma MCP** | Specs, Abstände, Struktur aus dem Design — ohne Raten |
+| **Chrome DevTools MCP** | Eine konkrete Analyse (A11y **oder** INP) |
 
-**Detaillierte Schrittfolgen** (zum Mitgehen):
+**Runbook:**
+- [01-chrome-devtools-mcp-demo.md](../../../input/sections/06/01-chrome-devtools-mcp-demo.md)
 
-- [Runbook: Chrome DevTools MCP](../../../input/sections/06/01-chrome-devtools-mcp-demo.md)
-- [Runbook: Figma MCP](../../../input/sections/06/02-figma-mcp-demo.md)
+---
+
+# 2. Pfad als Referenz (optional)
+
+| Demo | Fokus |
+| --- | --- |
+| **Figma MCP** | Design-Struktur und Specs ohne Raten |
+
+**Runbook:**
+- [02-figma-mcp-demo.md](../../../input/sections/06/02-figma-mcp-demo.md)
 
 ---
 
@@ -47,8 +55,8 @@ footer: 'Cursor Agentic Coding — Section 06'
 
 # Merksätze
 
-- **Demo 1:** *Daten kommen aus dem Browser über MCP — nicht aus dem Kopf des Modells.*
-- **Demo 2:** *Design-Kontext aus Figma — strukturiert, nicht geraten.*
+- *Daten kommen aus echten Tools, nicht aus Modell-Raten.*
+- *MCP beschleunigt, aber braucht saubere Approval-Disziplin.*
 
 ---
 

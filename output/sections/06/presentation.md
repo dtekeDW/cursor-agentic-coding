@@ -14,7 +14,7 @@
 - [ ] **Hook:** MCP = externe Tools + Approval (kurz)
 - [ ] **Demo 1:** [01-chrome-devtools-mcp-demo.md](../../../input/sections/06/01-chrome-devtools-mcp-demo.md) — Chronologie abarbeiten, Prompt, **eine** Variante (A11y oder INP)
 - [ ] Tool **freigeben**, Output zeigen
-- [ ] **Demo 2:** [02-figma-mcp-demo.md](../../../input/sections/06/02-figma-mcp-demo.md) -> Beispiel finden (muss nicht komplex)
+- [ ] **Demo 2 nur referenzieren:** [02-figma-mcp-demo.md](../../../input/sections/06/02-figma-mcp-demo.md) als optionalen Follow-up nennen
 - [ ] **Sicherheit** ein Satz
 - [ ] **Übergang** Section 07
 

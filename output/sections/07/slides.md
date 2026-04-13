@@ -36,6 +36,16 @@ footer: 'Cursor Agentic Coding — Section 07'
 
 ---
 
+# Developer CTA — Start morgen
+
+1. Ein Repo auswaehlen
+2. Eine `.cursor/rules` Datei schaerfen
+3. Ein `AGENTS.md` mit Team-Ton und Guardrails anlegen
+4. Einen wiederholbaren Skill definieren
+5. Einen MCP-Server bewusst und sicher aktivieren
+
+---
+
 # Governance (ein Rahmen)
 
 - Wann reicht **Planning**?
@@ -47,6 +57,14 @@ footer: 'Cursor Agentic Coding — Section 07'
 
 - Offene Fragen aus dem Talk
 - **Nächster Schritt** pro Team klären — wer verantwortet Rules, Skills, MCP-Setup?
+
+---
+
+# Kurz nach vorn — Cursor 3
+
+- Beobachtet die Cursor-Release-Notes fuer neue Agent- und MCP-Workflows.
+- Startet mit dem stabilen Setup aus heute und erweitert inkrementell.
+- Ziel: nicht alles neu, sondern euren bestehenden Workflow smarter machen.
 
 ---
 

@@ -1,7 +1,7 @@
 # Section 04 — Ablauf-Checkliste (Referent:innen)
 
-**Zeit:** 7 Min · **Owner:** Miguel · **Kern-Demo:** ja  
-**Inhalt + Prompts:** [section.md](section.md) · **Folien:** [slides.md](slides.md)
+**Zeit:** 5 Min · **Owner:** Dogan & Miguel · **Kern-Demo:** nein  
+**Inhalt:** [section.md](section.md) · **Folien:** [slides.md](slides.md)
 
 ## Navigation
 
@@ -10,20 +10,16 @@
 - [Next: Section 05](../05/presentation.md)
 
 
-## NEW
-- [ ] **Übergang** Section 04 erklärt das grobe und ganze für:
-- [ ] **Context, Rules, Guidelines (Project, Team, Global), -> in die Cursor settings schauen
+## Checkliste
 
-## OLD
-
-- [ ] **Hook:** Optionen → Entscheidung → kleiner Plan vor großem Diff
-- [ ] Repo **ms_frontend** (o. ä.) + `.cursor/rules` zeigen
-- [ ] **Ask:** 3 Optionen, **eine** wählen (Prompts in [section.md](section.md))
-- [ ] **Plan:** 3 Phasen, **freigeben**
-- [ ] Optional **Subagent** erwähnen
-- [ ] **Agent:** **nur Phase 1** → Diff + Check
-- [ ] **Übergang** Section 05 Skills
+- [ ] **Hook:** Skills = wiederverwendbare Team-Workflows
+- [ ] **2 Min** Konzept: portable, versioniert, actionable, progressive
+- [ ] Skill-Orte + SKILL.md Frontmatter kurz zeigen
+- [ ] `disable-model-invocation` klar erklaeren (auto vs manuell)
+- [ ] Jira- und Changeset-Skill als Vorschau einordnen
+- [ ] Miguel zeigt `ms_frontend` Skill-Landschaft (Nuxt, Vue, Doku/Struktur)
+- [ ] **Uebergang:** Section 05 = Main Demo (Ask -> Plan -> Agent)
 
 ## Notfall
 
-- Vorgefertigten Plan zeigen (Plan B in [section.md](section.md)).
+- Nur die Folien und je eine SKILL.md Datei oeffnen, keine Live-Ausfuehrung.

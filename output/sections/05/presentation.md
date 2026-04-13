@@ -11,14 +11,13 @@
 
 ## Checkliste
 
-- [ ] **Hook:** Skills = Team-Gedächtnis; heute Doku + Jira + Changeset
-- [ ] **~2min** Konzept ([cursor.com/docs/skills](https://cursor.com/docs/skills)) — Tabellen in [section.md](section.md)
-- [ ] **~2min** **Jira** SKILL + Script-Pfad; optional Live-Prompt
-- [ ] **~2.5min** **Changeset** SKILL; optional Live auf Branch
-- [ ] **~1min** Invocation: Auto vs. `/` · `disable-model-invocation`
+- [ ] **Hook:** Skill Demo Time (konkrete Team-Workflows)
+- [ ] **Jira Skill (~2.5 min):** Ticket -> Plan Flow zeigen
+- [ ] **Changeset Skill (~2.5 min):** Branch Diff -> `.changeset` zeigen
+- [ ] **ms_frontend Skills (~2 min):** Miguel zeigt Framework/Doku/Struktur Skills
+- [ ] **Sprecher-Handoff:** Dogan startet, Miguel uebernimmt ms_frontend Deep Dive
 - [ ] **Übergang** Section 06 MCP
-- [ ] **Ablauf** Dogan die 2 Skills, Miguel macht Framework Agnotics, Docs, mehr
 
 ## Notfall
 
-- Plan B in [section.md](section.md) — nur SKILL.md durchgehen oder einen Skill live.
+- Vorgefertigte Skill-Outputs zeigen und nur einen Skill live laufen lassen.

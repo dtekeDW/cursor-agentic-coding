@@ -4,88 +4,104 @@ paginate: true
 footer: 'Cursor Agentic Coding — Section 04'
 ---
 
-# Section 04 — Plan-First
+# Section 04 — Skills erklärt
 
-## Von der Idee zum freigegebenen Plan
-
-**Kern:** Erst **Optionen** und **Entscheidung**, dann **kleine Phasen** — nicht sofort „alles bauen“.
+## Wiederverwendbare Agent-Workflows
 
 [Vollständige Agenda](../../../Workshop.md)
 
 ---
 
-# Was „Plan-First“ bedeutet
+# Warum Skills?
 
-1. Keine große Umsetzung ohne **Optionen** und eure **Freigabe**
-2. Jede Option: **betroffene Dateien**, **Risiko**, **Validation**
-3. Gute Schritte sind **klein**, **prüfbar**, **zurücknehmbar**
-4. Ergebnis: ein **freigegebener Mehrphasen-Plan** statt einer langen Wunschliste
+| Punkt | Nutzen |
+| --- | --- |
+| **Portable** | Laeuft in Agenten mit Skills-Standard |
+| **Versioniert** | Im Repo nachvollziehbar und teilbar |
+| **Actionable** | Kann Scripts und Templates ausfuehren |
+| **Progressive** | Laedt nur den noetigen Kontext |
 
 ---
 
-# Typischer Ablauf (Überblick)
+# Wo liegen Skills?
 
 ```text
-Ask      →  Optionen + Trade-offs
-   ↓
-Plan     →  Phasen, Checks, Rollback-Ideen
-   ↓
-Freigabe →  (ihr)
-   ↓
-Agent    →  eine Phase umsetzen, dann prüfen
+.agents/skills/     # Projekt
+.cursor/skills/     # Projekt
+~/.cursor/skills/   # global
 ```
 
 ---
 
-# Subagents (Konzept)
+# Minimaler Aufbau
 
-- Bei großen Aufgaben (z. B. **Frontend** + **Backend**) können **einzelne Plan-Todos** an **Subagents** gehen
-- Jeder Subagent: **eigenes Context Window** — fokussierte Arbeit
-- Danach Ergebnisse **zusammenführen**
-
----
-
-# Beispiel-Aufgabe (Demo-Kontext)
-
-Optionaler **sekundärer CTA** auf einer **Reservation Card** (oder vergleichbare kleine UI-Erweiterung im **Nuxt / Storybook / UI-Package**-Setup).
-
-**Guard Rails im Repo:** `.cursor/rules` (und ggf. Skills) beachten.
+```text
+my-skill/
+  SKILL.md
+  scripts/        (optional)
+  references/     (optional)
+  assets/         (optional)
+```
 
 ---
 
-# Prompt-Ideen (Struktur)
+# SKILL.md Frontmatter (Pflicht)
 
-**Optionen (Ask, read-only):**
+```yaml
+---
+name: create-changeset-from-main-diff
+description: Use when a branch needs a changeset from main diff.
+---
+```
 
-- Drei Optionen mit: Dateien, Risiko, einfachster Check — dann **eine** Option wählen
-
-**Plan:**
-
-- Drei **kleine Phasen**: Ziel, Dateien, Erfolgskriterium, **Rollback-Notiz**
-
-**Umsetzung:**
-
-- **Nur Phase 1** im Agent — danach Diff + kurze Validation
-
-*(Längere Prompt-Vorlagen könnt ihr im Workshop-Repo oder von den Referent:innen erhalten.)*
+- `name` muss zum Ordnernamen passen.
+- `description` steuert, wann der Agent den Skill relevant findet.
 
 ---
 
-# Plan B (wenn Live nicht glänzt)
+# Invocation
 
-- Einen **vorbereiteten Plan** zeigen und **gemeinsam** gegenlesen
-- Lernziel bleibt: **Struktur vor großem Diff**
+- **Automatisch:** Agent ruft bei Relevanz auf.
+- **Manuell:** `/` tippen und Skill auswaehlen.
+- **Nur manuell:** `disable-model-invocation: true`
 
 ---
 
-# Nächster Teil — Section 05
+# Skill-Kategorien (allgemein)
 
-**Skills:** Wiederholbare Team-Workflows als Dateien — z. B. **Jira → Plan** und **Changeset aus Branch-Diff**.
+| Kategorie | Typische Aufgabe |
+| --- | --- |
+| **Delivery** | Release, Merge Request, Changesets |
+| **Planning** | Jira/Ticket-Analyse, Umsetzungsplaene |
+| **Framework** | Vue, Nuxt, Pinia, UnoCSS Patterns |
+| **Quality** | Vitest, Playwright, E2E, Pipeline-Analyse |
+| **Documentation** | Storybook-Doku, strukturierte Outputs |
+
+---
+
+# Best Practices fuer gute Skills
+
+- Eine Aufgabe pro Skill klar fokussieren
+- Konkrete Inputs/Outputs in der `SKILL.md` beschreiben
+- Scripts klein und robust halten
+- Details bei Bedarf in `references/` auslagern
+
+---
+
+# Takeaway
+
+- Skills machen Team-Workflows reproduzierbar.
+- Weniger Prompt-Zufall, mehr konsistente Outputs.
+
+---
+
+# Als Naechstes — Section 05
+
+**Demo-Zeit:** konkrete Skills live (Jira, Changeset, ms_frontend-Skills).
 
 ---
 
 # Weiterführend
 
-- [Plan Mode](https://cursor.com/docs/agent/plan-mode)
-- [Agent Prompting](https://cursor.com/docs/agent/prompting)
-- [Agent Overview](https://cursor.com/docs/agent/overview)
+- [Skills](https://cursor.com/docs/skills)
+- [Agent Skills Standard](https://agentskills.io/)

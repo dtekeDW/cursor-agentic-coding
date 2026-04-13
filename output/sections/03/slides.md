@@ -6,15 +6,15 @@ footer: 'Cursor Agentic Coding — Section 03'
 
 # Section 03 — Kontext steuern
 
-## Rules · Context · Indexing
+## Rules · AGENTS.md · Context · Indexing
 
-**Kernidee:** Bessere Antworten durch **richtigen Kontext** und **klare Regeln** — nicht nur längere Prompts.
+**Kernidee:** bessere Antworten durch **Kontext-Orchestrierung** und **klare Regeln**, nicht nur durch längere Prompts.
 
 [Vollständige Agenda](../../../Workshop.md)
 
 ---
 
-# Vier Hebel (Merksätze)
+# Vier Hebel
 
 1. **Rules** — dauerhaftes Verhalten (team- und projektweit)
 2. **Context** — worauf das Modell **konkret** schaut (`@`, Auswahl)
@@ -30,32 +30,53 @@ footer: 'Cursor Agentic Coding — Section 03'
 | **Project Rules** (`.cursor/rules`) | Im Repo versioniert — Projekt-Standards |
 | **User Rules** | Persönlich, accountweit |
 | **Team Rules** | Organisation, zentral vorgegeben |
-| **AGENTS.md** | Einfache Markdown-Anweisungen im Repo |
+| **AGENTS.md** | Einfache Markdown-Guidance, auch in Unterordnern möglich |
 
 ---
 
-# Hierarchie bei Konflikten
+# Regel-Hierarchie bei Konflikten
 
 ```text
-AGENTS.md  →  einfache Repo-Guidance
-
-Team Rules  →  Project Rules  →  User Rules
-(org)            (repo)           (persönlich)
-
-Konflikt:  Team > Project > User
+Team Rules > Project Rules > User Rules
+AGENTS.md ergänzt als leichtgewichtige Guidance.
 ```
 
 ---
 
-# Context aktiv nutzen
+# Nested AGENTS.md (Folder-Kontext)
 
-- **Ohne** gezielte Auswahl: breite, unscharfe Antworten möglich
-- **Mit** `@Datei` / `@Ordner`: Fokus auf das, was wirklich zählt
-- **A/B-Test im Team:** gleiche Aufgabe einmal ohne, einmal mit `@` + Rules — Unterschied sichtbar machen
+```text
+project/
+  AGENTS.md                # global
+  frontend/
+    AGENTS.md              # frontend-spezifisch
+  backend/
+    AGENTS.md              # backend-spezifisch
+```
+
+- Je tiefer im Ordner, desto spezifischer der Kontext.
+- Sehr gut für Framework-/Domain-spezifische Guidance.
 
 ---
 
-# Indexing (kurz)
+# Kontext aktiv steuern
+
+- **Ohne** gezielte Auswahl: breite, unscharfe Antworten möglich
+- **Mit** `@Datei` / `@Ordner`: Fokus auf das, was wirklich zählt
+- **A/B live zeigen:** gleiche Aufgabe einmal ohne, einmal mit `@` + Rules
+
+---
+
+# Kontext-Orchestrierung im Alltag
+
+1. Aufgabe kurz und präzise formulieren
+2. `@`-Kontext gezielt anhängen (Datei/Ordner/Symbol)
+3. Relevante Rule aktiv lassen oder nennen
+4. Erst dann in Plan/Agent weitergehen
+
+---
+
+# Indexing (Prerequisite, kurz)
 
 - Ohne brauchbares **Indexing** findet der Agent Inhalte nicht zuverlässig
 - Gute Prompts helfen wenig, wenn relevante Dateien „unsichtbar“ sind
@@ -71,9 +92,9 @@ Konflikt:  Team > Project > User
 
 # Takeaway
 
-> Nicht mehr nur **mehr Prompt-Text** — sondern **besserer Kontext** und **klare Rules**.
+> Nicht mehr Prompt-Menge, sondern **Kontext-Hierarchie + Rules**.
 
-**Als Nächstes — Section 04:** Plan-First von der Idee bis zur ersten Umsetzungsphase.
+**Als Nächstes — Section 04:** Skills erklären (Struktur, Invocation, Beispiele).
 
 ---
 

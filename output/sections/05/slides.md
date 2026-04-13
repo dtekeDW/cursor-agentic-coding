@@ -4,99 +4,86 @@ paginate: true
 footer: 'Cursor Agentic Coding — Section 05'
 ---
 
-# Section 05 — Skills
+# Section 05 — Skill Demo Time
 
-## Wiederverwendbare Team-Routinen
+## Konkrete Skills live im Flow
 
-**Definition:** Portabler, versionierbarer Baustein — der Agent führt **Anweisungen** und optional **Scripts** aus.
+**Ziel:** zeigen, wie konkrete Skills reale Team-Workflows beschleunigen.
 
 [Vollständige Agenda](../../../Workshop.md)
 
 ---
 
-# Warum Skills?
+# Demo-Reihenfolge (8 Min)
 
-| Eigenschaft | Nutzen |
-| --- | --- |
-| **Portable** | Funktionieren in Agents, die den Standard unterstützen |
-| **Version-controlled** | Im Repo oder von GitHub installierbar |
-| **Actionable** | Scripts, Templates, Referenzen |
-| **Progressive** | Kontext wird bei Bedarf nachgeladen |
-
----
-
-# Wo liegen Skills?
-
-| Ort | Geltung |
-| --- | --- |
-| `.agents/skills/` | Projekt |
-| `.cursor/skills/` | Projekt |
-| `~/.cursor/skills/` | Benutzer (global) |
-
-*(Plus Kompatibilität: `.claude/`, `.codex/` — siehe Doku.)*
+1. **Jira Skill** zeigen (Planung aus Ticket)
+2. **Changeset Skill** zeigen (Diff -> Changeset)
+3. **ms_frontend Skill-Landschaft** (Miguel Deep Dive)
+4. **Kurzvergleich:** manuell vs. mit Skill
+5. **Fallback:** vorbereitete Outputs, falls Live hakt
 
 ---
 
-# Minimaler Aufbau
+# Demo 1 — Jira Planning Skill
+
+- Skill: `jira-code-planning` / `planning-jira-ticket-implementation`
+- Input: Jira Ticket-ID oder URL
+- Output: strukturierter Implementierungsplan (ohne Code)
+
+---
+
+# Demo 2 — Changeset Skill
 
 ```text
-.agents/skills/my-skill/
-  └── SKILL.md
+Use create-changeset-from-main-diff
+Compare current branch with origin/main
+Create/merge .changeset entry with affected package bumps
 ```
 
-**Mit Erweiterungen:** `scripts/`, `references/`, `assets/`
+---
+
+# Demo 3 — ms_frontend Skills (Miguel)
+
+**Pfad:** `/Users/dteke/Developer/docker/projects/ms_frontend/.agents/skills`
+
+- Framework: `nuxt`, `vue`, `pinia`, `unocss`
+- Quality: `vitest`, `playwright-cli`, `e2e-guides`
+- Doku/Struktur: `storybook-customer-docs`, `find-skills`, `write-changeset-description`
 
 ---
 
-# SKILL.md (Frontmatter)
+# Warum das im Team stark ist
 
-Pflichtfelder:
-
-- **`name`** — Kleinbuchstaben, Zahlen, Bindestriche; = Ordnername
-- **`description`** — Wann und wofür der Skill gilt (Relevanz für den Agent)
-
-Optional:
-
-- **`disable-model-invocation: true`** → Skill **nur** bei **`/skill-name`**, nicht automatisch
+- Wiederholbare Outputs statt jedes Mal neue Prompts
+- Einheitlicher Qualitätsstandard fuer alle
+- Schnellere Einarbeitung fuer neue Teammitglieder
 
 ---
 
-# Skill 1 — Jira → Plan
+# Sprecher-Handoff
 
-**Idee:** Ticket-URL oder Nummer → Script holt Daten → Codebase → **Plan** (oder Umsetzung).
-
-**Material im Workshop-Repo:**
-
-- [SKILL.md — Planning Jira](../../../input/sections/05/planning-jira-ticket-implementation/SKILL.md)
-- Script: `scripts/get-jira-issue.sh`
+- **Dogan:** Jira + Changeset Skill Demos
+- **Miguel:** ms_frontend Skills (Framework + Doku + Struktur)
+- Wechsel klar ansagen, damit der rote Faden stabil bleibt
 
 ---
 
-# Skill 2 — Changeset aus Main-Diff
+# Plan B (Live-Absicherung)
 
-**Idee:** Aktueller Branch vs. **`origin/main`** → betroffene **Packages** → **Bump-Typ** → `.changeset/*.md`.
-
-**Material:**
-
-- [SKILL.md — Changeset from main diff](../../../input/sections/05/create-changeset-from-main-diff/SKILL.md)
-
----
-
-# Aufruf
-
-- **Automatisch** — wenn der Agent den Skill für passend hält
-- **Manuell** — **`/`** tippen, Skill suchen
-- **Explizit nur** — mit `disable-model-invocation: true`
+- Vorgefertigte Skill-Outputs zeigen
+- Nur einen Skill live ausfuehren, Rest kurz walkthrough
+- Lernziel bleibt: konkreter Mehrwert von Skills sichtbar machen
 
 ---
 
 # Nächster Teil — Section 06
 
-**MCP:** Cursor mit **Browser**, **Figma** und anderen Tools **über das Protokoll** verbinden — mit **Tool-Approval**.
+**MCP:** externe Tools und Datenquellen kontrolliert in den Workflow holen.
 
 ---
 
 # Weiterführend
 
-- [Agent Skills (Cursor Docs)](https://cursor.com/docs/skills)
-- [Agent Skills Standard](https://agentskills.io/)
+- [Plan Mode](https://cursor.com/docs/agent/plan-mode)
+- [Agent Overview](https://cursor.com/docs/agent/overview)
+- [Prompting](https://cursor.com/docs/agent/prompting)

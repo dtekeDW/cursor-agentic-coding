@@ -4,86 +4,87 @@ paginate: true
 footer: 'Cursor Agentic Coding — Section 02'
 ---
 
-# Section 02 — Modi & Settings (Überblick)
-
-**Nach Section 01:** viel Input auf einmal — das kommt **wieder**. Hier: **vier Modi** + **kurzer Settings-Blick** — dann **Miguel**.
+# Section 02 — Modi in der Praxis
 
 [Vollständige Agenda](../../../Workshop.md)
 
 ---
 
-# Section 02 — Reihenfolge
+# Section 02 — Reihenfolge (8 Min)
 
-1. **Live:** Chat öffnen, frischer Tab, **Modell** (**⌘⇧/**)
-2. **Vier Modi** — wann **nicht** Agent?
-3. **Shift+Tab** — durchrotieren
-4. **Read-only vs. Edits**
-5. **Cursor Settings** — v. a. **Agents** & **Indexing**
-6. **Übergang:** **Miguel** → Section 03 / 04
+1. **Vier Modi** — wann welcher Modus?
+2. **Shortcuts** — **Shift+Tab**, Mode-Picker
+3. **Zwei Prompt-Beispiele** — **Ask** und **Debug**
+4. **Settings-Sneak-Peek** — Agents, Indexing
+5. Übergang zu **Section 03** (Context & Rules)
 
 ---
 
-# Die vier Modi (Kern)
+# Die vier Modi (Kern-Map)
 
 | Modus | Kurz |
 | ----- | ---- |
-| **Ask** | **Read-only**, schnell, sparsam — **semantische Suche**, einfache **Projektfragen** |
-| **Agent** | **Default** — sucht, editiert, Terminal; **„macht was“** |
-| **Plan** | **Planung**, **Gegenfragen** — komplexe Aufgaben strukturieren; **Demo → Section 04** |
-| **Debug** | **Logs**, **Hypothesen**, Fehlerfokus — oft stark bei **viel Debug-Zeit** |
+| **Ask** | Read-only verstehen: Architektur, Flows, Wo liegt was? |
+| **Plan** | Erst klären, Optionen vergleichen, Phasen planen |
+| **Agent** | Umsetzen: Dateien, Terminal, Tools |
+| **Debug** | Root-Cause mit Logs/Hypothesen statt Rate-Fix |
 
 ---
 
-# Default Agent — wann wechseln?
+# Wann **nicht** im Agent bleiben?
 
-- Viele sind **sofort im Agent** — das ist der **Standard**
-- Wenn ihr **nur Fragen** habt und **keine** Dateien / Konfigs geändert haben wollt → **Modus wechseln** (z. B. **Ask**)
-
----
-
-# Read-only vs. direkt am Code
-
-| | **Ask** · **Plan** | **Agent** · **Debug** |
-| --- | --- | --- |
-| **Im Talk** | eher **read-only** / erst **klären & planen** | können **Dateien ändern** |
-
-*Feinheiten zu **Plan** und Umsetzung → **Section 04** / Doku.*
+- Standard ist oft **Agent**.
+- Wenn ihr nur verstehen wollt: **Ask** statt unnötige Edits.
+- Bei komplexen Tasks: **Plan** vor der Umsetzung.
+- Bei zähen Bugs: **Debug** statt blindem Refactor.
 
 ---
 
-# Modus wechseln
+# Mode-Switch in 5 Sekunden
 
-- **Dropdown** (Mode-Picker) im Chat / Agent-Panel
-- **Shift+Tab** — rotiert durch die Modi
-- Neues Thema → oft **neuer Chat**
+- **Shift+Tab** rotiert durch die Modi.
+- Mode-Picker im Chat zeigt den aktiven Modus klar.
+- Thema wechseln? Häufig **neuen Chat** öffnen.
 
 ---
 
-# Cursor Settings — was ihr kurz zeigt
+# Prompt-Beispiel 1 — Ask Mode
 
-| Tab / Thema | Inhalt |
+```text
+Use Ask mode. Do not edit files.
+Explain how our message queue works and where it is implemented.
+List the 3 most relevant files first.
+```
+
+**Ziel:** schnell verstehen, null Risiko für Code-Änderungen.
+
+---
+
+# Prompt-Beispiel 2 — Debug Mode
+
+```text
+Use Debug mode.
+We have flaky terminal output in our build step.
+Propose 3 root-cause hypotheses and which instrumentation to add first.
+```
+
+**Ziel:** evidenzbasiert arbeiten, nicht sofort am falschen Ort fixen.
+
+---
+
+# Settings-Sneak-Peek (nur kurz)
+
+| Bereich | Was ihr sagt |
 | --- | --- |
-| **General** | Look, Notifications, allgemeine Preferences |
-| **Agents** | **Zentral:** Shortcuts, **MCP**, **Allowlist**, **Web/Fetch**, **Ignore/Allow**, **Sandbox**, **lokal** |
-| **Modell** | wie Section 01 (**⌘⇧/**) |
-| **Cloud Agents** | kurz verweisen |
-| **Plugins** | **Marketplace** — Skills, Rules, Agents, MCP (Details später) |
-| **Indexing** | **„Brain“** der Codebase — Sync/Status bei großen Repos / neuen Dateien |
-
----
-
-# Merksatz
-
-- **Nur fragen** → nicht im **Agent** hängen bleiben
-- **Shift+Tab** kennen
-- **Agents-Tab** = Guardrails & Tool-Netz
+| **Agents** | Tools, MCP, Allowlist, Web/Fetch, Sandbox |
+| **Indexing** | „Brain“ der Codebase, wichtig bei großen Repos |
+| **Rules/Skills** | Kommt jetzt vertieft in Section 03/04 |
 
 ---
 
 # Als Nächstes
 
-- **Miguel** — **Section 03:** **Context**, **Rules**, **Indexing** vertiefen
-- **Section 04:** **Plan-First** / großer **Live-Flow**
+- **Section 03:** Context, Rules, `AGENTS.md`, Hierarchie.
 
 ---
 
