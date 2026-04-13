@@ -79,6 +79,21 @@ description: Use when a branch needs a changeset from main diff.
 
 ---
 
+# Frontmatter Fields (SKILL.md)
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `name` | Yes | Skill identifier. Lowercase letters, numbers, and hyphens only. Must match the parent folder name. |
+| `description` | Yes | Describes what the skill does and when to use it. Used by the agent to determine relevance. |
+| `license` | No | License name or reference to a bundled license file. |
+| `compatibility` | No | Environment requirements (system packages, network access, etc.). |
+| `metadata` | No | Arbitrary key-value mapping for additional metadata. |
+| `disable-model-invocation` | No | When `true`, the skill is only included when explicitly invoked via `/skill-name`. The agent will not automatically apply it based on context. |
+
+---
+
+
+
 # Best Practices fuer gute Skills
 
 - Eine Aufgabe pro Skill klar fokussieren
