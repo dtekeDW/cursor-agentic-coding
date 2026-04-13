@@ -88,6 +88,12 @@ description: Use when a branch needs a changeset from main diff.
 
 ---
 
+https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals
+
+"AGENTS.md outperforms skills in [Vercels] agent evals"
+
+---
+
 # Takeaway
 
 - Skills machen Team-Workflows reproduzierbar.
