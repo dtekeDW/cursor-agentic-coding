@@ -42,6 +42,12 @@ Create/merge .changeset entry with affected package bumps
 
 ---
 
+# Demo 3 - Worktree Skill
+
+Creating and managing worktrees.
+
+---
+
 # Demo 3 - NextJS Skill
 
 https://nextjs.org/blog/next-16-2-ai#ai-ready-project-setup
