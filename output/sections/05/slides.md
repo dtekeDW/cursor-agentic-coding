@@ -78,6 +78,8 @@ https://skills.sh/vercel/workflow/workflow
 - Quality: `vitest`, `playwright-cli`, `e2e-guides`
 - Doku/Struktur: `storybook-customer-docs`, `find-skills`, `write-changeset-description`
 
+https://github.com/antfu/skills
+
 ---
 
 # Warum das im Team stark ist
