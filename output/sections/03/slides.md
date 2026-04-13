@@ -34,12 +34,27 @@ footer: 'Cursor Agentic Coding — Section 03'
 
 ---
 
+# Cursor Ignore
+
+Cursor sollte bestimmte Dateien wie z. B. `.env` ignorieren.
+Über die `.cursorignore` (ähnlich wie `.gitignore`) lässt sich festlegen, welche Dateien von Cursor dauerhaft ignoriert und niemals in den LLM-Kontext aufgenommen werden.
+
+---
+
 # Regel-Hierarchie bei Konflikten
 
 ```text
 Team Rules > Project Rules > User Rules
 AGENTS.md ergänzt als leichtgewichtige Guidance.
 ```
+
+---
+
+# Erstellen von Regeln
+
+/create-rule (SKILL)
+Create a rule:
+Every method should include a TSDoc comment, written in plain text without using `@param` or any other `@` annotations.
 
 ---
 
