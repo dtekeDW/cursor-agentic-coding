@@ -22,6 +22,14 @@ footer: 'Cursor Agentic Coding — Section 05'
 4. **Kurzvergleich:** manuell vs. mit Skill
 5. **Fallback:** vorbereitete Outputs, falls Live hakt
 
+
+## Verteilung
+- Jira Ticket Implementation (Miguel)
+- Create Changset Changelog (Dogan)
+- Worktree + Merge Request (Miguel)
+- Analyzed Failed Pipeline (Dogan)
+- Playwrite Full Cycle (Check, Find, Create, Test) (Dogan)
+- NextJS ? (Miguel)
 ---
 
 # Demo 1 — Jira Planning Skill
