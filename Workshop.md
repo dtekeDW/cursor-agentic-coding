@@ -2,8 +2,8 @@
 
 ## Meta
 
-- Version: `v0.5.0`
-- Stand: `2026-04-13 CET`
+- Version: `v0.5.2`
+- Stand: `2026-04-14 CET`
 - Speaker: `Dogan Teke`, `Miguel Franken`
 - Zielgruppe: Entwickler:innen, die bisher primär Chat-Prompting nutzen
 - Dauer: `44 Min` Talk + `10 Min` Q&A
@@ -11,32 +11,44 @@
 
 ## Agenda
 
-| ID  | Titel                     | Min | Presenter      | Kern-Demo | Status                 | Referenz (`section.md`)              | Checkliste (`presentation.md`)         | Folien (`slides.md`)                 |
-| --- | ------------------------- | --- | -------------- | --------- | ---------------------- | ------------------------------------ | --------------------------------------- | ------------------------------------ |
-| 01  | Intro                      | 8   | Dogan          | nein      | ready-for-presentation | [Section 01](output/sections/01/section.md) | [presentation.md](output/sections/01/presentation.md) | [slides.md](output/sections/01/slides.md) |
-| 02  | Modes                      | 8   | Dogan          | nein      | ready-for-presentation | [Section 02](output/sections/02/section.md) | [presentation.md](output/sections/02/presentation.md) | [slides.md](output/sections/02/slides.md) |
-| 03  | Context, Rules             | 7   | Miguel         | nein      | ready-for-content      | [Section 03](output/sections/03/section.md) | [presentation.md](output/sections/03/presentation.md) | [slides.md](output/sections/03/slides.md) |
-| 04  | Skills Explanation         | 5   | Dogan & Miguel | nein      | ready-for-content      | [Section 04](output/sections/04/section.md) | [presentation.md](output/sections/04/presentation.md) | [slides.md](output/sections/04/slides.md) |
-| 05  | Full Demo (Ask + Plan + Agent) | 8   | Dogan & Miguel | ja        | ready-for-demo         | [Section 05](output/sections/05/section.md) | [presentation.md](output/sections/05/presentation.md) | [slides.md](output/sections/05/slides.md) |
-| 06  | MCP Small Demo             | 4   | Dogan          | ja        | ready-for-demo         | [Section 06](output/sections/06/section.md) | [presentation.md](output/sections/06/presentation.md) | [slides.md](output/sections/06/slides.md) |
-| 07  | Q&A                        | 4   | Dogan & Miguel | nein      | ready-for-content      | [Section 07](output/sections/07/section.md) | [presentation.md](output/sections/07/presentation.md) | [slides.md](output/sections/07/slides.md) |
+
+| ID  | Titel            | Min | Presenter      | Demo               | slides                                    |
+| --- | ---------------- | --- | -------------- | ------------------ | ----------------------------------------- |
+| 01  | Intro            | 8   | Dogan & Miguel | —                  | [slides.md](output/sections/01/slides.md) |
+| 02  | Modes & Shorcuts | 8   | Dogan          | —                  | [slides.md](output/sections/02/slides.md) |
+| 03  | Context & Rules  | 7   | Miguel         | —                  | [slides.md](output/sections/03/slides.md) |
+| 04  | Skills & Harness | 5   | Dogan & Miguel | —                  | [slides.md](output/sections/04/slides.md) |
+| 05  | Demo Practice    | 8   | Dogan & Miguel | [✓](#hook-demo-05) | [slides.md](output/sections/05/slides.md) |
+| 06  | MCP Small Demo   | 4   | Dogan          | [✓](#hook-demo-06) | [slides.md](output/sections/06/slides.md) |
+| 07  | Q&A              | 4   | Dogan & Miguel | —                  | [slides.md](output/sections/07/slides.md) |
+
 
 Gesamtzeit Talk: `44 Min` (8+8+7+5+8+4+4)  
 Q&A: `10 Min`
+
+### Demo (Agenda-Hooks)
+
+Klick auf **✓** in der Spalte **Demo** springt hierher; Details jeweils in `section.md` der Section. **—** = keine Kern-Demo in dieser Section.
+
+**05 — Full Demo (Ask + Plan + Agent):** [Section 05](output/sections/05/section.md)
+
+**06 — MCP Small Demo:** [Section 06](output/sections/06/section.md)
 
 ## Docs Mapping (aus `https://cursor.com/llms.txt`)
 
 - Quellindex: [Cursor LLM TXT](https://cursor.com/llms.txt)
 
-| Section | Fokus                     | Primäre Docs                                                                                                                                 |
-| ------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 01      | Einstieg, Agent-Grundverständnis | [Agent Overview](https://cursor.com/docs/agent/overview), [Docs Overview](https://cursor.com/docs.md)                                      |
-| 02      | Ask/Plan/Agent/Debug Modes | [Agent Overview](https://cursor.com/docs/agent/overview.md), [Plan Mode](https://cursor.com/docs/agent/plan-mode.md), [Debug Mode](https://cursor.com/docs/agent/debug-mode.md) |
-| 03      | Kontext, Rules, Indexing  | [Rules](https://cursor.com/docs/rules.md), [Help: Context](https://cursor.com/help/customization/context.md), [Help: Indexing](https://cursor.com/help/customization/indexing.md) |
-| 04      | Skills (Jira, Changeset)  | [Skills](https://cursor.com/docs/skills.md)                                                                                                  |
-| 05      | Main Demo (Ask->Plan->Agent) | [Plan Mode](https://cursor.com/docs/agent/plan-mode.md), [Prompting](https://cursor.com/docs/agent/prompting.md)                         |
-| 06      | MCP Small Demo            | [MCP](https://cursor.com/docs/mcp.md), [Agent Security](https://cursor.com/docs/agent/security.md)                                            |
-| 07      | Adoption, Q&A             | [Rules](https://cursor.com/docs/rules.md), [Skills](https://cursor.com/docs/skills.md), [Help: Teams Setup](https://cursor.com/help/account-and-billing/teams-setup.md) |
+
+| Section | Fokus                            | Primäre Docs                                                                                                                                                                      |
+| ------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 01      | Einstieg, Agent-Grundverständnis | [Agent Overview](https://cursor.com/docs/agent/overview), [Docs Overview](https://cursor.com/docs.md)                                                                             |
+| 02      | Ask/Plan/Agent/Debug Modes       | [Agent Overview](https://cursor.com/docs/agent/overview.md), [Plan Mode](https://cursor.com/docs/agent/plan-mode.md), [Debug Mode](https://cursor.com/docs/agent/debug-mode.md)   |
+| 03      | Kontext, Rules, Indexing         | [Rules](https://cursor.com/docs/rules.md), [Help: Context](https://cursor.com/help/customization/context.md), [Help: Indexing](https://cursor.com/help/customization/indexing.md) |
+| 04      | Skills (Jira, Changeset)         | [Skills](https://cursor.com/docs/skills.md)                                                                                                                                       |
+| 05      | Main Demo (Ask->Plan->Agent)     | [Plan Mode](https://cursor.com/docs/agent/plan-mode.md), [Prompting](https://cursor.com/docs/agent/prompting.md)                                                                  |
+| 06      | MCP Small Demo                   | [MCP](https://cursor.com/docs/mcp.md), [Agent Security](https://cursor.com/docs/agent/security.md)                                                                                |
+| 07      | Adoption, Q&A                    | [Rules](https://cursor.com/docs/rules.md), [Skills](https://cursor.com/docs/skills.md), [Help: Teams Setup](https://cursor.com/help/account-and-billing/teams-setup.md)           |
+
 
 ## Iterationsregeln
 
@@ -61,3 +73,4 @@ Q&A: `10 Min`
 - [Section 06](output/sections/06/section.md) · [Checkliste 06](output/sections/06/presentation.md) · [Folien 06](output/sections/06/slides.md)
 - [Section 07](output/sections/07/section.md) · [Checkliste 07](output/sections/07/presentation.md) · [Folien 07](output/sections/07/slides.md)
 - [Changelog](output/changelog.md)
+

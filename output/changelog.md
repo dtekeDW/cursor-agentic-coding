@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-04-14
+- **Workshop.md** **v0.5.2:** Agenda ohne Spalte **Status**; **Demo**: **✓** (verlinkt) vs. **—** statt ja/nein; Hooks-Text angepasst.
+- **Workshop.md** **v0.5.1:** Agenda-Tabelle gestrafft (Spalten **Referenz** / **Checkliste** entfernt); **Kern-Demo** → **Demo**; Spalte **slides** nur noch Link zu `slides.md`; bei **Demo = ja** Sprungmarken **[ja](#hook-demo-05)** / **[ja](#hook-demo-06)** plus kurzer Abschnitt **Demo (Agenda-Hooks)** mit Ankern.
+
 ## 2026-03-25
 - **Workshop.md** **v0.4.34:** Section **01** **8 Min**, Section **02** **7 Min**; Talk-Gesamt **44 Min** (Summe in Agenda).
 - **Section 01:** **8 Min**; zuvor Dry-Run-Abschluss (Simple Browser, Queue, Folien-Reihenfolge) — siehe frühere Einträge; `section.md` / `presentation.md` Zeiten angepasst.
