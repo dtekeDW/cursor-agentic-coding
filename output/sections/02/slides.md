@@ -1,22 +1,23 @@
----
-marp: true
-paginate: true
-footer: 'Cursor Agentic Coding — Section 02'
----
-
 # Section 02 — Modi in der Praxis
 
-[Vollständige Agenda](../../../Workshop.md)
+**Heute:** wann **Ask / Plan / Agent / Debug** — und welche **Shortcuts** sparen Zeit.
+
+[Workshop.md — Agenda](../../../Workshop.md)
+
+[Section 01 — slides.md](../01/slides.md)
+
+[Section 03 — slides.md](../03/slides.md)
+
+**Nächste Section:** Context, Rules, `AGENTS.md`, Hierarchie.
 
 ---
 
 # Section 02 — Reihenfolge (8 Min)
 
 1. **Vier Modi** — wann welcher Modus?
-2. **Shortcuts** — **Shift+Tab**, Mode-Picker
-3. **Zwei Prompt-Beispiele** — **Ask** und **Debug**
-4. **Settings-Sneak-Peek** — Agents, Indexing
-5. Übergang zu **Section 03** (Context & Rules)
+2. **Shortcuts** — gruppiert: Chat, Modell/Modi, Palette, Design Mode
+3. **Settings-Sneak-Peek** — Agents, Indexing
+4. Übergang zu **Section 03** (Context & Rules)
 
 ---
 
@@ -40,35 +41,39 @@ footer: 'Cursor Agentic Coding — Section 02'
 
 ---
 
-# Mode-Switch in 5 Sekunden
+# Shortcuts — Chat & Oberfläche
 
-- **Shift+Tab** rotiert durch die Modi.
-- Mode-Picker im Chat zeigt den aktiven Modus klar.
-- Thema wechseln? Häufig **neuen Chat** öffnen.
-
----
-
-# Prompt-Beispiel 1 — Ask Mode
-
-```text
-Use Ask mode. Do not edit files.
-Explain how our message queue works and where it is implemented.
-List the 3 most relevant files first.
-```
-
-**Ziel:** schnell verstehen, null Risiko für Code-Änderungen.
+| Shortcut | Kurz |
+| --- | --- |
+| **⌘N** | Neuer Chat |
+| **⌘D** | Chat anpinnen |
+| **⌘B** | Sidebar ein/aus |
+| **⌘⌥B** | Diff Viewer |
+| **⌘,** | Einstellungen |
 
 ---
 
-# Prompt-Beispiel 2 — Debug Mode
+# Shortcuts — Modell, Modi, Befehle
 
-```text
-Use Debug mode.
-We have flaky terminal output in our build step.
-Propose 3 root-cause hypotheses and which instrumentation to add first.
-```
+| Shortcut | Kurz |
+| --- | --- |
+| **⌘⇧/** | Modellwahl / Model Options |
+| **Shift+Tab** | Modi durchrotieren |
+| **⌘⇧P** | Command Palette (Befehle) |
+| **⌘K** | Quick Actions / Befehls-Palette (Cursor) |
 
-**Ziel:** evidenzbasiert arbeiten, nicht sofort am falschen Ort fixen.
+*Modus wechseln? Oft hilft auch ein **neuer Chat** (**⌘N**).*
+
+---
+
+# Shortcuts — Design Mode (UI fokussieren)
+
+| Shortcut | Kurz |
+| --- | --- |
+| **⌘⇧D** | Design Mode ein/aus |
+| **Shift+Ziehen** | Bereich auswählen |
+| **⌘L** | Element in den Chat übernehmen |
+| **⌥+Klick** | Element ins Eingabefeld |
 
 ---
 
@@ -79,12 +84,6 @@ Propose 3 root-cause hypotheses and which instrumentation to add first.
 | **Agents** | Tools, MCP, Allowlist, Web/Fetch, Sandbox |
 | **Indexing** | „Brain“ der Codebase, wichtig bei großen Repos |
 | **Rules/Skills** | Kommt jetzt vertieft in Section 03/04 |
-
----
-
-# Als Nächstes
-
-- **Section 03:** Context, Rules, `AGENTS.md`, Hierarchie.
 
 ---
 
