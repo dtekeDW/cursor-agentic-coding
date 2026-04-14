@@ -1,16 +1,14 @@
----
-marp: true
-paginate: true
-footer: 'Cursor Agentic Coding — Section 01'
----
-
 # Cursor Agentic Coding in Practice
 
 ## Section 01 — Einstieg: Chat-Oberfläche & Kontext
 
 **Heute:** mehr als nur Chat — Workflows, Demos — zuerst **Basics:** was ihr im Interface seht und was es bedeutet.
 
-[Vollständige Agenda](../../../Workshop.md)
+[Workshop.md — Agenda](../../../Workshop.md)
+
+[Section 02 — slides.md](../02/slides.md)
+
+**Nächste Section:** **Ask**, **Plan**, **Agent**, **Debug** — wann welcher Modus?
 
 ---
 
@@ -24,7 +22,7 @@ footer: 'Cursor Agentic Coding — Section 01'
 6. **`@`‑Mentions** — Dateien, Ordner, Docs, Past Chats → Details **Section 03**
 7. **Terminal** — **`@Terminal`**, Logs mitgeben
 8. **Diff zu `main`** — im **Prompt** formulieren (kein `@Git`-Menü)
-9. **Kurz: Features** — semantische Suche, **Simple Browser** (**⌘⇧P**), Bildgenerierung
+9. **Feature Overview** — semantische Suche, **Simple Browser** (**⌘⇧P**), Bildgenerierung
 10. **Message Queue** — **Enter** (wartet) vs. **⌘Enter** (sofort)
 
 ---
@@ -112,7 +110,7 @@ footer: 'Cursor Agentic Coding — Section 01'
 
 ---
 
-# Am Abschluss: Features (kurz durchzählen)
+# Feature Overview
 
 - **Semantische Suche** über die indexierte Codebase — [Search](https://cursor.com/docs/agent/tools/search)
 - **Simple Browser:** **⌘⇧P** (Command Palette) → *Simple Browser* → URL — **DOM / Struktur** gezielt ins Chat, **DevTools** nutzbar
@@ -135,12 +133,6 @@ footer: 'Cursor Agentic Coding — Section 01'
 | --- | --- |
 | **Laufort** | **Local** / **Worktree** / **Cloud** — im Panel wählbar |
 | **Sonstige Tools** | **Shell**, **Web**, … — [Overview → Tools](https://cursor.com/docs/agent/overview#tools) |
-
----
-
-# Nächster Teil
-
-**Section 02:** **Ask**, **Plan**, **Agent**, **Debug** — wann welcher Modus?
 
 ---
 
